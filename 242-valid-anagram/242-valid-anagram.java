@@ -1,15 +1,17 @@
-public class Solution {
-  public boolean isAnagram(String s, String t) {
-      int[] alphabet = new int[26];
-      for (int i = 0; i < s.length(); i++) alphabet[s.charAt(i) - 'a']++;
-      for (int i = 0; i < t.length(); i++) {
-        alphabet[t.charAt(i) - 'a']--;
-        if(alphabet[t.charAt(i) - 'a'] < 0) 
-            return false;
-      }
-      for (int i : alphabet) 
-          if (i != 0) 
-              return false;
-      return true;
-  }
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        int[] al = new int[26];
+        for (char c : s.toCharArray()) {
+            al[c - 'a']++;
+        }
+        for (char c : t.toCharArray()) {
+            al[c - 'a']--;
+        }
+        
+        for (int i = 0; i < 26; i++) {
+            if (al[i] != 0)
+                return false;
+        }
+        return true;
+    }
 }
