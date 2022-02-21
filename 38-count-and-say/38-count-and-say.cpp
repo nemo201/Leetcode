@@ -2,28 +2,21 @@ class Solution {
 public:
     string countAndSay(int n) {
         string s = "1";
-        for (int i = 1; i < n; i++) {
-            s = countIndex(s);
-        }
-        return s;
+        return countAndSay(n, s);
     }
     
-    string countIndex(string s) {
-        string res;
-        char c = s[0];
-        int count = 1;
-        for (int i = 1; i < s.size(); i++) {
-            if (c == s[i])
-                count++;
-            else {
-                res += to_string(count);
-                res += c;
-                c = s[i];
-                count = 1;
-            }
+    string countAndSay(int n, string s) {
+        if (n == 1)
+            return s;
+        int i = 0, j, len = s.size();
+        string ans = "";
+        
+        while (i < len) {
+            j = i;
+            while (i < len && s[i] == s[j])
+                i++;
+            ans += to_string(i - j) + s[j];
         }
-        res += to_string(count);
-        res += c;
-        return res;
+        return countAndSay(n-1, ans);
     }
 };
