@@ -1,28 +1,29 @@
 class Solution {
-    public String countAndSay(int n) {
-        String s = "1";
+public:
+    string countAndSay(int n) {
+        string s = "1";
         for (int i = 1; i < n; i++) {
             s = countIndex(s);
         }
         return s;
     }
     
-    public String countIndex(String s) {
-        StringBuilder sb = new StringBuilder();
-        char c = s.charAt(0);
+    string countIndex(string s) {
+        string res;
+        char c = s[0];
         int count = 1;
-        for (int i = 1; i < s.length(); i++) {
-            if (s.charAt(i) == c)
+        for (int i = 1; i < s.size(); i++) {
+            if (c == s[i])
                 count++;
             else {
-                sb.append(count);
-                sb.append(c);
-                c = s.charAt(i);
+                res += to_string(count);
+                res += c;
+                c = s[i];
                 count = 1;
             }
         }
-        sb.append(count);
-        sb.append(c);
-        return sb.toString();
+        res += to_string(count);
+        res += c;
+        return res;
     }
-}
+};
