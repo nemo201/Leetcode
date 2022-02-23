@@ -24,12 +24,22 @@ public:
     Node* cloneGraph(Node* node) {
         if (!node)
             return NULL;
-        if (copies.find(node) == copies.end()) {
-            copies[node] = new Node(node->val, {});
-            for (Node* neighbor : node->neighbors)
-                copies[node]->neighbors.push_back(cloneGraph(neighbor));
+        Node* copy = new Node(node->val, {});
+        copies[node] = copy;
+        queue<Node*> todo;
+        todo.push(node);
+        while(!todo.empty()) {
+            Node* cur = todo.front();
+            todo.pop();
+            for(Node* neig : cur-> neighbors) {
+                if (copies.find(neig) == copies.end()) {
+                    copies[neig] = new Node(neig -> val, {});
+                    todo.push(neig);
+                }
+                copies[cur]->neighbors.push_back(copies[neig]);
+            }
         }
-        return copies[node];
+        return copy;
     }
 private:
     unordered_map<Node*, Node*> copies;
