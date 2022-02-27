@@ -1,32 +1,56 @@
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * struct TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
  */
 class Solution {
-        int max = 0;
-    public int widthOfBinaryTree(TreeNode root) {
-        helper(root, new ArrayList<Integer>(), 0, 0);
-        return max;
-    }
-    
-    void helper(TreeNode root, List<Integer> lefts, int level, int index){
-        if(root == null) return;
-        if(level == lefts.size()){
-           lefts.add(index); 
+public:
+    int widthOfBinaryTree(TreeNode* root) {
+        if(root == NULL)
+            return 0;
+        
+        int res = 1;
+        queue<pair<TreeNode*, int>> q;
+        
+        // I am using intialising list
+        q.push({root, 0});      // also can use make_pair
+        
+        while(!q.empty())
+        {
+            int cnt = q.size();
+            // start is the index of root node for first level
+            int start = q.front().second;
+            int end = q.back().second;
+            
+            res = max(res,end-start + 1);
+            
+            for(int i = 0; i <cnt; ++i)
+            {
+                pair<TreeNode*, int> p = q.front();
+                // we will use it while inserting it children
+                // left child will be 2 * idx + 1;
+                // right chils will be 2 * idx + 2;
+                int idx = p.second - start;
+                
+                q.pop();
+                
+                // if  left child exist
+                if(p.first->left != NULL)
+                    q.push({p.first->left, (long long)2 * idx + 1});
+                
+                // if right child exist
+                if(p.first->right != NULL)
+                    q.push({p.first->right, (long long) 2 * idx + 2});
+            }
         }
-        max = Math.max(max, index - lefts.get(level) + 1);
-        helper(root.left, lefts, level + 1, index * 2);
-        helper(root.right, lefts, level + 1, index * 2 + 1);
+        
+        return res;
+        
     }
-}
+};
