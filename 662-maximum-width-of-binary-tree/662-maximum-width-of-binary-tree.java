@@ -14,16 +14,19 @@
  * }
  */
 class Solution {
+        int max = 0;
     public int widthOfBinaryTree(TreeNode root) {
-        List<Integer> left = new ArrayList<>();
-        return dfs(root, 1, 0, left);
+        helper(root, new ArrayList<Integer>(), 0, 0);
+        return max;
     }
     
-    private int dfs(TreeNode root, int id, int d, List<Integer> left) {
-        if (root == null)
-            return 0;
-        if (d >= left.size())
-            left.add(id);
-        return Math.max(id + 1 - left.get(d), Math.max(dfs(root.left, id*2, d+1, left), dfs(root.right, id*2 + 1, d+1, left)));
+    void helper(TreeNode root, List<Integer> lefts, int level, int index){
+        if(root == null) return;
+        if(level == lefts.size()){
+           lefts.add(index); 
+        }
+        max = Math.max(max, index - lefts.get(level) + 1);
+        helper(root.left, lefts, level + 1, index * 2);
+        helper(root.right, lefts, level + 1, index * 2 + 1);
     }
 }
