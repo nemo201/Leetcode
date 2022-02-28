@@ -25,7 +25,7 @@ class Solution {
         int h2 = height(root.right);
         int diff = Math.abs(h1 - h2);
         
-        if (h1 >= 0 && h2 >= 0 && (diff == 0 || diff == 1))
+        if (h1 >= 0 && h2 >= 0 && diff < 2)
             return Math.max(h1, h2) + 1;
         
         return -1;
