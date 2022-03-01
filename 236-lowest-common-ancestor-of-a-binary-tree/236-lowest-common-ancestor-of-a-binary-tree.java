@@ -8,25 +8,34 @@
  * }
  */
 class Solution {
-    private TreeNode ans = null;
-    
-    private boolean dfs(TreeNode curNode, TreeNode p, TreeNode q) {
-        if (curNode == null)
-            return false;
-        
-        int left = dfs(curNode.left, p, q) ? 1 : 0;
-        int right = dfs(curNode.right, p, q) ? 1 : 0;
-        
-        int mid = (curNode == p || curNode == q) ? 1 : 0;
-        
-        if (mid + left + right >= 2)
-            ans = curNode;
-        
-        return (mid + left + right > 0);
-    }
-    
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        dfs(root, p, q);
-        return ans;
+        Stack<TreeNode> stack = new Stack<>();
+        Map<TreeNode, TreeNode> parent = new HashMap<>();
+        
+        parent.put(root, null);
+        stack.push(root);
+        
+        while (!parent.containsKey(p) || !parent.containsKey(q)) {
+            TreeNode node = stack.pop();
+            
+            if (node.left != null) {
+                parent.put(node.left, node);
+                stack.push(node.left);
+            }
+            if (node.right != null) {
+                parent.put(node.right, node);
+                stack.push(node.right);
+            }
+        }
+        Set<TreeNode> ances = new HashSet<>();
+        while (p != null) {
+            ances.add(p);
+            p = parent.get(p);
+        }
+        
+        while (!ances.contains(q))
+            q = parent.get(q);
+        
+        return q;
     }
 }
