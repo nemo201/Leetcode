@@ -1,36 +1,38 @@
 /**
  * Definition for a binary tree node.
- * struct TreeNode {
+ * public class TreeNode {
  *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
  */
 class Solution {
-public:
-    TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
-        map<int, int> inMap; 
-
-        for(int i = 0; i < inorder.size(); i++) {
-            inMap[inorder[i]] = i;
+    int preIdx;
+    Map<Integer, Integer> map;
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        map = new HashMap<>();
+        preIdx = 0;
+        for (int i = 0; i < inorder.length; i++) {
+            map.put(inorder[i], i);
         }
-
-        TreeNode* root = buildTree(preorder, 0, preorder.size() - 1, inorder, 0, inorder.size() - 1, inMap);
+        return arrayToTree(preorder, 0, preorder.length - 1);
+    }
+    
+    private TreeNode arrayToTree(int[] preorder, int left, int right) {
+        if (left > right)
+            return null;
+        int rootVal = preorder[preIdx++];
+        TreeNode root = new TreeNode(rootVal);
+        
+        root.left = arrayToTree(preorder, left, map.get(rootVal) - 1);
+        root.right = arrayToTree(preorder, map.get(rootVal) + 1, right);
         return root;
     }
-   TreeNode* buildTree(vector<int>& preorder, int preStart, int preEnd, vector<int>& inorder, int inStart, int inEnd, map<int, int> &inMap) {
-        if(preStart > preEnd || inStart > inEnd) return NULL;
-
-        TreeNode* root = new TreeNode(preorder[preStart]);
-        int inRoot = inMap[root->val];
-        int numsLeft = inRoot - inStart;
-
-        root->left = buildTree(preorder, preStart + 1, preStart + numsLeft, inorder, inStart, inRoot - 1, inMap);
-        root->right = buildTree(preorder, preStart + numsLeft + 1, preEnd, inorder, inRoot + 1, inEnd, inMap);
-
-        return root;
-    }
-};
+}
