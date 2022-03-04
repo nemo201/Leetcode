@@ -12,17 +12,27 @@
 class Solution {
 public:
     bool isSymmetric(TreeNode* root) {
-        if (root == NULL)
-            return true;
-        return isSym(root->left, root->right);
-    }
-    
-    bool isSym(TreeNode* left, TreeNode* right) {
-        if (left == NULL || right == NULL)
-            return left == right;
-        if (left->val != right->val)
-            return false;
-        
-        return isSym(left->left, right->right) && isSym(left->right, right->left);
+        if (!root) return true;
+		queue<TreeNode*> pending({ root->left, root->right });
+
+		while (!pending.empty())
+		{
+			TreeNode* l = pending.front();
+			pending.pop();
+			TreeNode* r = pending.front();
+			pending.pop();
+
+			if (!l && r || l && !r) return false;
+			if (l)
+			{
+				if (l->val != r->val) return false;
+				pending.push(l->left);
+				pending.push(r->right);
+				pending.push(l->right);
+				pending.push(r->left);
+			}
+		}
+
+		return true;
     }
 };
