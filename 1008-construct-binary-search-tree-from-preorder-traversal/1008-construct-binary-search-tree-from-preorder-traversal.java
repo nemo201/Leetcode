@@ -1,34 +1,31 @@
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
+ * struct TreeNode {
  *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
  */
 class Solution {
-    int nodeId = 0;
-    public TreeNode bstFromPreorder(int[] pre) {
-        if (pre == null || pre.length == 0)
-            return null;
-        return helper(pre, Integer.MIN_VALUE, Integer.MAX_VALUE);
+public:
+    int idx = 0;
+    TreeNode* bstFromPreorder(vector<int>& pre) {
+        if (pre.size() == 0)
+            return NULL;
+        return helper(pre, INT_MIN, INT_MAX);
     }
     
-    TreeNode helper(int[] pre, int start, int end) {
-        if(nodeId == pre.length || pre[nodeId] < start || pre[nodeId] > end)
-            return null;
+    TreeNode* helper(vector<int>& pre, int start, int end) {
+        if (idx == pre.size() || pre[idx] < start || pre[idx] > end)
+            return NULL;
         
-        int val = pre[nodeId++];
-        TreeNode node = new TreeNode(val);
-        node.left = helper(pre, start, val);
-        node.right = helper(pre, val, end);
+        int val = pre[idx++];
+        TreeNode* node = new TreeNode(val);
+        node->left = helper(pre, start, val);
+        node->right = helper(pre, val, end);
         return node;
     }
-}
+};
