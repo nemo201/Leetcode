@@ -1,31 +1,40 @@
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ * struct ListNode {
  *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
  */
-class Solution {
-    public ListNode deleteDuplicates(ListNode head) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
+class Solution 
+{
+public:
+    ListNode* deleteDuplicates(ListNode* head) 
+    {
+        if(head==NULL or head->next==NULL)
+            return head;
         
-        ListNode pred = dummy;
+        ListNode* ans = new ListNode(0,head);
+        ListNode* prev = ans;
         
-        while (head != null) {
-            if (head.next != null && head.val == head.next.val) {
-                while (head.next != null && head.val == head.next.val)
-                    head = head.next;
-                
-                pred.next = head.next;
-            } else {
-                pred = pred.next;
+        while(head)
+        {
+            if(head->next != NULL && head->val == head->next->val)
+            {
+                while(head->next != NULL && head->val == head->next->val)
+                {
+                    head = head->next;
+                }
+                prev->next = head->next;
             }
-            head = head.next;
+            else
+            {
+                prev = prev->next;     
+            }
+            head = head->next;
         }
-        return dummy.next;
+        return ans->next;            
     }
-}
+};
