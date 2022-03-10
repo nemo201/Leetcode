@@ -14,24 +14,29 @@
  * }
  */
 class Solution {
-    List<Integer> list = new ArrayList<>();
-    public boolean findTarget(TreeNode root, int k) {
-        dfs(root);
+    TreeNode root;
+    public boolean findTarget(TreeNode node, int k) {
+        if (root == null)
+            root = node;
+        if (node == null)
+            return false;
         
-        for (int i = 0; i < list.size(); i++) {
-            for (int j = i + 1; j < list.size(); j++) {
-                if (list.get(i) + list.get(j) == k)
-                    return true;
-            }
-        }
-        return false;
+        if (search(node, k - node.val))
+            return true;
+        
+        return findTarget(node.left, k) || findTarget(node.right, k);
     }
     
-    void dfs(TreeNode root) {
-        if (root == null)
-            return;
-        list.add(root.val);
-        dfs(root.left);
-        dfs(root.right);
+    public boolean search(TreeNode node, int k) {
+        TreeNode cur = root;
+        while (cur != null) {
+            if (k > cur.val)
+                cur = cur.right;
+            else if (k < cur.val)
+                cur = cur.left;
+            else
+                return cur != node ? true : false;
+        }
+        return false;
     }
 }
