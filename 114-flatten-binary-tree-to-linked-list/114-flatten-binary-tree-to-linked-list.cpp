@@ -15,11 +15,11 @@ public:
         TreeNode* cur = root;
         while (cur) {
             if (cur->left) {
-                TreeNode* pre = cur->left;
-                while (pre->right)
-                    pre = pre->right;
-                
-                pre->right = cur->right;
+                TreeNode* last = cur->left;
+                while (last->right) {
+                    last = last->right;
+                }
+                last->right = cur->right;
                 cur->right = cur->left;
                 cur->left = NULL;
             }
