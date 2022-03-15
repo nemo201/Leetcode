@@ -4,16 +4,16 @@ class Solution {
         StringBuilder sb = new StringBuilder(s);
         for (int i = 0; i < sb.length(); i++) {
             if (sb.charAt(i) == '(')
-                stack.add(i);
+                stack.add(i + 1);
             if (sb.charAt(i) == ')') {
-                if(!stack.empty())
+                if(!stack.empty() && stack.peek() >= 0)
                     stack.pop();
                 else
-                    sb.setCharAt(i, '*');
+                    stack.add(-(i + 1));
             }
         }
         while (!stack.empty())
-            sb.setCharAt(stack.pop(), '*');
-        return sb.toString().replaceAll("\\*", "");
+            sb.deleteCharAt(Math.abs(stack.pop()) - 1);
+        return sb.toString();
     }
 }
