@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/validate-stack-sequences/">946. Validate Stack Sequences</a></h2><h3>Medium</h3><hr><div><p>Given two integer arrays <code>pushed</code> and <code>popped</code> each with distinct values, return <code>true</code><em> if this could have been the result of a sequence of push and pop operations on an initially empty stack, or </em><code>false</code><em> otherwise.</em></p>
+<h2><a href="https://leetcode.com/problems/validate-stack-sequences/solution/">946. Validate Stack Sequences</a></h2><h3>Medium</h3><hr><div><p>Given two integer arrays <code>pushed</code> and <code>popped</code> each with distinct values, return <code>true</code><em> if this could have been the result of a sequence of push and pop operations on an initially empty stack, or </em><code>false</code><em> otherwise.</em></p>
 
 <p>&nbsp;</p>
 <p><strong>Example 1:</strong></p>
