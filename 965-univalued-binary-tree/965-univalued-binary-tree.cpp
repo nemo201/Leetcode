@@ -11,20 +11,23 @@
  */
 class Solution {
 public:
+    vector<int> vec;
     bool isUnivalTree(TreeNode* root) {
-        if (!root)
-            return true;
         
-        if (root->left) {
-            if (root->left->val != root->val)
+        dfs(root);
+        
+        for (int v : vec) {
+            if (v != vec[0])
                 return false;
         }
-        
-        if (root->right) {
-            if (root->right->val != root->val)
-                return false;
+        return true;
+    }
+    
+    void dfs(TreeNode* root) {
+        if (root) {
+            vec.push_back(root->val);
+            dfs(root->left);
+            dfs(root->right);
         }
-        
-        return isUnivalTree(root->left) && isUnivalTree(root->right);
     }
 };
