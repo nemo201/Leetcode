@@ -1,6 +1,5 @@
 class Solution {
-public:
-    int brokenCalc(int startValue, int target) {
+    public int brokenCalc(int startValue, int target) {
         int ans = 0;
         while (target > startValue) {
             ans++;
@@ -11,4 +10,4 @@ public:
         }
         return ans + startValue - target;
     }
-};
+}
