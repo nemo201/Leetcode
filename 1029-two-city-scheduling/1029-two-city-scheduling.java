@@ -1,16 +1,17 @@
 class Solution {
     public int twoCitySchedCost(int[][] costs) {
-        Arrays.sort(costs, (a, b) -> {
-            return (a[0] - a[1]) - (b[0] - b[1]);
-        });
-        
-        int price = 0;
-        for (int i = 0; i < costs.length / 2; i++) {
-            price += costs[i][0];
-        }
-        for (int i = costs.length / 2; i < costs.length; i++) {
-            price += costs[i][1];
-        }
-        return price;
-    }
+		// sort on basis of absolute diff of cities
+		Arrays.sort(costs, (a1, a2) -> a1[0] - a1[1] - a2[0] + a2[1]);
+		// hold answer
+		int cost = 0;
+		// length of array. i.e. n
+		int n = costs.length;
+		// iterate half time
+		for (int i = 0; i < n / 2; i++) {
+			// add 0th index element of first half and 1st index element of second half
+			cost += costs[i][0] + costs[i + n / 2][1];
+		}
+		// return answer
+		return cost;
+	}
 }
