@@ -1,28 +1,65 @@
 class Solution {
-public:
-    int m, n;
-    vector<vector<int> > ans;
-    vector<vector<bool> > atlantic, pacific;
-    queue<pair<int, int> > q;
-    vector<vector<int> > pacificAtlantic(vector<vector<int>>& mat) {
-        if(!size(mat)) return ans;
-        m = size(mat), n = size(mat[0]);
-        atlantic = pacific = vector<vector<bool> >(m, vector<bool>(n, false));
-        for(int i = 0; i < m; i++) bfs(mat, pacific, i, 0), bfs(mat, atlantic, i, n - 1);
-        for(int i = 0; i < n; i++) bfs(mat, pacific, 0, i), bfs(mat, atlantic, m - 1, i);             
-        return ans;
+
+int rows = 0;
+int cols = 0;
+
+int [][] heightsGlobal = null;
+
+public List<List<Integer>> pacificAtlantic(int[][] heights) {
+    heightsGlobal = heights;
+    rows = heights.length;
+    cols = heights[0].length;
+
+    Set<String> po = new HashSet<>();
+    Set<String> alt = new HashSet<>();
+            
+    for(int i = 0; i < cols; i++){
+        //po cols
+        dfs(0,i, po, heights[0][i]);
+        //alt cols
+        dfs(rows-1,i, alt, heights[rows-1][i]);
     }
-    void bfs(vector<vector<int> >& mat, vector<vector<bool> >& visited, int i, int j){        
-        q.push({i, j});
-        while(!q.empty()){
-            tie(i, j) = q.front(); q.pop();
-            if(visited[i][j]) continue;
-            visited[i][j] = true;
-            if(atlantic[i][j] && pacific[i][j]) ans.push_back(vector<int>{i, j});
-            if(i + 1 <  m && mat[i + 1][j] >= mat[i][j]) q.push({i + 1, j});
-            if(i - 1 >= 0 && mat[i - 1][j] >= mat[i][j]) q.push({i - 1, j});
-            if(j + 1 <  n && mat[i][j + 1] >= mat[i][j]) q.push({i, j + 1});
-            if(j - 1 >= 0 && mat[i][j - 1] >= mat[i][j]) q.push({i, j - 1});
+    
+    for(int j = 0; j<rows; j++){
+        //po rows
+        dfs(j,0, po, heights[j][0]);
+        //alt cols
+        dfs(j,cols-1, alt, heights[j][cols-1]);
+    }
+    
+    List<List<Integer>> result = new ArrayList<>();
+    
+    for(int k = 0; k<rows; k++){
+        for(int l = 0; l<cols; l++){
+           String cell = Integer.toString(k) + ":" + Integer.toString(l);
+            
+            if(po.contains(cell) && alt.contains(cell)){
+                String [] res = cell.split(":");
+                
+                List<Integer> resList = new ArrayList<>();
+                resList.add(Integer.valueOf(res[0]));
+                resList.add(Integer.valueOf(res[1]));
+                result.add(resList);
+            }
         }
     }
-};
+    
+    return result;
+    
+}
+
+public void dfs(int r, int c, Set<String> visited, int prevHeight) {
+    String cell = Integer.toString(r) + ":" + Integer.toString(c);
+    System.out.println(cell);
+    if(visited.contains(cell) || r < 0 || r == rows || c < 0 || c == cols || heightsGlobal[r][c] < prevHeight){
+        return;
+    }
+    
+    visited.add(Integer.toString(r) + ":" + Integer.toString(c));
+    
+    dfs(r+1,c,visited, heightsGlobal[r][c]);
+    dfs(r-1,c,visited, heightsGlobal[r][c]);
+    dfs(r,c+1,visited, heightsGlobal[r][c]);
+    dfs(r,c-1,visited, heightsGlobal[r][c]);
+}
+}
