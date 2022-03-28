@@ -1,6 +1,7 @@
 class Solution {
-    public boolean search(int[] nums, int target) {
-        int n = nums.length;
+public:
+    bool search(vector<int>& nums, int target) {
+        int n = nums.size();
         if (n == 0) return false;
         int end = n - 1;
         int start = 0;
@@ -16,12 +17,13 @@ class Solution {
                 start++;
                 continue;
             }
+
             // which array does pivot belong to.
-            boolean pivotArray = existsInFirst(nums, start, nums[mid]);
+            bool pivotArray = existsInFirst(nums, start, nums[mid]);
 
             // which array does target belong to.
-            boolean targetArray = existsInFirst(nums, start, target);
-            if (pivotArray ^ targetArray) { // If pivot and target exist in different sorted arrays, recall that xor is true when both operands are distinct
+            bool targetArray = existsInFirst(nums, start, target);
+            if (pivotArray ^ targetArray) { // If pivot and target exist in different sorted arrays, recall that xor is true only when both the operands are distinct
                 if (pivotArray) {
                     start = mid + 1; // pivot in the first, target in the second
                 } else {
@@ -39,12 +41,12 @@ class Solution {
     }
 
     // returns true if we can reduce the search space in current binary search space
-    private boolean isBinarySearchHelpful(int[] arr, int start, int element) {
-        return arr[start] != element;
+    bool isBinarySearchHelpful(vector<int>& nums, int start, int element) {
+        return nums[start] != element;
     }
 
     // returns true if element exists in first array, false if it exists in second
-    private boolean existsInFirst(int[] arr, int start, int element) {
-        return arr[start] <= element;
+    bool existsInFirst(vector<int>& nums, int start, int element) {
+        return nums[start] <= element;
     }
-}
+};
