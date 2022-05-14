@@ -1,51 +1,53 @@
 class Solution {
-    Map<Integer, List<Pair<Integer, Integer>>> adj = new HashMap<>();
+public:
+    // Adjacency list, defined it as per the maximum number of nodes
+    // But can be defined with the input size as well
+    vector<pair<int, int>> adj[101];
     
-    public void bfs(int[] sigRec, int sNode) {
-        Queue<Integer> q = new LinkedList<>();
-        q.add(sNode);
+    void DFS(vector<int>& signalReceivedAt, int currNode, int currTime) {
+        // If the current time is greater than or equal to the fastest signal received
+        // Then no need to iterate over adjacent nodes
+        if (currTime >= signalReceivedAt[currNode]) {
+            return;
+        }
+
+        // Fastest signal time for currNode so far
+        signalReceivedAt[currNode] = currTime;
         
-        sigRec[sNode] = 0;
-        
-        while (!q.isEmpty()) {
-            int curNode = q.remove();
+        // Broadcast the signal to adjacent nodes
+        for (pair<int, int> edge : adj[currNode]) {
+            int travelTime = edge.first;
+            int neighborNode = edge.second;
             
-            if (!adj.containsKey(curNode))
-                continue;
-            
-            for (Pair<Integer, Integer> edge : adj.get(curNode)) {
-                int time = edge.getKey();
-                int neighborNode = edge.getValue();
-                
-                int arrivalTime = sigRec[curNode] + time;
-                if (sigRec[neighborNode] > arrivalTime) {
-                    sigRec[neighborNode] = arrivalTime;
-                    q.add(neighborNode);
-                }
-            }
+            // currTime + time : time when signal reaches neighborNode
+            DFS(signalReceivedAt, neighborNode, currTime + travelTime);
         }
     }
     
-    public int networkDelayTime(int[][] times, int n, int k) {
-        for (int[] time : times) {
+    int networkDelayTime(vector<vector<int>>& times, int n, int k) {
+        // Build the adjacency list
+        for (vector<int> time : times) {
             int source = time[0];
             int dest = time[1];
             int travelTime = time[2];
             
-            adj.putIfAbsent(source, new ArrayList<>());
-            adj.get(source).add(new Pair(travelTime, dest));
+            adj[source].push_back({travelTime, dest});
         }
         
-        int []sigRec = new int[n + 1];
-        Arrays.fill(sigRec, Integer.MAX_VALUE);
-        
-        bfs(sigRec, k);
-        
-        int ans = Integer.MIN_VALUE;
+        // Sort the edges connecting to every node
         for (int i = 1; i <= n; i++) {
-            ans = Math.max(ans, sigRec[i]);
+            sort(adj[i].begin(), adj[i].end());
         }
         
-        return ans == Integer.MAX_VALUE ? -1 : ans;
+        vector<int> signalReceivedAt(n + 1, INT_MAX);
+        DFS(signalReceivedAt, k, 0);
+        
+        int answer = INT_MIN;
+        for (int node = 1; node <= n; node++) {
+            answer = max(answer, signalReceivedAt[node]);
+        }
+        
+        // INT_MAX signifies atleat one node is unreachable
+        return answer == INT_MAX ? -1 : answer;
     }
-}
+};
