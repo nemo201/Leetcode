@@ -15,12 +15,25 @@ class Solution {
         if (list2 == null)
             return list1;
         
-        if (list1.val < list2.val) {
-            list1.next = mergeTwoLists(list1.next, list2);
-            return list1;
-        } else {
-            list2.next = mergeTwoLists(list2.next, list1);
-            return list2;
+        ListNode dummy = new ListNode(0);
+        ListNode head = dummy;
+        
+        ListNode p1 = list1, p2 = list2;
+        while (p1 != null && p2 != null) {
+            if (p1.val < p2.val) {
+                head.next = p1;
+                p1 = p1.next;
+            } else {
+                head.next = p2;
+                p2 = p2.next;
+            }
+            head = head.next;
         }
+        if (p1 == null)
+            head.next = p2;
+        if (p2 == null)
+            head.next = p1;
+        
+        return dummy.next;
     }
 }
