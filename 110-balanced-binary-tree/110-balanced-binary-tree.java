@@ -23,6 +23,7 @@ class Solution {
             return 0;
         int h1 = height(root.left);
         int h2 = height(root.right);
+        
         int diff = Math.abs(h1 - h2);
         
         if (h1 >= 0 && h2 >= 0 && diff < 2)
