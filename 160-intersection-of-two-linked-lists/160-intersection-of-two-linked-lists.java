@@ -37,9 +37,6 @@ public class Solution {
             }
         }
         
-        System.out.println(p1.val);
-        System.out.println(p2.val);
-        
         while (p1 != null && p2 != null) {
             if (p1 == p2)
                 return p1;
