@@ -19,8 +19,9 @@ class Solution {
             return null;
         
         TreeNode left = root.left, right = root.right;
-        root.left = invertTree(right);
         root.right = invertTree(left);
+        root.left = invertTree(right);
+        
         return root;
     }
 }
