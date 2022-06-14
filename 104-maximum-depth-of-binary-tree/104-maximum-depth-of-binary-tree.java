@@ -17,22 +17,9 @@ class Solution {
     public int maxDepth(TreeNode root) {
         if (root == null)
             return 0;
+        int left = maxDepth(root.left) + 1;
+        int right = maxDepth(root.right) + 1;
         
-        int height = 0;
-        
-        Queue<TreeNode> q = new LinkedList<>();
-        q.offer(root);
-        while (!q.isEmpty()) {
-            height++;
-            int size = q.size();
-            for (int i = 0; i < size; i++) {
-                TreeNode curr = q.poll();
-                if (curr.left != null)
-                    q.offer(curr.left);
-                if (curr.right != null)
-                    q.offer(curr.right);
-            }
-        }
-        return height;
+        return Math.max(left, right);
     }
 }
