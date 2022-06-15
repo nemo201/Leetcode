@@ -12,16 +12,24 @@
 class Solution {
 public:
     bool isValidBST(TreeNode* root) {
-        return isValid(root, LONG_MIN, LONG_MAX);
-    }
-    
-    bool isValid (TreeNode* root, long min, long max) {
-        if (root == NULL)
+        if (!root)
             return true;
+        stack<TreeNode*> stk;
+        TreeNode* pre = NULL;
         
-        if (root->val >= max || root->val <= min)
-            return false;
-        
-        return isValid(root->left, min, root->val) && isValid(root->right, root->val, max);
+        while (root || !stk.empty()) {
+            while (root) {
+                stk.push(root);
+                root = root->left;
+            }
+            root = stk.top();
+            stk.pop();
+            
+            if (pre && pre->val >= root->val)
+                return false;
+            pre = root;
+            root = root->right;
+        }
+        return true;
     }
 };
