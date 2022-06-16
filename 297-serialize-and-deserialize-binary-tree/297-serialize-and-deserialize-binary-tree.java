@@ -24,13 +24,13 @@ public class Codec {
         nodesLeft.addAll(Arrays.asList(data.split(",")));
         return deserializeHelper(nodesLeft);
     }
-    private TreeNode deserializeHelper(Queue<String> nodesRemaining) {
-        String current = nodesRemaining.poll();
-        if (current.equals("X")) return null;
-        TreeNode newNode = new TreeNode(Integer.valueOf(current));
-        newNode.left = deserializeHelper(nodesRemaining);
-        newNode.right = deserializeHelper(nodesRemaining);
-        return newNode;
+    private TreeNode deserializeHelper(Queue<String> queue) {
+        String s = queue.poll();
+        if (s.equals("X")) return null;
+        TreeNode root = new TreeNode(Integer.valueOf(s));
+        root.left = deserializeHelper(queue);
+        root.right = deserializeHelper(queue);
+        return root;
     }
 }
 
