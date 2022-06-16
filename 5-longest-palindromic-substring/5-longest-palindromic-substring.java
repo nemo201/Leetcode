@@ -4,23 +4,23 @@ class Solution {
             return "";
         int start = 0, end = 0;
         for (int i = 0; i < s.length(); i++) {
-            int l1 = expand(s, i, i);
-            int l2 = expand(s, i, i + 1);
-            int l = Math.max(l1, l2);
-            if (l > end - start) {
-                start = i - (l - 1) / 2;
-                end = i + l/2;
+            int len1 = exp(s, i, i);
+            int len2 = exp(s, i, i + 1);
+            int len = Math.max(len1, len2);
+            if (len > end - start) {
+                start = i - (len - 1) / 2;
+                end = i + len / 2;
             }
         }
         return s.substring(start, end + 1);
     }
     
-    private int expand(String s, int left, int right) {
-        int l = left, r = right;
-        while (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)) {
-            l--;
-            r++;
+    private int exp(String s, int left, int right) {
+        int L = left, R = right;
+        while (L >= 0 && R < s.length() && s.charAt(L) == s.charAt(R)) {
+            L--;
+            R++;
         }
-        return r - l - 1;
+        return R - L - 1;
     }
 }
