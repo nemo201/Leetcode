@@ -1,25 +1,19 @@
 class Solution {
-    Set<List<Integer>> set = new HashSet<>();
-    int n, k;
-    
     public List<List<Integer>> subsetsWithDup(int[] nums) {
-        n = nums.length;
         Arrays.sort(nums);
-        for (k = 0; k < n + 1; k++) {
-            backTrack(0, new ArrayList(), nums);
-        }
-        return new ArrayList(set);
+        List<List<Integer>> list = new ArrayList<>();
+        findSub(0, nums, list, new ArrayList());
+        return list;
     }
     
-    public void backTrack(int index, List<Integer> ds, int[] nums) {
-        if (index == k) {
-            set.add(new ArrayList(ds));
-            return;
-        }
-        
-        for (int i = index; i < n; i++) {
+    public void findSub(int index, int[] nums, List<List<Integer>> ans, List<Integer> ds) {
+        ans.add(new ArrayList(ds));
+        for (int i = index; i < nums.length; i++) {
+            if (i != index && nums[i] == nums[i - 1])
+                continue;
+            
             ds.add(nums[i]);
-            backTrack(i + 1, ds, nums);
+            findSub(i + 1, nums, ans, ds);
             ds.remove(ds.size() - 1);
         }
     }
