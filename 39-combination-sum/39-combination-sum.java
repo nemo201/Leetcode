@@ -8,7 +8,7 @@ class Solution {
     public void findComb(int index, int[] arr, int target, List<List<Integer>> ans, List<Integer> ds) {
         if (index == arr.length) {
             if (target == 0)
-                ans.add(new ArrayList<>(ds));
+                ans.add(new ArrayList(ds));
             return;
         }
         
