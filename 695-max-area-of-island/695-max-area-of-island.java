@@ -3,15 +3,15 @@ class Solution {
         if (grid.length == 0 || grid == null)
             return 0;
         
-        int ans = 0;
+        int maxArea = 0;
+        
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
-                if (grid[i][j] == 1) {
-                    ans = Math.max(ans, dfs(i, j, grid));
-                }
+                if (grid[i][j] == 1)
+                    maxArea= Math.max(maxArea, dfs(i, j, grid));
             }
         }
-        return ans;
+        return maxArea;
     }
     
     public int dfs(int r, int c, int[][] grid) {
@@ -19,6 +19,7 @@ class Solution {
             return 0;
         
         grid[r][c] = 0;
+        
         return 1 + dfs(r + 1, c, grid) + dfs(r - 1, c, grid) + dfs(r, c + 1, grid) + dfs(r, c - 1, grid);
     }
 }
