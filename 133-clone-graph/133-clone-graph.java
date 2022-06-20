@@ -25,7 +25,7 @@ class Solution {
         if (node == null)
             return node;
         
-        return dfs (node);
+        return dfs(node);
     }
     
     public Node dfs(Node node) {
@@ -35,8 +35,8 @@ class Solution {
         Node copy = new Node(node.val);
         oldToNew.put(node, copy);
         
-        for (Node nei : node.neighbors)
-            copy.neighbors.add(dfs(nei));
+        for (Node n : node.neighbors)
+            copy.neighbors.add(dfs(n));
         
         return copy;
     }
