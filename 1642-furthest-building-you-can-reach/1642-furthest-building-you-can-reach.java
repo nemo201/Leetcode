@@ -1,5 +1,5 @@
 class Solution {
-        public int furthestBuilding(int[] A, int bricks, int ladders) {
+    public int furthestBuilding(int[] A, int bricks, int ladders) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
         for (int i = 0; i < A.length - 1; i++) {
             int d = A[i + 1] - A[i];
