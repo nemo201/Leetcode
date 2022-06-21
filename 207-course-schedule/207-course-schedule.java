@@ -17,11 +17,10 @@ class Solution {
             if (!dfs(i, preMap, visitSet))
                 return false;
         }
-        
         return true;
     }
     
-    public boolean dfs(int course,  Map<Integer, List<Integer>> preMap, Set<Integer> visitSet) {
+    public boolean dfs(int course, Map<Integer, List<Integer>> preMap, Set<Integer> visitSet) {
         if (visitSet.contains(course))
             return false;
         
@@ -29,10 +28,11 @@ class Solution {
             return true;
         
         visitSet.add(course);
-        for (int pre : preMap.get(course)) {
+        
+        for (int pre : preMap.get(course))
             if (!dfs(pre, preMap, visitSet))
                 return false;
-        }
+        
         visitSet.remove(course);
         preMap.put(course, new ArrayList());
         return true;
