@@ -1,34 +1,33 @@
 class Solution {
-    Set<Integer> seen = new HashSet();
-    int MAX_EDGE_VAL = 1000;
-    
     public int[] findRedundantConnection(int[][] edges) {
-        List<Integer>[] graph = new ArrayList[MAX_EDGE_VAL + 1];
-        for (int i = 0; i <= MAX_EDGE_VAL; i++) {
-            graph[i] = new ArrayList<>();
-        }
+        int n = edges.length;
+        int[] parents = new int[n + 1];
+        Arrays.fill(parents, -1);
         
         for (int[] edge : edges) {
-            seen.clear();
-            if (!graph[edge[0]].isEmpty() && !graph[edge[1]].isEmpty() && dfs(graph, edge[0], edge[1]))
-                return edge;
+            int a = edge[0], b = edge[1];
             
-            graph[edge[0]].add(edge[1]);
-            graph[edge[1]].add(edge[0]);
+            int parentA = find(parents, a);
+            int parentB = find(parents, b);
+            
+            if (parentA == parentB)
+                return edge;
+            else
+                union(parents, parentA, parentB);
         }
-        throw new AssertionError();
+        return new int[]{-1, -1};
     }
     
-    public boolean dfs(List<Integer>[] graph, int source, int target) {
-        if (!seen.contains(source)) {
-            seen.add(source);
-            if (source == target)
-                return true;
-            for (int nei : graph[source]) {
-                if (dfs(graph, nei, target))
-                    return true;
-            }
-        }
-        return false;
+    private int find(int[] parents, int v) {
+        if (parents[v] < 0)
+            return v;
+        return find(parents, parents[v]);
+    }
+    
+    private void union(int[] parents, int a, int b) {
+        if (parents[a] > parents[b])
+            union(parents, b, a);
+        
+        parents[b] = a;
     }
 }
