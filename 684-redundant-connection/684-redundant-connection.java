@@ -5,8 +5,8 @@ class Solution {
         Arrays.fill(parents, -1);
         
         for (int[] edge : edges) {
-            int a = edge[0], b = edge[1];
-            
+            int a = edge[0];
+            int b = edge[1];
             int parentA = find(parents, a);
             int parentB = find(parents, b);
             
@@ -25,9 +25,9 @@ class Solution {
     }
     
     private void union(int[] parents, int a, int b) {
-        if (parents[a] > parents[b])
+        if (parents[a] > parents[b]) {
             union(parents, b, a);
-        
+        }
         parents[b] = a;
     }
 }
