@@ -8,6 +8,7 @@ class Solution {
     
     public void findSub(int index, int[] nums, List<List<Integer>> ans, List<Integer> ds) {
         ans.add(new ArrayList(ds));
+        
         for (int i = index; i < nums.length; i++) {
             if (i != index && nums[i] == nums[i - 1])
                 continue;
