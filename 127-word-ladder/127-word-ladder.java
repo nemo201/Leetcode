@@ -7,7 +7,8 @@ class Solution {
         queue.add(beginWord);
         
         Set<String> visited = new HashSet<>();
-        queue.add(beginWord);
+        visited.add(beginWord);
+        
         
         int changes = 1;
         
