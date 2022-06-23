@@ -1,46 +1,37 @@
 class Solution {
     public int minCostConnectPoints(int[][] points) {
         int n = points.length;
+        
+        PriorityQueue<Pair<Integer, Integer>> heap = new PriorityQueue<>((a, b) -> (a.getKey() - b.getKey()));
+        
+        boolean[] inMTS = new boolean[n];
+        
+        heap.add(new Pair(0, 0));
         int mstCost = 0;
         int edgesUsed = 0;
         
-        // Track nodes which are visited.
-        boolean[] inMST = new boolean[n];
-        
-        int[] minDist = new int[n];
-        minDist[0] = 0;
-        
-        for (int i = 1; i < n; ++i) {
-            minDist[i] = Integer.MAX_VALUE;
-        }
-        
         while (edgesUsed < n) {
-            int currMinEdge = Integer.MAX_VALUE;
-            int currNode = -1;
+            Pair<Integer, Integer> topElement = heap.poll();
             
-            // Pick least weight node which is not in MST.
-            for (int node = 0; node < n; ++node) {
-                if (!inMST[node] && currMinEdge > minDist[node]) {
-                    currMinEdge = minDist[node];
-                    currNode = node;
-                }
-            }
+            int weight = topElement.getKey();
+            int curNode = topElement.getValue();
             
-            mstCost += currMinEdge;
+            if (inMTS[curNode])
+                continue;
+            
+            inMTS[curNode] = true;
+            mstCost += weight;
             edgesUsed++;
-            inMST[currNode] = true;
             
-            // Update adjacent nodes of current node.
-            for (int nextNode = 0; nextNode < n; ++nextNode) {
-                int weight = Math.abs(points[currNode][0] - points[nextNode][0]) + 
-                             Math.abs(points[currNode][1] - points[nextNode][1]);
-                
-                if (!inMST[nextNode] && minDist[nextNode] > weight) {
-                    minDist[nextNode] = weight;
+            for (int nextNode = 0; nextNode < n; nextNode++) {
+                if(!inMTS[nextNode]) {
+                    int nextWeight = Math.abs(points[curNode][0] - points[nextNode][0]) + 
+                                     Math.abs(points[curNode][1] - points[nextNode][1]);
+                    
+                    heap.add(new Pair(nextWeight, nextNode));
                 }
             }
         }
-        
         return mstCost;
     }
 }
