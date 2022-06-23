@@ -1,37 +1,32 @@
 class Solution {
     public int minCostConnectPoints(int[][] points) {
         int n = points.length;
+        Queue<Pair<Integer, Integer>> heap = new PriorityQueue<>((a, b) -> (a.getKey() - b.getKey()));
         
-        PriorityQueue<Pair<Integer, Integer>> heap = new PriorityQueue<>((a, b) -> (a.getKey() - b.getKey()));
-        
-        boolean[] inMTS = new boolean[n];
-        
+        boolean[] visited = new boolean[n];
+        int cost = 0;
+        int edges = 0;
         heap.add(new Pair(0, 0));
-        int mstCost = 0;
-        int edgesUsed = 0;
         
-        while (edgesUsed < n) {
-            Pair<Integer, Integer> topElement = heap.poll();
+        while (edges < n) {
+            Pair<Integer, Integer> top = heap.poll();
+            int weight = top.getKey();
+            int curNode = top.getValue();
             
-            int weight = topElement.getKey();
-            int curNode = topElement.getValue();
-            
-            if (inMTS[curNode])
+            if (visited[curNode])
                 continue;
-            
-            inMTS[curNode] = true;
-            mstCost += weight;
-            edgesUsed++;
+            visited[curNode] = true;
+            cost += weight;
+            edges++;
             
             for (int nextNode = 0; nextNode < n; nextNode++) {
-                if(!inMTS[nextNode]) {
-                    int nextWeight = Math.abs(points[curNode][0] - points[nextNode][0]) + 
-                                     Math.abs(points[curNode][1] - points[nextNode][1]);
+                if (!visited[nextNode]) {
+                    int nextWeight = Math.abs(points[curNode][0] - points[nextNode][0]) + Math.abs(points[curNode][1] - points[nextNode][1]);
                     
                     heap.add(new Pair(nextWeight, nextNode));
                 }
             }
         }
-        return mstCost;
+        return cost;
     }
 }
