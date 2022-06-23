@@ -1,51 +1,36 @@
 class Solution {
-    Map<Integer, List<Pair<Integer, Integer>>> adj = new HashMap<>();
-    
-    public void bfs(int[] sigRec, int sNode) {
-        Queue<Integer> q = new LinkedList<>();
-        q.add(sNode);
+    public int networkDelayTime(int[][] times, int n, int k) {
+        Map<Integer, Map<Integer, Integer>> map = new HashMap<>();
+        for (int[] time : times) {
+            map.putIfAbsent(time[0], new HashMap());
+            map.get(time[0]).put(time[1], time[2]);
+        }
         
-        sigRec[sNode] = 0;
+        Queue<int[]> pq = new PriorityQueue<>((a, b) -> (a[0] - b[0]));
         
-        while (!q.isEmpty()) {
-            int curNode = q.remove();
+        pq.add(new int[]{0, k});
+        
+        boolean[] visited = new boolean[n + 1];
+        int res = 0;
+        
+        while(!pq.isEmpty()) {
+            int[] cur = pq.remove();
+            int curNode = cur[1];
+            int curDist = cur[0];
             
-            if (!adj.containsKey(curNode))
+            if (visited[curNode])
                 continue;
             
-            for (Pair<Integer, Integer> edge : adj.get(curNode)) {
-                int time = edge.getKey();
-                int neighborNode = edge.getValue();
-                
-                int arrivalTime = sigRec[curNode] + time;
-                if (sigRec[neighborNode] > arrivalTime) {
-                    sigRec[neighborNode] = arrivalTime;
-                    q.add(neighborNode);
+            visited[curNode] = true;
+            res = curDist;
+            n--;
+            
+            if (map.containsKey(curNode)) {
+                for (int next : map.get(curNode).keySet()) {
+                    pq.add(new int[]{curDist + map.get(curNode).get(next), next});
                 }
             }
         }
-    }
-    
-    public int networkDelayTime(int[][] times, int n, int k) {
-        for (int[] time : times) {
-            int source = time[0];
-            int dest = time[1];
-            int travelTime = time[2];
-            
-            adj.putIfAbsent(source, new ArrayList<>());
-            adj.get(source).add(new Pair(travelTime, dest));
-        }
-        
-        int []sigRec = new int[n + 1];
-        Arrays.fill(sigRec, Integer.MAX_VALUE);
-        
-        bfs(sigRec, k);
-        
-        int ans = Integer.MIN_VALUE;
-        for (int i = 1; i <= n; i++) {
-            ans = Math.max(ans, sigRec[i]);
-        }
-        
-        return ans == Integer.MAX_VALUE ? -1 : ans;
+        return n == 0 ? res : -1;
     }
 }
