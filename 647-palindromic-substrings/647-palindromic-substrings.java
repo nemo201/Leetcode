@@ -2,7 +2,7 @@ class Solution {
     int count = 1;
     public int countSubstrings(String s) {
         
-        if (s.length () == 0)
+        if (s.length() == 0)
             return 0;
         
         for (int i = 0; i < s.length() - 1; i++) {
