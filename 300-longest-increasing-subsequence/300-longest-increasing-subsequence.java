@@ -1,20 +1,20 @@
 class Solution {
-    public int lengthOfLIS(int[] nums) {
-        int[] dp = new int[nums.length];
-        Arrays.fill(dp, 1);
+public:
+    int lengthOfLIS(vector<int>& nums) {
+        vector<int> dp(nums.size(), 1);
         
-        int max = 1;
+        int maxx = 1;
         
-        for (int j = 1; j < nums.length; j++) {
+        for (int j = 0; j < nums.size(); j++) {
             int i = 0;
             while (i < j) {
                 if (nums[i] < nums[j]) {
-                    dp[j] = Math.max(1 + dp[i], dp[j]);
+                    dp[j] = max(1 + dp[i], dp[j]);
                 }
                 i++;
             }
-            max = Math.max(max, dp[j]);
+            maxx = max(maxx, dp[j]);
         }
-        return max;
+        return maxx;
     }
-}
+};
