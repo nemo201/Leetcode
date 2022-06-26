@@ -1,9 +1,10 @@
 class Solution {
     public int lengthOfLIS(int[] nums) {
         int[] dp = new int[nums.length];
-        
         Arrays.fill(dp, 1);
-        int maxSoFar = 1;
+        
+        int max = 1;
+        
         for (int j = 1; j < nums.length; j++) {
             int i = 0;
             while (i < j) {
@@ -12,8 +13,8 @@ class Solution {
                 }
                 i++;
             }
-            maxSoFar = Math.max(maxSoFar, dp[j]);
+            max = Math.max(max, dp[j]);
         }
-        return maxSoFar;
+        return max;
     }
 }
