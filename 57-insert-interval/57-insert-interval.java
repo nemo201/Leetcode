@@ -4,7 +4,6 @@ class Solution {
         int i = 0;
         
         while (i < intervals.length && intervals[i][1] < newInterval[0]) {
-            System.out.println(intervals[i]);
             ans.add(intervals[i]);
             i++;
         }
