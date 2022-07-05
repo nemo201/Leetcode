@@ -2,15 +2,17 @@ class Solution {
     public String smallestStringWithSwaps(String s, List<List<Integer>> pairs) {
         UnionFind uf = new UnionFind(s.length());
         
+        //creating subsets
         for (List<Integer> edge : pairs) {
             int source = edge.get(0);
             int dest = edge.get(1);
             
             uf.union(source, dest);
         }
-        
+        //map to store list of vertices with common root
         Map<Integer, List<Integer>> dic = new HashMap<>();
         
+        //storing vertices with common root by find() function
         for (int v = 0; v < s.length(); v++) {
             int root = uf.find(v);
             dic.putIfAbsent(root, new ArrayList<>());
@@ -19,13 +21,16 @@ class Solution {
         
         char[] smolStr = new char[s.length()];
         
+        //itterating through the map 
         for (List<Integer> list : dic.values()) {
             List<Character> characters = new ArrayList();
+            //sort all the vertices with common edge
             for (int index : list) {
                 characters.add(s.charAt(index));
             }
             Collections.sort(characters);
             
+            //store the characters
             for (int index = 0; index < list.size(); index++) {
                 smolStr[list.get(index)] = characters.get(index);
             }
@@ -33,7 +38,7 @@ class Solution {
         
         return new String(smolStr);
     }
-    
+    //unionfind
     class UnionFind {
         private int[] root;
         private int[] rank;
