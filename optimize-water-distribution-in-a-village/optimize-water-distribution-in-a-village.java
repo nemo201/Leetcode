@@ -13,7 +13,7 @@ class Solution {
         
         Collections.sort(oEdge, (a, b) -> (a[2] - b[2]));
         int totalCost = 0;
-        UnionFind uf = new UnionFind(n);
+        UnionFind uf  = new UnionFind(n);
         
         for (int[] edge : oEdge) {
             int h1 = edge[0];
@@ -23,7 +23,6 @@ class Solution {
             if (uf.union(h1, h2))
                 totalCost += cost;
         }
-        
         return totalCost;
     }
     
