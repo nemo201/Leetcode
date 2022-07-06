@@ -4,6 +4,11 @@ class Solution {
         if (n <= 1)
             return n;
         
-        return fib(n - 1) + fib(n - 2);
+        int[] cache = new int[n + 1];
+        cache[1] = 1;
+        for (int i = 2; i < n + 1; i++)
+            cache[i] = cache[i - 1] + cache[i - 2];
+        
+        return cache[n];
     }
 }
