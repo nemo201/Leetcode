@@ -36,7 +36,6 @@ class Solution {
         Stack<Integer> stack = new Stack<>();
         Set<Integer> visited = new HashSet();
         stack.push(source);
-        visited.add(source);
         
         while (!stack.isEmpty()) {
             int node = stack.pop();
@@ -44,11 +43,13 @@ class Solution {
             if (node == destination)
                 return true;
             
+            if (visited.contains(node))
+                continue;
+            
+            visited.add(node);
+            
             for (int nei : adj.get(node)) {
-                if (!visited.contains(nei)) {
-                    visited.add(nei);
-                    stack.push(nei);
-                }
+                stack.push(nei);
             }
         }
         return false;
