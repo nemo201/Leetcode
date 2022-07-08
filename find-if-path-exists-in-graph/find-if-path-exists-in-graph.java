@@ -11,22 +11,23 @@ class Solution {
             adj.get(edge[1]).add(edge[0]);
         }
         
-        Stack<Integer> stack = new Stack();
-        stack.push(source);
-        Set<Integer> set = new HashSet();
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(source);
+        Set<Integer> set = new HashSet<>();
+        set.add(source);
         
-        while(!stack.isEmpty()) {
-            int node = stack.pop();
+        while(!q.isEmpty()) {
+            int node = q.poll();
             
             if (node == destination)
                 return true;
             
-            if (set.contains(node))
-                continue;
-            set.add(node);
-            
-            for (int nei : adj.get(node)){
-                stack.push(nei);
+            for (int nei : adj.get(node)) {
+                
+                if (!set.contains(nei)) {
+                    set.add(nei);
+                    q.offer(nei);
+                }
             }
         }
         return false;
