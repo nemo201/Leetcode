@@ -12,6 +12,7 @@ class Solution {
             map.get(str.get(0)).add(str.get(1));
         }
         
+        //someone pls explain
         for (Map.Entry<String, List<String>> entry : this.map.entrySet()) {
             Collections.sort(entry.getValue());
             this.visited.put(entry.getKey(), new boolean[entry.getValue().size()]);
@@ -24,6 +25,7 @@ class Solution {
         bt("JFK", route);
         return ans;
     }
+    
     
     private boolean bt(String origin, List<String> route) {
         if (route.size() == flights + 1) {
