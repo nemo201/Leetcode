@@ -1,40 +1,56 @@
 class Solution {
-    boolean found;
     public boolean validPath(int n, int[][] edges, int source, int destination) {
-        found = false;
-        
-        if (source == destination)
-            return true;
-        
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        boolean[] visited = new boolean[n];
+        Map<Integer, List<Integer>> adj = new HashMap<>();
         
         for (int i = 0; i < n; i++) {
-            graph.put(i, new ArrayList());
+            adj.put(i, new ArrayList());
         }
         
         for (int[] edge : edges) {
-            graph.get(edge[0]).add(edge[1]);
-            graph.get(edge[1]).add(edge[0]);
+            adj.get(edge[0]).add(edge[1]);
+            adj.get(edge[1]).add(edge[0]);
         }
+//         BFS
+//         Queue<Integer> q = new LinkedList<>();
+//         q.offer(source);
+//         Set<Integer> set = new HashSet<>();
+//         set.add(source);
         
-        dfs(graph, visited, source, destination);
+//         while(!q.isEmpty()) {
+//             int node = q.poll();
+            
+//             if (node == destination)
+//                 return true;
+            
+//             for (int nei : adj.get(node)) {
+                
+//                 if (!set.contains(nei)) {
+//                     set.add(nei);
+//                     q.offer(nei);
+//                 }
+//             }
+//         }
+//         return false;
         
-        return found;
-    }
-    
-    private void dfs(Map<Integer,List<Integer>> graph,boolean[] visited, int source, int destination) {
-        if (visited[source] || found)
-            return;
+//         DFS
+        Stack<Integer> stack = new Stack<>();
+        Set<Integer> visited = new HashSet();
+        stack.push(source);
+        visited.add(source);
         
-        visited[source] = true;
-        for (int nei : graph.get(source)) {
-            if (nei == destination) {
-                found = true;
-                break;
+        while (!stack.isEmpty()) {
+            int node = stack.pop();
+            
+            if (node == destination)
+                return true;
+            
+            for (int nei : adj.get(node)) {
+                if (!visited.contains(nei)) {
+                    visited.add(nei);
+                    stack.push(nei);
+                }
             }
-            if (!visited[nei])
-                dfs(graph, visited, nei, destination);
         }
+        return false;
     }
 }
