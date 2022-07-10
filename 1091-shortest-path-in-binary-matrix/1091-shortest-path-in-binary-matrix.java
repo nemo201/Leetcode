@@ -1,39 +1,44 @@
 class Solution {
-    private int dir[][] = new int[][]{{0,1},{0,-1},{1,0},{-1,0},{1,-1},{-1,1},{-1,-1},{1,1}};
+    
+    private static final int[][] directions = new int[][]{{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
     
     public int shortestPathBinaryMatrix(int[][] grid) {
-        int m = grid.length;
-        int n = grid[0].length;
-        
-        if (grid[0][0] == 1 || grid[m-1][n-1] == 1)
+        if (grid[0][0] != 0 || grid[grid.length - 1][grid[0].length - 1] != 0)
             return -1;
         
-        boolean [][]visited = new boolean[m][n];
-        visited[0][0] = true;
         Queue<int[]> q = new LinkedList<>();
-        q.add(new int[]{0, 0});
+        grid[0][0] = 1;
+        q.offer(new int[]{0, 0});
         
-        int ans = 0;
-        
-        while(!q.isEmpty()) {
-            int size = q.size();
-            for (int i = 0; i < size; i++) {
-                int []pop = q.poll();
-                if (pop[0] == m - 1 && pop[1] == n - 1)
-                    return ans + 1;
-                
-                for (int k = 0; k < 8; k++) {
-                    int nextX = dir[k][0] + pop[0];
-                    int nextY = dir[k][1] + pop[1];
-                    
-                    if (nextX >= 0 && nextX < m && nextY >= 0 && nextY < n && !visited[nextX][nextY] && grid[nextX][nextY] == 0){
-                        q.add(new int[]{nextX, nextY});
-                        visited[nextX][nextY] = true;
-                    }
-                }
+        while (!q.isEmpty()) {
+            int[] cell = q.poll();
+            int row = cell[0];
+            int col = cell[1];
+            int distance = grid[row][col];
+            if (row == grid.length - 1 && col == grid[0].length - 1) {
+                return distance;
             }
-            ans++;
+            for (int[] neighbour : getNeighbours(row, col, grid)) {
+                int nRow = neighbour[0];
+                int nCol = neighbour[1];
+                q.add(new int[]{nRow, nCol});
+                grid[nRow][nCol] = distance + 1;
+            }
         }
         return -1;
+    }
+    
+    private List<int[]> getNeighbours(int row, int col, int[][] grid) {
+        List<int[]> neighbour = new ArrayList<>();
+        for (int i = 0; i < directions.length; i++) {
+            int newRow = row + directions[i][0];
+            int newCol = col + directions[i][1];
+            
+            if (newRow < 0 || newRow >= grid.length || newCol < 0 || newCol >= grid[0].length || grid[newRow][newCol] != 0)
+                continue;
+            
+            neighbour.add(new int[]{newRow, newCol});
+        }
+        return neighbour;
     }
 }
