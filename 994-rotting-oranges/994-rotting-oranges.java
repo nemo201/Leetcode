@@ -1,65 +1,103 @@
+// BFS O(1) space
 class Solution {
-    private static final int[][] dir = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
     public int orangesRotting(int[][] grid) {
-        Queue<int[]> q = new LinkedList<>();
-        
-        int fresh = 0;
         int ROWS = grid.length, COLS = grid[0].length;
+        int timestamp = 2;
+        while (helper(timestamp, grid, ROWS, COLS))
+            timestamp++;
         
-        for (int r = 0; r < ROWS; r++) {
-            for (int c = 0; c < COLS; c++) {
-                if (grid[r][c] == 2)
-                    q.offer(new int[]{r, c});
-                else if (grid[r][c] == 1)
-                    fresh++;
+        for (int[] row : grid) {
+            for (int cell : row) {
+                if (cell == 1)
+                    return -1;
             }
         }
-        
-        q.offer(new int[]{-1, -1});
-        
-        int min = -1;
-        
-        while (!q.isEmpty()) {
-            int[] cell = q.poll();
-            int row = cell[0];
-            int col = cell[1];
-            
-            if (row == -1) {
-                min++;
-                
-                if (!q.isEmpty())
-                    q.offer(new int[]{-1, -1});
-            } else {
-                for (int[] nei : getNei(row, col, grid)) {
-                    int nRow = nei[0];
-                    int nCol = nei[1];
-                    
-                    if (grid[nRow][nCol] == 1) {
-                        grid[nRow][nCol] = 2;
-                        fresh--;
-                        q.offer(new int[]{nRow, nCol});
+        return timestamp - 2;
+    }
+    
+    private boolean helper(int timestamp, int[][] grid, int ROWS, int COLS) {
+        int[][] directions = { {-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+        boolean toBeCont = false;
+        for (int row = 0; row < ROWS; row++) {
+            for (int col = 0; col < COLS; col++) {
+                if(grid[row][col] == timestamp) {
+                    for (int[] d : directions) {
+                        int nRow = row + d[0];
+                        int nCol = col + d[1];
+                        
+                        if (nRow >= 0 && nRow < ROWS && nCol >= 0 && nCol < COLS)
+                            if (grid[nRow][nCol] == 1) {
+                                grid[nRow][nCol] = timestamp + 1;
+                                toBeCont = true;
+                            }
                     }
                 }
             }
         }
-        return fresh == 0 ? min : - 1;
-    }
-    
-    private List<int[]> getNei(int row, int col, int[][] grid) {
-        List<int[]> nei = new ArrayList<>();
-        
-        for (int i = 0; i < dir.length; i++) {
-            int newR = row + dir[i][0];
-            int newC = col + dir[i][1];
-            
-            if (newR < 0 || newR >= grid.length || newC < 0 || newC >= grid[0].length)
-                continue;
-            
-            nei.add(new int[]{newR, newC});
-        }
-        return nei;
+        return toBeCont;
     }
 }
+// BFS O(n) space
+// class Solution {
+//     private static final int[][] dir = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+//     public int orangesRotting(int[][] grid) {
+//         Queue<int[]> q = new LinkedList<>();
+//         int ROWS = grid.length, COLS = grid[0].length;
+//         int fresh = 0;
+        
+//         for (int r = 0; r < ROWS; r++) {
+//             for (int c = 0; c < COLS; c++) {
+//                 if (grid[r][c] == 2)
+//                     q.offer(new int[]{r, c});
+//                 if (grid[r][c] == 1)
+//                     fresh++;
+//             }
+//         }
+//         //level end
+//         q.offer(new int[]{-1, -1});
+//         int mins = -1;
+        
+//         while (!q.isEmpty()) {
+//             int[] cell = q.poll();
+//             int row = cell[0];
+//             int col = cell[1];
+            
+//             if (row == -1){
+//                 mins++;
+                
+//                 if (!q.isEmpty())
+//                     q.offer(new int[]{-1, -1});
+//             } else {
+//                 for (int[] nei : getNei(row, col, grid)) {
+//                     int nRow = nei[0];
+//                     int nCol = nei[1];
+                    
+//                     if (grid[nRow][nCol] == 1){
+//                         grid[nRow][nCol] = 2;
+//                         fresh--;
+//                         q.offer(new int[]{nRow, nCol});
+//                     }
+//                 }
+//             } 
+//         }
+//         return fresh == 0 ? mins : -1;
+//     }
+    
+//     private List<int[]> getNei(int row, int col, int[][] grid) {
+//         List<int[]> list = new ArrayList<>();
+        
+//         for (int i = 0; i < dir.length; i++) {
+//             int newRow = row + dir[i][0];
+//             int newCol = col + dir[i][1];
+            
+//             if (newRow < 0 || newRow >= grid.length || newCol < 0 || newCol >= grid[0].length)
+//                 continue;
+            
+//             list.add(new int[]{newRow, newCol});
+//         }
+//         return list;
+//     }
+// }
 
 // DFS
 // class Solution {
