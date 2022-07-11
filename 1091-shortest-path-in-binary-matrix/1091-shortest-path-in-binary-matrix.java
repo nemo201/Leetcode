@@ -1,34 +1,68 @@
 class Solution {
     private static final int[][] dir = new int[][]{{-1, -1}, {-1, 0}, {0, -1}, {-1, 1}, {0, 1}, {1, 1}, {1, 0}, {1, -1}};
     
+//     public int shortestPathBinaryMatrix(int[][] grid) {
+//         if (grid == null || grid.length == 0 || grid[0][0] != 0 || grid[grid.length - 1][grid[0].length - 1] != 0)
+//             return -1;
+        
+//         Queue<int[]> q = new LinkedList<>();
+//         q.offer(new int[]{0, 0, 1});
+//         boolean[][] visited = new boolean[grid.length][grid[0].length];
+//         visited[0][0] = true;
+        
+//         while(!q.isEmpty()) {
+//             int[] cell = q.poll();
+//             int row = cell[0];
+//             int col = cell[1];
+//             int dist = cell[2];
+            
+//             if (row == grid.length - 1 && col == grid[0].length - 1)
+//                 return dist;
+            
+//             for (int[] nei : getNei(row, col, grid)) {
+//                 int nRow = nei[0];
+//                 int nCol = nei[1];
+                
+//                 if (visited[nRow][nCol])
+//                     continue;
+                
+//                 visited[nRow][nCol] = true;
+//                 q.offer(new int[]{nRow, nCol, dist + 1});
+//             }
+//         }
+//         return -1;
+//     }
+    
     public int shortestPathBinaryMatrix(int[][] grid) {
         if (grid == null || grid.length == 0 || grid[0][0] != 0 || grid[grid.length - 1][grid[0].length - 1] != 0)
             return -1;
         
         Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{0, 0, 1});
+        q.offer(new int[]{0, 0});
         boolean[][] visited = new boolean[grid.length][grid[0].length];
         visited[0][0] = true;
+        int curDist = 1;
         
-        while(!q.isEmpty()) {
-            int[] cell = q.poll();
-            int row = cell[0];
-            int col = cell[1];
-            int dist = cell[2];
+        while (!q.isEmpty()) {
+            int nodesAtCurDist = q.size();
+            for (int i = 0; i < nodesAtCurDist; i++) {
+                int[] cell = q.poll();
+                int row = cell[0];
+                int col = cell[1];
             
-            if (row == grid.length - 1 && col == grid[0].length - 1)
-                return dist;
+                if (row == grid.length - 1 && col == grid[0].length - 1)
+                    return curDist;
             
-            for (int[] nei : getNei(row, col, grid)) {
-                int nRow = nei[0];
-                int nCol = nei[1];
-                
-                if (visited[nRow][nCol])
-                    continue;
-                
-                visited[nRow][nCol] = true;
-                q.offer(new int[]{nRow, nCol, dist + 1});
+                for (int[] nei : getNei(row, col, grid)) {
+                    int nRow = nei[0];
+                    int nCol = nei[1];
+                    if (visited[nRow][nCol])
+                        continue;
+                    visited[nRow][nCol] = true;
+                    q.offer(new int[]{nRow, nCol});
+                }
             }
+            curDist++;
         }
         return -1;
     }
