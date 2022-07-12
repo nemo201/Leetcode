@@ -1,63 +1,35 @@
 class Solution {
-    private static final int[][] dir = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-    
     public int orangesRotting(int[][] grid) {
-        if (grid == null || grid.length == 0)
+        if (grid.length == 0 || grid == null)
             return 0;
         
-        int rows = grid.length, cols = grid[0].length;
-        
-        Queue<int[]> q = new LinkedList<>();
-        int fresh = 0;
-        
-        for (int r = 0; r < rows; r++) {
-            for (int c = 0; c < cols; c++) {
-                if (grid[r][c] == 2)
-                    q.offer(new int[]{r, c});
-                if (grid[r][c] == 1)
-                    fresh++;
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[0].length; j++) {
+                if (grid[i][j] == 2)
+                    dfs(i, j, 2, grid);
             }
         }
-        q.offer(new int[]{-1, -1});
-        int mins = -1;
         
-        while (!q.isEmpty()) {
-            int[] cell = q.poll();
-            int row = cell[0];
-            int col = cell[1];
-            
-            if (row == -1) {
-                mins++;
-                
-                if(!q.isEmpty())
-                    q.offer(new int[]{-1, -1});
-            } else {
-                for (int[] nei : getNei(row, col, grid)) {
-                    int nRow = nei[0];
-                    int nCol = nei[1];
-                    
-                    if (grid[nRow][nCol] == 1) {
-                        grid[nRow][nCol] = 2;
-                        fresh--;
-                        q.offer(new int[]{nRow, nCol});
-                    }
-                }
+        int min = 2;
+        
+        for (int[] row : grid) {
+            for (int cell : row) {
+                if (cell == 1)
+                    return -1;
+                min = Math.max(min, cell);
             }
         }
-        return fresh == 0 ? mins : -1;
+        return min - 2;
     }
     
-    private List<int[]> getNei(int row, int col, int[][] grid) {
-        List<int[]> list = new ArrayList<>();
+    public void dfs(int r, int c, int min, int[][] grid) {
+        if (r < 0 || r >= grid.length || c < 0 || c >= grid[0].length || grid[r][c] == 0 || 1 < grid[r][c] && grid[r][c] < min)
+            return;
         
-        for (int i = 0; i < dir.length; i++) {
-            int newR = row + dir[i][0];
-            int newC = col + dir[i][1];
-            
-            if (newR < 0 || newR >= grid.length || newC < 0 || newC >= grid[0].length)
-                continue;
-            list.add(new int[]{newR, newC});
-        }
-        return list;
+        grid[r][c] = min;
+        dfs(r + 1, c, min + 1, grid);
+        dfs(r - 1, c, min + 1, grid);
+        dfs(r, c + 1, min + 1, grid);
+        dfs(r, c - 1, min + 1, grid);
     }
 }
