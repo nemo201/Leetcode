@@ -1,70 +1,96 @@
 class Solution {
-    
-    class UnionFind{
-        int[] root;
-        int[] rank;
-        
+    // Kruskal's Algorithm
+    public int minCostConnectPoints(int[][] points) {
+        if (points == null || points.length == 0) {
+            return 0;
+        }
+        int size = points.length;
+        PriorityQueue<Edge> pq = new PriorityQueue<>((x, y) -> x.cost - y.cost);
+        UnionFind uf = new UnionFind(size);
+
+        for (int i = 0; i < size; i++) {
+            int[] coordinate1 = points[i];
+            for (int j = i+1; j < size; j++) {
+                int[] coordinate2 = points[j];
+                // Calculate the distance between two coordinates.
+                int cost = Math.abs(coordinate1[0] - coordinate2[0]) + 
+                           Math.abs(coordinate1[1] - coordinate2[1]);
+                Edge edge = new Edge(i, j, cost);
+                pq.add(edge);
+            }
+        }
+
+        int result = 0;
+        int count = size - 1;
+        while (!pq.isEmpty() && count > 0) {
+            Edge edge = pq.poll();
+            if (!uf.connected(edge.point1, edge.point2)) {
+                uf.union(edge.point1, edge.point2);
+                result += edge.cost;
+                count--;
+            }
+        }
+        return result;
+    }
+
+    class Edge {
+        int point1;
+        int point2;
+        int cost;
+
+        Edge(int point1, int point2, int cost) {
+            this.point1 = point1;
+            this.point2 = point2;
+            this.cost = cost;
+        }
+    }
+
+    class UnionFind {
+        int root[];
+        int rank[];
+
         public UnionFind(int size) {
             root = new int[size];
             rank = new int[size];
-            
             for (int i = 0; i < size; i++) {
                 root[i] = i;
-                rank[i] = 1;
+                rank[i] = 1; 
             }
         }
-        
+
         public int find(int x) {
-            if (x == root[x])
+            if (x == root[x]) {
                 return x;
+            }
             return root[x] = find(root[x]);
         }
-        
-        public boolean union(int x, int y) {
-            int Rx = find(x);
-            int Ry = find(y);
-            
-            if (Rx == Ry)
-                return false;
-            
-            if (rank[Rx] < rank[Ry])
-                root[Rx] = Ry;
-            else {
-                root[Ry] = Rx;
-                rank[Rx]++;
+
+        public void union(int x, int y) {
+            int rootX = find(x);
+            int rootY = find(y);
+            if (rootX != rootY) {
+                if (rank[rootX] > rank[rootY]) {
+                    root[rootY] = rootX;
+                } else if (rank[rootX] < rank[rootY]) {
+                    root[rootX] = rootY;
+                } else {
+                    root[rootY] = rootX;
+                    rank[rootX] += 1;
+                }
             }
-            return true;
+        }
+
+        public boolean connected(int x, int y) {
+            return find(x) == find(y);
         }
     }
-    
-    public int minCostConnectPoints(int[][] points) {
-        int n = points.length;
-        List<int[]> allEdges = new ArrayList<>();
-        
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                int weight = Math.abs(points[i][0] - points[j][0]) + Math.abs(points[i][1] - points[j][1]);
-                
-                int[] curEdge = {weight, i, j};
-                allEdges.add(curEdge);
-            }
-        }
-        Collections.sort(allEdges, (a, b) -> Integer.compare(a[0], b[0]));
-        
-        UnionFind uf = new UnionFind(n);
-        int cost = 0;
-        int edgesUsed = 0;
-        
-         for (int i = 0; i < allEdges.size() && edgesUsed < n - 1; i++) {
-            int n1 = allEdges.get(i)[1];
-            int n2 = allEdges.get(i)[2];
-            int weight = allEdges.get(i)[0];
-            
-            if (uf.union(n1, n2)){
-                cost += weight;
-                edgesUsed++;
-            }
-        }
-        return cost;
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int[][] points = {{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0}};
+        Solution solution = new Solution();
+        System.out.print("Minimum Cost to Connect Points = "); 
+        System.out.println(solution.minCostConnectPoints(points)); 
     }
 }
