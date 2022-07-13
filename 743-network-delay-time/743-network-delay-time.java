@@ -1,36 +1,35 @@
 class Solution {
     public int networkDelayTime(int[][] times, int n, int k) {
-        Map<Integer, Map<Integer, Integer>> map = new HashMap<>();
+        Map<Integer, Map<Integer, Integer>> adj = new HashMap<>();
+        
         for (int[] time : times) {
-            map.putIfAbsent(time[0], new HashMap());
-            map.get(time[0]).put(time[1], time[2]);
+            adj.putIfAbsent(time[0], new HashMap<>());
+            adj.get(time[0]).put(time[1], time[2]);
         }
         
-        Queue<int[]> pq = new PriorityQueue<>((a, b) -> (a[0] - b[0]));
+        Queue<int[]> minHeap = new PriorityQueue<>((a, b) -> Integer.compare(a[0], b[0]));
         
-        pq.add(new int[]{0, k});
-        
+        minHeap.add(new int[]{0, k});
+        int time = 0;
         boolean[] visited = new boolean[n + 1];
-        int res = 0;
         
-        while(!pq.isEmpty()) {
-            int[] cur = pq.remove();
+        while (!minHeap.isEmpty()) {
+            int[] cur = minHeap.poll();
             int curNode = cur[1];
-            int curDist = cur[0];
+            int curWeight = cur[0];
             
-            if (visited[curNode])
+            if (visited[curNode] == true)
                 continue;
-            
             visited[curNode] = true;
-            res = curDist;
+            time = curWeight;
             n--;
             
-            if (map.containsKey(curNode)) {
-                for (int next : map.get(curNode).keySet()) {
-                    pq.add(new int[]{curDist + map.get(curNode).get(next), next});
+            if (adj.containsKey(curNode)) {
+                for (int next : adj.get(curNode).keySet()) {
+                    minHeap.add(new int[]{curWeight + adj.get(curNode).get(next), next});
                 }
             }
         }
-        return n == 0 ? res : -1;
+        return n == 0 ? time : -1;
     }
 }
