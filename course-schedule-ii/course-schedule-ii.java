@@ -1,6 +1,6 @@
 class Solution {
     public int[] findOrder(int numCourses, int[][] prerequisites) {
-        boolean isPossible = true;
+        //boolean isPossible = true;
         Map<Integer, List<Integer>> adj = new HashMap<>();
         int[] indegree = new int[numCourses];
         int[] topological = new int[numCourses];
