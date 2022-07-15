@@ -26,18 +26,50 @@ class Solution {
         if (root == null)
             return root;
         
-        Node leftNode = root;
-        while (leftNode.left != null) {
-            Node curNode = leftNode;
-            while (curNode != null) {
-                curNode.left.next = curNode.right;
-                if (curNode.next != null) {
-                    curNode.right.next = curNode.next.left;
+        Node leftmost = root;
+        
+        while (leftmost.left != null) {
+            Node head = leftmost;
+            
+            while (head != null) {
+                head.left.next = head.right;
+                
+                if (head.next != null) {
+                    head.right.next = head.next.left;
                 }
-                curNode = curNode.next;
+                
+                head = head.next;
             }
-            leftNode = leftNode.left;
+            leftmost = leftmost.left;
         }
         return root;
     }
 }
+
+// O(n) space
+// class Solution {
+//     public Node connect(Node root) {
+//         if (root == null)
+//             return null;
+        
+//         Queue<Node> q = new LinkedList<>();
+//         q.offer(root);
+        
+//         while (!q.isEmpty()) {
+//             int size = q.size();
+            
+//             for (int i = 0; i < size; i++) {
+//                 Node node = q.poll();
+//                 if (i < size - 1)
+//                     node.next = q.peek();
+                
+//                 if (node.left != null)
+//                     q.offer(node.left);
+                
+//                 if (node.right != null)
+//                     q.offer(node.right);
+//             }
+//         }
+//         return root;
+//     }
+// }
