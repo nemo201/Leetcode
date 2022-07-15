@@ -24,7 +24,7 @@ class Node {
 class Solution {
     public Node connect(Node root) {
         if (root == null)
-            return root;
+            return null;
         
         Queue<Node> q = new LinkedList<>();
         q.offer(root);
@@ -33,16 +33,15 @@ class Solution {
             int size = q.size();
             
             for (int i = 0; i < size; i++) {
-                Node cur = q.poll();
-                
+                Node node = q.poll();
                 if (i < size - 1)
-                    cur.next = q.peek();
+                    node.next = q.peek();
                 
-                if (cur.left != null)
-                    q.offer(cur.left);
+                if (node.left != null)
+                    q.offer(node.left);
                 
-                if (cur.right != null)
-                    q.offer(cur.right);
+                if (node.right != null)
+                    q.offer(node.right);
             }
         }
         return root;
