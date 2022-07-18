@@ -1,9 +1,16 @@
 class Solution {
-        public void reverseString(char[] s) {
-        for(int i=0; i<s.length/2; i++){    //Do it half the number of String length
-            char tmp = s[i];
-            s[i] = s[s.length-1-i];     //Front swap with other End side 
-            s[s.length-1-i] = tmp;      //End swap with other Front side
-        }
+    public void reverseString(char[] s) {
+        helper(0, s.length - 1, s);
+    }
+    
+    private void helper(int left, int right, char[] s) {
+        if (left >= right)
+            return;
+        
+        char temp = s[left];
+        s[left++] = s[right];
+        s[right--] = temp;
+        
+        helper(left, right, s);
     }
 }
