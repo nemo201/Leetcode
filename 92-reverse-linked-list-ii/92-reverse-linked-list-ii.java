@@ -9,24 +9,35 @@
  * }
  */
 class Solution {
-    ListNode successor = null;
-    ListNode reverseN(ListNode head, int n) {
-        if (n == 1) {
-            successor = head.next;
-            return head;
+    public ListNode reverseBetween(ListNode head, int left, int right) {
+        if (head == null)
+            return null;
+        
+        ListNode cur = head, prev = null;
+        while (left > 1) {
+            prev = cur;
+            cur = cur.next;
+            left--;
+            right--;
         }
-        ListNode last = reverseN(head.next, n - 1);
-        head.next.next = head;
-        head.next = successor;
-        return last;
-    }    
-    
-    public ListNode reverseBetween(ListNode head, int m, int n) {
-        if (m == 1) {
-            // You can also expand the code here to get rid of the helper function 'reverseN'
-            return reverseN(head, n);
+        
+        ListNode con = prev, tail = cur;
+        
+        ListNode third = null;
+        while (right > 0) {
+            third = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = third;
+            right--;
         }
-        head.next = reverseBetween(head.next, m - 1, n - 1);
+        
+        if (con != null)
+            con.next = prev;
+        else
+            head = prev;
+        
+        tail.next = cur;
         return head;
     }
 }
