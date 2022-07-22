@@ -1,12 +1,22 @@
+//memo
 class Solution {
-    public int rob(int[] nums) {
-        int rob1 = 0, rob2 = 0;
-        
-        for (int i = 0; i < nums.length; i++) {
-            int temp = Math.max(nums[i] + rob1, rob2);
-            rob1 = rob2;
-            rob2 = temp;
+    Map<Integer, Integer> memo = new HashMap<>();
+    int[] nums;
+    
+    private int dp(int i) {
+        //base case
+        if (i == 0)
+            return nums[0];
+        if (i == 1)
+            return Math.max(nums[0], nums[1]);
+        if (!memo.containsKey(i)) {
+            memo.put(i, Math.max(dp(i - 1), dp(i - 2) + nums[i]));
         }
-        return rob2;
+        return memo.get(i);
+    }
+    
+    public int rob(int[] nums) {
+        this.nums = nums;
+        return dp(nums.length - 1);
     }
 }
