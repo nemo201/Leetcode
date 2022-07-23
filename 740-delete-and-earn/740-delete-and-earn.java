@@ -8,16 +8,39 @@ class Solution {
             maxNum = Math.max(maxNum, num);
         }
         
-        int[] dp = new int[maxNum + 1];
-        dp[1] = points.getOrDefault(1, 0);
+        int twoBack = 0;
+        int oneBack = points.getOrDefault(1, 0);
         
-        for (int num = 2; num < dp.length; num++) {
-            int gain = points.getOrDefault(num, 0);
-            dp[num] = Math.max(dp[num - 1], dp[num - 2] + gain);
+        for (int num = 2; num <= maxNum; num++) {
+            int temp = oneBack;
+            oneBack = Math.max(oneBack, twoBack + points.getOrDefault(num, 0));
+            twoBack = temp;
         }
-        return dp[maxNum];
+        return oneBack;
     }
 }
+
+// bottom up
+// class Solution {
+//     public int deleteAndEarn(int[] nums) {
+//         Map<Integer, Integer> points = new HashMap<>();
+//         int maxNum = 0;
+        
+//         for (int num : nums) {
+//             points.put(num, points.getOrDefault(num, 0) + num);
+//             maxNum = Math.max(maxNum, num);
+//         }
+        
+//         int[] dp = new int[maxNum + 1];
+//         dp[1] = points.getOrDefault(1, 0);
+        
+//         for (int num = 2; num < dp.length; num++) {
+//             int gain = points.getOrDefault(num, 0);
+//             dp[num] = Math.max(dp[num - 1], dp[num - 2] + gain);
+//         }
+//         return dp[maxNum];
+//     }
+// }
 
 // top down
 // class Solution {
