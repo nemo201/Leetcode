@@ -1,24 +1,52 @@
 class Solution {
     public int deleteAndEarn(int[] nums) {
         Map<Integer, Integer> points = new HashMap<>();
-        int maxNum = 0;
         
         for (int num : nums) {
             points.put(num, points.getOrDefault(num, 0) + num);
-            maxNum = Math.max(maxNum, num);
         }
         
-        int twoBack = 0;
-        int oneBack = points.getOrDefault(1, 0);
+        List<Integer> elements = new ArrayList<>(points.keySet());
+        Collections.sort(elements);
         
-        for (int num = 2; num <= maxNum; num++) {
-            int temp = oneBack;
-            oneBack = Math.max(oneBack, twoBack + points.getOrDefault(num, 0));
-            twoBack = temp;
+        int two = 0;
+        int one = points.get(elements.get(0));
+        
+        for (int i = 1; i < elements.size(); i++) {
+            int curEle = elements.get(i);
+            int temp = one;
+            if (curEle == elements.get(i - 1) + 1)
+                one = Math.max(one, two + points.get(curEle));
+            else
+                one += points.get(curEle);
+            
+            two = temp;
         }
-        return oneBack;
+        return one;
     }
 }
+// bottom up with optimized space
+// class Solution {
+//     public int deleteAndEarn(int[] nums) {
+//         Map<Integer, Integer> points = new HashMap<>();
+//         int maxNum = 0;
+        
+//         for (int num : nums) {
+//             points.put(num, points.getOrDefault(num, 0) + num);
+//             maxNum = Math.max(maxNum, num);
+//         }
+        
+//         int twoBack = 0;
+//         int oneBack = points.getOrDefault(1, 0);
+        
+//         for (int num = 2; num <= maxNum; num++) {
+//             int temp = oneBack;
+//             oneBack = Math.max(oneBack, twoBack + points.getOrDefault(num, 0));
+//             twoBack = temp;
+//         }
+//         return oneBack;
+//     }
+// }
 
 // bottom up
 // class Solution {
