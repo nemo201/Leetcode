@@ -9,6 +9,9 @@ class Solution {
     }
     
     private boolean match(String word, String pattern) {
+        if (word.length() != pattern.length())
+            return false;
+        
         Map<Character, Character> m1 = new HashMap<>();
         Map<Character, Character> m2 = new HashMap<>();
         
