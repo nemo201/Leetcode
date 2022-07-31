@@ -9,22 +9,26 @@
  */
 
 class Solution {
-    TreeNode ans, target;
-    
     public final TreeNode getTargetCopy(final TreeNode original, final TreeNode cloned, final TreeNode target) {
-        this.target = target;
-        inorder(original, cloned);
-        return ans;
-    }
-    
-    private void inorder(TreeNode o, TreeNode c) {
-        if (o == null)
-            return;
-        inorder(o.left, c.left);
+        Queue<TreeNode> q = new LinkedList<>();
+        q.offer(original);
+        q.offer(cloned);
         
-        if (o == target)
-            ans = c;
-        
-        inorder(o.right, c.right);
+        while (!q.isEmpty()) {
+            TreeNode o = q.poll();
+            TreeNode c = q.poll();
+            
+            if (o == target)
+                return c;
+            if (o.left != null){
+                q.offer(o.left);
+                q.offer(c.left);
+            }
+            if (o.right != null) {
+                q.offer(o.right);
+                q.offer(c.right);
+            }
+        }
+        return null;
     }
 }
