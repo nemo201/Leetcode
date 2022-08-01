@@ -14,29 +14,19 @@
  * }
  */
 class Solution {
-    TreeNode root;
-    public boolean findTarget(TreeNode node, int k) {
-        if (root == null)
-            root = node;
-        if (node == null)
-            return false;
-        
-        if (search(node, k - node.val))
-            return true;
-        
-        return findTarget(node.left, k) || findTarget(node.right, k);
+    Set<Integer> set = new HashSet<>();
+    public boolean findTarget(TreeNode root, int k) {
+        return find(root, k);
     }
     
-    public boolean search(TreeNode node, int k) {
-        TreeNode cur = root;
-        while (cur != null) {
-            if (k > cur.val)
-                cur = cur.right;
-            else if (k < cur.val)
-                cur = cur.left;
-            else
-                return cur != node ? true : false;
-        }
-        return false;
+    private boolean find(TreeNode root, int k) {
+        if (root == null)
+            return false;
+        
+        if (set.contains(k - root.val))
+            return true;
+        
+        set.add(root.val);
+        return find(root.left, k) || find(root.right, k);
     }
 }
