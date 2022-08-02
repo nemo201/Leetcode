@@ -14,18 +14,29 @@
  * }
  */
 class Solution {
-    int sum = 0;
-    public int sumOfLeftLeaves(TreeNode root) {
-        helper(root, null);
-        return sum;
+    private boolean isLeaf(TreeNode node) {
+        return node != null && node.left == null && node.right == null;
     }
     
-    private void helper(TreeNode root, TreeNode p) {
+    public int sumOfLeftLeaves(TreeNode root) {
         if (root == null)
-            return;
-        if (root.left == null && root.right == null && p != null && p.left == root)
-            sum += root.val;
-        helper(root.left, root);
-        helper(root.right, root);
+            return 0;
+        
+        int total = 0;
+        Stack<TreeNode> stack = new Stack<>();
+        stack.push(root);
+        
+        while (!stack.isEmpty()) {
+            TreeNode cur = stack.pop();
+            
+            if(isLeaf(cur.left))
+                total += cur.left.val;
+            
+            if (cur.left != null)
+                stack.push(cur.left);
+            if (cur.right != null)
+                stack.push(cur.right);
+        }
+        return total;
     }
 }
