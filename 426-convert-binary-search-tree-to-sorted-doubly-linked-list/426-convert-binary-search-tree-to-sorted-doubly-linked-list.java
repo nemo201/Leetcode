@@ -20,14 +20,13 @@ class Node {
 */
 
 class Solution {
-    Node first = null, last = null;
+    Node last = null, first = null;
     public Node treeToDoublyList(Node root) {
         if (root == null)
             return null;
-        
         helper(root);
-        last.right = first;
         first.left = last;
+        last.right = first;
         return first;
     }
     
