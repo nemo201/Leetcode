@@ -20,31 +20,28 @@ class Node {
 */
 
 class Solution {
-    List<Node> ans = new ArrayList<>();
+    Node first = null, last = null;
     public Node treeToDoublyList(Node root) {
         if (root == null)
             return null;
         
         helper(root);
-        //List<Node> ans = new LinkedList<>();
-        ans.get(0).left = ans.get(ans.size() - 1);
-        
-        for (int i = 0; i < ans.size() - 1; i++) {
-            ans.get(i).right = ans.get(i + 1);
-        }
-        ans.get(ans.size() - 1).right = ans.get(0);
-        
-        for (int i = ans.size() - 1; i > 0; i--) {
-            ans.get(i).left = ans.get(i - 1);
-        }
-        return ans.get(0);
+        last.right = first;
+        first.left = last;
+        return first;
     }
     
     private void helper(Node node) {
-        if (node == null)
-            return;
-        helper(node.left);
-        ans.add(node);
-        helper(node.right);
+        if (node != null) {
+            helper(node.left);
+            if (last != null) {
+                last.right = node;
+                node.left = last;
+            } else {
+                first = node;
+            }
+            last = node;
+            helper(node.right);
+        }
     }
 }
