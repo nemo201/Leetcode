@@ -15,43 +15,37 @@
  *     public List<NestedInteger> getList();
  * }
  */
-public class NestedIterator implements Iterator<Integer> {
 
-    private Queue<Integer> queue = new LinkedList();
+import java.util.NoSuchElementException;
+public class NestedIterator implements Iterator<Integer> {
     
+    private List<Integer> integers = new ArrayList<Integer>();
+    private int pos = 0;
+
     public NestedIterator(List<NestedInteger> nestedList) {
-            helper(nestedList);
+        flatten(nestedList);
     }
     
-    private void helper(List<NestedInteger> list){
-        if (list == null)
-            return;
-        
-        for (NestedInteger in: list){
-            if (in.isInteger())
-                queue.offer(in.getInteger());
-            else{
-                helper(in.getList());
-            }
-            
+    private void flatten(List<NestedInteger> nestedList) {
+        for (NestedInteger nestedInteger : nestedList) {
+            if (nestedInteger.isInteger())
+                integers.add(nestedInteger.getInteger());
+            else
+                flatten(nestedInteger.getList());
         }
     }
 
     @Override
     public Integer next() {
-        if (hasNext()){
-            return queue.poll();
-        }
-        else
-            return -1;
+        if (!hasNext())
+            throw new NoSuchElementException();
+        
+        return integers.get(pos++);
     }
 
     @Override
     public boolean hasNext() {
-        if (!queue.isEmpty())
-            return true;
-        else
-            return false;
+        return pos < integers.size();
     }
 }
 
