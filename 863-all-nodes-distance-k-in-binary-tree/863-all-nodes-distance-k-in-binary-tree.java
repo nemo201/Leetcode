@@ -12,12 +12,12 @@ class Solution {
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
         parent = new HashMap<>();
         dfs(root, null);
-        
         Queue<TreeNode> q = new LinkedList<>();
-        q.add(target);
+        q.offer(target);
         Set<TreeNode> seen = new HashSet<>();
         seen.add(target);
         int dist = 0;
+        
         while (!q.isEmpty()) {
             int size = q.size();
             if (dist == k) {
@@ -26,21 +26,23 @@ class Solution {
                     ans.add(n.val);
                 return ans;
             }
+            
             for (int i = 0; i < size; i++) {
-                TreeNode node = q.poll();
-                seen.add(node);
-                if (node.left != null && !seen.contains(node.left)) {
-                    seen.add(node.left);
-                    q.offer(node.left);
+                TreeNode cur = q.poll();
+                seen.add(cur);
+                
+                if (cur.left != null && !seen.contains(cur.left)) {
+                    q.offer(cur.left);
+                    seen.add(cur.left);
                 }
-                if (node.right != null && !seen.contains(node.right)) {
-                    seen.add(node.right);
-                    q.offer(node.right);
+                if (cur.right != null && !seen.contains(cur.right)) {
+                    seen.add(cur.right);
+                    q.offer(cur.right);
                 }
-                TreeNode par = parent.get(node);
+                TreeNode par = parent.get(cur);
                 if (par != null && !seen.contains(par)) {
-                    seen.add(par);
                     q.offer(par);
+                    seen.add(par);
                 }
             }
             dist++;
