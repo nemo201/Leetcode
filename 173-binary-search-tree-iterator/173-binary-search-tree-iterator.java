@@ -22,13 +22,12 @@ class BSTIterator {
         helper(root);
     }
     
-    private void helper(TreeNode node) {
-        if (node == null){
+    private void helper(TreeNode root) {
+        if (root == null)
             return;
-        }
-        helper(node.left);
-        list.add(node.val);
-        helper(node.right);
+        helper(root.left);
+        list.add(root.val);
+        helper(root.right);
     }
     
     public int next() {
@@ -36,7 +35,7 @@ class BSTIterator {
     }
     
     public boolean hasNext() {
-        return index + 1 < this.list.size();
+        return index + 1 < list.size();
     }
 }
 
