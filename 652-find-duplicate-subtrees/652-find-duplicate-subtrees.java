@@ -14,18 +14,17 @@
  * }
  */
 class Solution {
-    
     public List<TreeNode> findDuplicateSubtrees(TreeNode root) {
         Map<String, Integer> map = new HashMap<>();
         List<TreeNode> ans = new ArrayList<>();
-        post(root, map, ans);
+        helper(root, map, ans);
         return ans;
     }
     
-    private String post(TreeNode node, Map<String, Integer> map, List<TreeNode> ans) {
+    private String helper(TreeNode node, Map<String, Integer> map, List<TreeNode> ans) {
         if (node == null)
             return "#";
-        String serial = node.val + "," + post(node.left, map, ans) + "," + post(node.right, map, ans);
+        String serial = node.val + "," + helper(node.left, map, ans) + "," + helper(node.right, map, ans);
         map.put(serial, map.getOrDefault(serial, 0) + 1);
         if (map.get(serial) == 2)
             ans.add(node);
