@@ -8,9 +8,8 @@
  * }
  */
 class Solution {
-    Map<TreeNode, TreeNode> parent;
+    Map<TreeNode, TreeNode> parent = new HashMap<>();
     public List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
-        parent = new HashMap<>();
         dfs(root, null);
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(target);
@@ -30,17 +29,16 @@ class Solution {
             for (int i = 0; i < size; i++) {
                 TreeNode cur = q.poll();
                 seen.add(cur);
-                
                 if (cur.left != null && !seen.contains(cur.left)) {
-                    q.offer(cur.left);
                     seen.add(cur.left);
+                    q.offer(cur.left);
                 }
                 if (cur.right != null && !seen.contains(cur.right)) {
                     seen.add(cur.right);
                     q.offer(cur.right);
                 }
                 TreeNode par = parent.get(cur);
-                if (par != null && !seen.contains(par)) {
+                if (par != null && !seen.contains(par)){
                     q.offer(par);
                     seen.add(par);
                 }
@@ -56,5 +54,5 @@ class Solution {
             dfs(node.left, node);
             dfs(node.right, node);
         }
-    }
+    } 
 }
