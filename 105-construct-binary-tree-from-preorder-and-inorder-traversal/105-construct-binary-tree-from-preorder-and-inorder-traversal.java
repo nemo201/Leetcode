@@ -15,26 +15,24 @@
  */
 class Solution {
     int preIndex;
-    Map<Integer, Integer> inIndex;
+    Map<Integer, Integer> location = new HashMap<>();
+    
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         preIndex = 0;
-        inIndex = new HashMap<>();
-        
         for (int i = 0; i < inorder.length; i++) {
-            inIndex.put(inorder[i], i);
+            location.put(inorder[i], i);
         }
-        return arrayToTree(preorder, 0, preorder.length -1);
+        return helper(preorder, 0, preorder.length - 1);
     }
     
-    private TreeNode arrayToTree(int[] preorder, int left, int right) {
+    private TreeNode helper(int[] pre, int left, int right) {
         if (left > right)
             return null;
-        
-        int val = preorder[preIndex++];
+        int val = pre[preIndex++];
         TreeNode root = new TreeNode(val);
         
-        root.left = arrayToTree(preorder, left, inIndex.get(val) - 1);
-        root.right = arrayToTree(preorder, inIndex.get(val) + 1, right);
+        root.left = helper(pre, left, location.get(val) - 1);
+        root.right = helper(pre, location.get(val) + 1, right);
         
         return root;
     }
