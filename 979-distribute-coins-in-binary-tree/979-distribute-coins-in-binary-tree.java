@@ -24,10 +24,10 @@ class Solution {
     private int helper(TreeNode node) {
         if (node == null)
             return 0;
-        int L = helper(node.left);
-        int R = helper(node.right);
+        int left = helper(node.left);
+        int right = helper(node.right);
         
-        ans += Math.abs(L) + Math.abs(R);
-        return node.val + L + R - 1;
+        ans += Math.abs(left) + Math.abs(right);
+        return node.val + left + right - 1;
     }
 }
