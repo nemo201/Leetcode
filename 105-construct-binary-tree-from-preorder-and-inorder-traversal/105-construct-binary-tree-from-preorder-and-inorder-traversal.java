@@ -16,12 +16,10 @@
 class Solution {
     int preIndex;
     Map<Integer, Integer> location = new HashMap<>();
-    
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         preIndex = 0;
-        for (int i = 0; i < inorder.length; i++) {
+        for (int i = 0; i < inorder.length; i++)
             location.put(inorder[i], i);
-        }
         return helper(preorder, 0, preorder.length - 1);
     }
     
