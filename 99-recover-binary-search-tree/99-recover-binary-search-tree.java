@@ -14,26 +14,31 @@
  * }
  */
 class Solution {
-    TreeNode prev = null, first = null, second = null;
+    TreeNode x = null, y = null, pred = null;
     
     public void recoverTree(TreeNode root) {
-        swap(root);
-        int temp = first.val;
-        first.val = second.val;
-        second.val = temp;
+        helper(root);
+        swap(x, y);
     }
     
-    private void swap(TreeNode curr) {
-        if (curr == null)
+    private void helper(TreeNode node) {
+        if (node == null)
             return;
-        
-        swap(curr.left);
-        if (prev != null && prev.val > curr.val) {
-            if (first == null)
-                first = prev;
-            second = curr;
+        helper(node.left);
+        if (pred != null && node.val < pred.val) {
+            y = node;
+            if (x == null)
+                x = pred;
+            else
+                return;
         }
-        prev = curr;
-        swap(curr.right);
+        pred = node;
+        helper(node.right);
+    }
+    
+    private void swap(TreeNode a, TreeNode b) {
+        int tmp = a.val;
+        a.val = b.val;
+        b.val = tmp;
     }
 }
