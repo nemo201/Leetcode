@@ -19,7 +19,7 @@ class Solution {
         if (root == null)
             return ans;
         
-        Map<Integer, List<Integer>> columnTable = new HashMap<>();
+        Map<Integer, List<Integer>> ct = new HashMap<>();
         Queue<Pair<TreeNode, Integer>> q = new LinkedList<>();
         int col = 0;
         q.offer(new Pair(root, col));
@@ -30,19 +30,19 @@ class Solution {
             col = p.getValue();
             
             if (root != null) {
-                if (!columnTable.containsKey(col))
-                    columnTable.put(col, new ArrayList());
-                columnTable.get(col).add(root.val);
+                if (!ct.containsKey(col))
+                    ct.put(col, new ArrayList<>());
+                ct.get(col).add(root.val);
                 
                 q.offer(new Pair(root.left, col - 1));
                 q.offer(new Pair(root.right, col + 1));
             }
         }
-        List<Integer> sortedKeys = new ArrayList<>(columnTable.keySet());
-        Collections.sort(sortedKeys);
+        List<Integer> sorted = new ArrayList(ct.keySet());
+        Collections.sort(sorted);
         
-        for (int k : sortedKeys)
-            ans.add(columnTable.get(k));
+        for (int k : sorted)
+            ans.add(ct.get(k));
         
         return ans;
     }
