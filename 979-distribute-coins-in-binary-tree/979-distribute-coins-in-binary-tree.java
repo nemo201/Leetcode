@@ -14,9 +14,8 @@
  * }
  */
 class Solution {
-    int ans;
+    int ans = 0;
     public int distributeCoins(TreeNode root) {
-        ans = 0;
         helper(root);
         return ans;
     }
@@ -28,6 +27,7 @@ class Solution {
         int right = helper(node.right);
         
         ans += Math.abs(left) + Math.abs(right);
+        
         return node.val + left + right - 1;
     }
 }
