@@ -17,21 +17,22 @@ class Solution {
     public String getDirections(TreeNode root, int startValue, int destValue) {
         StringBuilder s = new StringBuilder(), d = new StringBuilder();
         
-        find(root, startValue, s);
-        find(root, destValue, d);
+        helper(root, startValue, s);
+        helper(root, destValue, d);
         
-        int i = 0, max_i = Math.min(d.length(), s.length());
-        while (i < max_i && s.charAt(s.length() - i - 1) == d.charAt(d.length() - i- 1))
+        int i = 0, max_i = Math.min(s.length(), d.length());
+        while (i < max_i && s.charAt(s.length() - i - 1) == d.charAt(d.length() - i - 1))
             i++;
         return "U".repeat(s.length() - i) + d.reverse().toString().substring(i);
     }
     
-    private boolean find(TreeNode node, int val, StringBuilder sb) {
+    private boolean helper(TreeNode node, int val, StringBuilder sb) {
         if (node.val == val)
             return true;
-        if (node.left != null && find(node.left, val, sb))
+        
+        if (node.left != null && helper(node.left, val, sb))
             sb.append("L");
-        else if (node.right != null && find(node.right, val, sb))
+        else if (node.right != null && helper(node.right, val, sb))
             sb.append("R");
         return sb.length() > 0;
     }
