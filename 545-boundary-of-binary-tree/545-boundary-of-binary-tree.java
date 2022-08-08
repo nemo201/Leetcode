@@ -18,31 +18,31 @@ class Solution {
         List<Integer> ans = new ArrayList<>();
         if (root == null)
             return ans;
-        
         if (!isLeaf(root))
             ans.add(root.val);
-        
-        TreeNode t = root.left;
-        while (t != null) {
-            if (!isLeaf(t))
-                ans.add(t.val);
-            if (t.left != null)
-                t = t.left;
+        TreeNode node = root.left;
+        while (node != null) {
+            if (!isLeaf(node))
+                ans.add(node.val);
+            if (node.left != null)
+                node = node.left;
             else
-                t = t.right;
+                node = node.right;
         }
-        addLeaves(ans, root);
+        addLeaves(root, ans);
         Stack<Integer> s = new Stack<>();
-        t = root.right;
-        while (t != null) {
-            if (!isLeaf(t))
-                s.push(t.val);
-            if (t.right != null)
-                t = t.right;
+        node = root.right;
+        
+        while (node != null) {
+            if (!isLeaf(node))
+                s.push(node.val);
+            if (node.right != null)
+                node = node.right;
             else
-                t = t.left;
+                node = node.left;
         }
-        while (!s.isEmpty())
+        
+        while (!s.empty())
             ans.add(s.pop());
         return ans;
     }
@@ -51,14 +51,14 @@ class Solution {
         return node.left == null && node.right == null;
     }
     
-    private void addLeaves(List<Integer> ans, TreeNode node) {
+    private void addLeaves(TreeNode node, List<Integer> ans) {
         if (isLeaf(node))
             ans.add(node.val);
         else {
             if (node.left != null)
-                addLeaves(ans, node.left);
+                addLeaves(node.left, ans);
             if (node.right != null)
-                addLeaves(ans, node.right);
+                addLeaves(node.right, ans);
         }
     }
 }
