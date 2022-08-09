@@ -16,33 +16,31 @@
 class Solution {
     public List<Integer> boundaryOfBinaryTree(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        if (root == null)
-            return ans;
+        
         if (!isLeaf(root))
             ans.add(root.val);
-        TreeNode node = root.left;
-        while (node != null) {
-            if (!isLeaf(node))
-                ans.add(node.val);
-            if (node.left != null)
-                node = node.left;
+        
+        TreeNode t = root.left;
+        while (t != null) {
+            if (!isLeaf(t))
+                ans.add(t.val);
+            if (t.left != null)
+                t = t.left;
             else
-                node = node.right;
+                t = t.right;
         }
         addLeaves(root, ans);
         Stack<Integer> s = new Stack<>();
-        node = root.right;
-        
-        while (node != null) {
-            if (!isLeaf(node))
-                s.push(node.val);
-            if (node.right != null)
-                node = node.right;
+        t = root.right;
+        while (t != null) {
+            if (!isLeaf(t))
+                s.push(t.val);
+            if (t.right != null)
+                t = t.right;
             else
-                node = node.left;
+                t = t.left;
         }
-        
-        while (!s.empty())
+        while (!s.isEmpty())
             ans.add(s.pop());
         return ans;
     }
