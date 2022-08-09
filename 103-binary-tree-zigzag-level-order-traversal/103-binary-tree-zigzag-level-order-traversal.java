@@ -20,12 +20,11 @@ class Solution {
             return ans;
         Queue<TreeNode> q = new LinkedList<>();
         q.offer(root);
-        
         boolean even = true;
         
         while (!q.isEmpty()) {
             int size = q.size();
-            LinkedList<Integer> curLevel = new LinkedList<>();
+            LinkedList<Integer> layer = new LinkedList<>();
             
             for (int i = 0; i < size; i++) {
                 TreeNode node = q.poll();
@@ -35,14 +34,13 @@ class Solution {
                 if (node.right != null)
                     q.offer(node.right);
                 
-                if (even) {
-                    curLevel.add(node.val);
-                } else {
-                    curLevel.addFirst(node.val);
-                }
+                if (even)
+                    layer.add(node.val);
+                else
+                    layer.addFirst(node.val);
             }
             even = !even;
-            ans.add(curLevel);
+            ans.add(layer);
         }
         return ans;
     }
