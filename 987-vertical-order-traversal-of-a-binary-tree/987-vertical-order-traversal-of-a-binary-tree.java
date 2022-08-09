@@ -29,14 +29,14 @@ class Solution {
         helper(root, 0, 0, q);
         
         while (!q.isEmpty()) {
-            List<Integer> temp = new ArrayList<>();
+            List<Integer> layer = new ArrayList<>();
             int[] node = q.poll();
-            temp.add(node[2]);
+            layer.add(node[2]);
             while (!q.isEmpty() && q.peek()[1] == node[1]) {
                 int[] tmp = q.poll();
-                temp.add(tmp[2]);
+                layer.add(tmp[2]);
             }
-            ans.add(temp);
+            ans.add(layer);
         }
         return ans;
     }
@@ -45,7 +45,7 @@ class Solution {
         if (node == null)
             return;
         helper(node.left, row + 1, col - 1, q);
-        q.offer(new int[] {row, col, node.val});
+        q.offer(new int[]{row, col, node.val});
         helper(node.right, row + 1, col + 1, q);
     }
 }
