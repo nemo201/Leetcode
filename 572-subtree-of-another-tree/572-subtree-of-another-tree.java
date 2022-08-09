@@ -17,18 +17,16 @@ class Solution {
     public boolean isSubtree(TreeNode root, TreeNode subRoot) {
         if (root == null)
             return subRoot == null;
-        
-        return isSameTree(root, subRoot) || isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+        return helper(root, subRoot) || isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
     }
     
-    private boolean isSameTree(TreeNode s, TreeNode t) {
-        if (s == null && t == null)
+    private boolean helper(TreeNode x, TreeNode y) {
+        if (x == null && y == null)
             return true;
-        if (s == null || t == null)
+        if (x == null || y == null)
             return false;
-        
-        if (s.val != t.val)
+        if (x.val != y.val)
             return false;
-        return isSameTree(s.left, t.left) && isSameTree(s.right, t.right);
+        return helper(x.left, y.left) && helper(x.right, y.right);
     }
 }
