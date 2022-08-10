@@ -16,7 +16,6 @@
 class Solution {
     public List<Integer> boundaryOfBinaryTree(TreeNode root) {
         List<Integer> ans = new ArrayList<>();
-        
         if (!isLeaf(root))
             ans.add(root.val);
         
@@ -26,9 +25,10 @@ class Solution {
                 ans.add(t.val);
             if (t.left != null)
                 t = t.left;
-            else
+            else 
                 t = t.right;
         }
+        
         addLeaves(root, ans);
         Stack<Integer> s = new Stack<>();
         t = root.right;
@@ -40,8 +40,10 @@ class Solution {
             else
                 t = t.left;
         }
+        
         while (!s.isEmpty())
             ans.add(s.pop());
+        
         return ans;
     }
     
@@ -50,13 +52,12 @@ class Solution {
     }
     
     private void addLeaves(TreeNode node, List<Integer> ans) {
-        if (isLeaf(node))
+        if (node == null)
+            return;
+        
+        if(isLeaf(node))
             ans.add(node.val);
-        else {
-            if (node.left != null)
-                addLeaves(node.left, ans);
-            if (node.right != null)
-                addLeaves(node.right, ans);
-        }
+        addLeaves(node.left, ans);
+        addLeaves(node.right, ans);
     }
 }
