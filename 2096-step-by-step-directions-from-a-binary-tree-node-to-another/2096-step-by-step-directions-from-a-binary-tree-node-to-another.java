@@ -19,11 +19,9 @@ class Solution {
         helper(root, startValue, s);
         helper(root, destValue, d);
         
-        int i = 0, i_max = Math.min(s.length(), d.length());
-        
-        while (i < i_max && s.charAt(s.length() - i - 1) == d.charAt(d.length() - i - 1))
+        int i = 0, imax = Math.min(s.length(), d.length());
+        while (i < imax && s.charAt(s.length() - i - 1) == d.charAt(d.length() - i- 1))
             i++;
-        
         return "U".repeat(s.length() - i) + d.reverse().toString().substring(i);
     }
     
