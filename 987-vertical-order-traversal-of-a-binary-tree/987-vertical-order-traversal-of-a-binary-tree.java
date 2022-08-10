@@ -16,8 +16,7 @@
 class Solution {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
-        if (root == null)
-            return ans;
+        
         Queue<int[]> q = new PriorityQueue<>((a, b) -> {
             if (a[1] == b[1]) {
                 if (a[0] == b[0])
