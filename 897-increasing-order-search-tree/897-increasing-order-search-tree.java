@@ -18,17 +18,18 @@ class Solution {
     public TreeNode increasingBST(TreeNode root) {
         TreeNode ans = new TreeNode(0);
         cur = ans;
-        inorder(root);
+        helper(root);
         return ans.right;
     }
     
-    private void inorder(TreeNode node) {
+    private void helper(TreeNode node) {
         if (node == null)
             return;
-        inorder(node.left);
+        
+        helper(node.left);
         node.left = null;
         cur.right = node;
         cur = node;
-        inorder(node.right);
+        helper(node.right);
     }
 }
