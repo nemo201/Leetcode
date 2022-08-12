@@ -1,20 +1,19 @@
 class Solution {
-    public int[][] floodFill(int[][] image, int sr, int sc, int newCol) {
-        int color = image[sr][sc];
-        if (color != newCol) {
-            helper(image, sr, sc, color, newCol);
-        }
+    public int[][] floodFill(int[][] image, int sr, int sc, int color) {
+        int org = image[sr][sc];
+        if (org == color)
+            return image;
+        helper(image, sr, sc, org, color);
         return image;
     }
     
-    private void helper(int[][] image, int row, int col, int color, int newCol) {
-        if (row < 0 || row >= image.length || col < 0 || col >= image[0].length || image[row][col] != color)
+    private void helper(int[][] image, int r, int c, int org, int color) {
+        if (r < 0 || r >= image.length || c < 0 || c >= image[0].length || image[r][c] != org)
             return;
-        
-        image[row][col] = newCol;    
-        helper(image, row + 1, col, color, newCol);
-        helper(image, row, col + 1, color, newCol);
-        helper(image, row - 1, col, color, newCol);
-        helper(image, row, col - 1, color, newCol);
+        image[r][c] = color;
+        helper(image, r + 1, c, org, color);
+        helper(image, r - 1, c, org, color);
+        helper(image, r, c + 1, org, color);
+        helper(image, r, c - 1, org, color);
     }
 }
