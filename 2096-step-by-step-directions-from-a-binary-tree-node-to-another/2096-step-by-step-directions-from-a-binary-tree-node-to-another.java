@@ -20,7 +20,7 @@ class Solution {
         helper(root, destValue, d);
         
         int i = 0, imax = Math.min(s.length(), d.length());
-        while (i < imax && s.charAt(s.length() - i - 1) == d.charAt(d.length() - i- 1))
+        while (i < imax && s.charAt(s.length() - i - 1) == d.charAt(d.length() - i - 1))
             i++;
         return "U".repeat(s.length() - i) + d.reverse().toString().substring(i);
     }
@@ -28,7 +28,7 @@ class Solution {
     private boolean helper(TreeNode node, int val, StringBuilder sb) {
         if (node.val == val)
             return true;
-        if (node.left != null && helper(node.left, val, sb))
+        else if (node.left != null && helper(node.left, val, sb))
             sb.append("L");
         else if (node.right != null && helper(node.right, val, sb))
             sb.append("R");
