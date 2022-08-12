@@ -15,22 +15,19 @@
  */
 class Solution {
     public TreeNode upsideDownBinaryTree(TreeNode root) {
-        if (root == null)
-            return null;
         return helper(root);
     }
     
     private TreeNode helper(TreeNode node) {
-        if (node == null || node.left == null) {
+        if (node == null || node.left == null)
             return node;
-        }
         
-        TreeNode root = helper(node.left);
+        TreeNode newRoot = helper(node.left);
         node.left.left = node.right;
         node.left.right = node;
         node.left = null;
         node.right = null;
         
-        return root;
+        return newRoot;
     }
 }
