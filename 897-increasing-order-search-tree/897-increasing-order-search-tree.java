@@ -25,11 +25,10 @@ class Solution {
     private void helper(TreeNode node) {
         if (node == null)
             return;
-        
         helper(node.left);
-        node.left = null;
         cur.right = node;
-        cur = node;
+        node.left = null;
+        cur = cur.right;
         helper(node.right);
     }
 }
