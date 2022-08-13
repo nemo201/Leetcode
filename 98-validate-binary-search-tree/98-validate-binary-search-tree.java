@@ -24,7 +24,7 @@ class Solution {
             return true;
         if (!helper(node.left))
             return false;
-        if (prev != null && prev >= node.val)
+        if (prev != null && node.val <=  prev)
             return false;
         prev = node.val;
         return helper(node.right);
