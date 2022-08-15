@@ -33,6 +33,7 @@ class Solution {
     
     private int dfs(List<NestedInteger> nestedList, int depth) {
         int total = 0;
+        
         for (NestedInteger n : nestedList) {
             if (n.isInteger()) {
                 total += n.getInteger() * depth;
