@@ -31,13 +31,14 @@ class Solution {
         return dfs(nestedList, 1);
     }
     
-    private int dfs(List<NestedInteger> list, int depth) {
+    private int dfs(List<NestedInteger> nestedList, int depth) {
         int total = 0;
-        for (NestedInteger n : list) {
-            if (n.isInteger())
+        for (NestedInteger n : nestedList) {
+            if (n.isInteger()) {
                 total += n.getInteger() * depth;
-            else
+            } else {
                 total += dfs(n.getList(), depth + 1);
+            }
         }
         return total;
     }
