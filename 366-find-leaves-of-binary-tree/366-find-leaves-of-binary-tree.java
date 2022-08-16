@@ -16,19 +16,20 @@
 class Solution {
     public List<List<Integer>> findLeaves(TreeNode root) {
         List<List<Integer>> ans = new ArrayList<>();
-        helper(root, ans);
+        dfs(root, ans);
         return ans;
     }
     
-    private int helper(TreeNode node, List<List<Integer>> ans) {
+    private int dfs(TreeNode node, List<List<Integer>> ans) {
         if (node == null)
             return -1;
-        int level = 1 + Math.max(helper(node.left, ans), helper(node.right, ans));
+        int level = 1 + Math.max(dfs(node.left, ans), dfs(node.right, ans));
         
         if (ans.size() < level + 1)
             ans.add(new ArrayList());
         
         ans.get(level).add(node.val);
+        
         return level;
     }
 }
