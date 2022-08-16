@@ -35,12 +35,12 @@ class Solution {
         int total = 0;
         
         for (NestedInteger n : nestedList) {
-            if (n.isInteger()) {
+            if (n.isInteger())
                 total += n.getInteger() * depth;
-            } else {
+            else
                 total += dfs(n.getList(), depth + 1);
-            }
         }
+        
         return total;
     }
 }
