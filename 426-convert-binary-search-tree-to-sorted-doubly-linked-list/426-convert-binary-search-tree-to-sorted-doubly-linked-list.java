@@ -20,21 +20,21 @@ class Node {
 */
 
 class Solution {
-    Node first = null, last = null;
+    Node last = null, first = null;
     public Node treeToDoublyList(Node root) {
         if (root == null)
             return null;
-        helper(root);
+        dfs(root);
+        
         first.left = last;
         last.right = first;
-        
         return first;
     }
     
-    private void helper(Node node) {
+    private void dfs(Node node) {
         if (node == null)
             return;
-        helper(node.left);
+        dfs(node.left);
         if (last != null) {
             last.right = node;
             node.left = last;
@@ -42,7 +42,6 @@ class Solution {
             first = node;
         }
         last = node;
-        
-        helper(node.right);
+        dfs(node.right);
     }
 }
