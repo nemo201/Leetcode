@@ -23,12 +23,11 @@ class Solution {
     private void dfs(TreeNode node, int maxSoFar) {
         if (maxSoFar <= node.val)
             ans++;
-        if (node.right != null) {
-            dfs(node.right, Math.max(node.val, maxSoFar));
-        }
         
-        if (node.left != null) {
-            dfs(node.left, Math.max(node.val, maxSoFar));
-        }
+        if (node.left != null)
+            dfs(node.left, Math.max(maxSoFar, node.val));
+        
+        if (node.right != null)
+            dfs(node.right, Math.max(maxSoFar, node.val));
     }
 }
