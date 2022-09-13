@@ -23,12 +23,10 @@ class Solution {
             return null;
         
         node.left = dfs(node.left);
-        
         node.right = dfs(node.right);
         
         if (node.val == 0 && node.left == null && node.right == null)
             node = null;
-        
         return node;
     }
 }
