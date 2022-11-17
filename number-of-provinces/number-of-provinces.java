@@ -1,10 +1,10 @@
 class Solution {
-    class uf {
-        private int[] root;
-        private int[] rank;
-        private int count;
+    class Uf {
+        int[] root;
+        int[] rank;
+        int count;
         
-        public uf(int size) {
+        Uf(int size) {
             root = new int[size];
             rank = new int[size];
             count = size;
@@ -26,9 +26,7 @@ class Solution {
             int ry = find(y);
             
             if (rx != ry) {
-                if (rank[rx] > rank[ry])
-                    root[ry] = rx;
-                else if (rank[rx] < rank[ry])
+                if (rank[rx] < rank[ry])
                     root[rx] = ry;
                 else {
                     root[ry] = rx;
@@ -38,7 +36,7 @@ class Solution {
             }
         }
         
-        public int getCount() {
+        int getCount() {
             return count;
         }
     }
@@ -46,16 +44,15 @@ class Solution {
     public int findCircleNum(int[][] isConnected) {
         if (isConnected == null || isConnected.length == 0)
             return 0;
-        
         int n = isConnected.length;
+        Uf uf = new Uf(n);
         
-        uf a = new uf(n);
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if(isConnected[i][j] == 1)
-                    a.union(i, j);
+                if (isConnected[i][j] == 1)
+                    uf.union(i, j);
             }
         }
-        return a.getCount();
+        return uf.getCount();
     }
 }
