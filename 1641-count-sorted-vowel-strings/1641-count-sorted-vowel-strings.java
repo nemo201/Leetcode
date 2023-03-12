@@ -1,5 +1,15 @@
 class Solution {
     public int countVowelStrings(int n) {
-        return ((n + 4)*(n + 3)*(n + 2)*(n + 1)) / 24;
+        return helper(n, 1);
+    }
+    
+    private int helper(int n, int vowels) {
+        if (n == 0)
+            return 1;
+        int result = 0;
+        for (int i = vowels; i <= 5; i++) {
+            result += helper(n - 1, i);
+        }
+        return result;
     }
 }
