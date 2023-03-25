@@ -13,7 +13,8 @@ class Solution {
         
         for (int i = 0; i < n; i++) {
             if (!visited[i]) {
-                sizeComponent = dfs(i, adj, visited);
+                // sizeComponent = dfs(i, adj, visited);
+                sizeComponent = bfs(i, adj, visited);
                 pairs += sizeComponent * (remaining - sizeComponent);
                 remaining -= sizeComponent;
             }
@@ -30,6 +31,30 @@ class Solution {
         for (int nei : adj.get(node)) {
             if (!visited[nei]) {
                 count += dfs(nei, adj, visited);
+            }
+        }
+        return count;
+    }
+    
+    public int bfs(int node, Map<Integer, List<Integer>> adj, boolean[] visited) {
+        int count = 1;
+        
+        Queue<Integer> q = new LinkedList();
+        q.offer(node);
+        visited[node] = true;
+        
+        while (!q.isEmpty()) {
+            node = q.poll();
+            
+            if (!adj.containsKey(node))
+            return count;
+            
+            for (int nei : adj.get(node)) {
+                if (!visited[nei]) {
+                    visited[nei] = true;
+                    q.offer(nei);
+                    count++;
+                }
             }
         }
         return count;
