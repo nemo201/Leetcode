@@ -18,6 +18,7 @@ Collection of LeetCode questions.
 | [0283-move-zeroes](https://github.com/nemo201/Leetcode/tree/main/0283-move-zeroes/) | Easy |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0303-range-sum-query-immutable](https://github.com/nemo201/Leetcode/tree/main/0303-range-sum-query-immutable/) | Easy |
+| [0560-subarray-sum-equals-k](https://github.com/nemo201/Leetcode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0643-maximum-average-subarray-i](https://github.com/nemo201/Leetcode/tree/main/0643-maximum-average-subarray-i/) | Easy |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/nemo201/Leetcode/tree/main/1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium |
@@ -96,6 +97,7 @@ Collection of LeetCode questions.
 | [0003-longest-substring-without-repeating-characters](https://github.com/nemo201/Leetcode/tree/main/0003-longest-substring-without-repeating-characters/) | Medium |
 | [0076-minimum-window-substring](https://github.com/nemo201/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 | [0424-longest-repeating-character-replacement](https://github.com/nemo201/Leetcode/tree/main/0424-longest-repeating-character-replacement/) | Medium |
+| [0560-subarray-sum-equals-k](https://github.com/nemo201/Leetcode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
 ## String
 | Problem Name | Difficulty |
@@ -109,6 +111,7 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0209-minimum-size-subarray-sum](https://github.com/nemo201/Leetcode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0303-range-sum-query-immutable](https://github.com/nemo201/Leetcode/tree/main/0303-range-sum-query-immutable/) | Easy |
+| [0560-subarray-sum-equals-k](https://github.com/nemo201/Leetcode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
