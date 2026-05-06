@@ -25,6 +25,7 @@ Collection of LeetCode questions.
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0303-range-sum-query-immutable](https://github.com/nemo201/Leetcode/tree/main/0303-range-sum-query-immutable/) | Easy |
 | [0304-range-sum-query-2d-immutable](https://github.com/nemo201/Leetcode/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
+| [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0525-contiguous-array](https://github.com/nemo201/Leetcode/tree/main/0525-contiguous-array/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/nemo201/Leetcode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0643-maximum-average-subarray-i](https://github.com/nemo201/Leetcode/tree/main/0643-maximum-average-subarray-i/) | Easy |
@@ -58,6 +59,7 @@ Collection of LeetCode questions.
 | [0015-3sum](https://github.com/nemo201/Leetcode/tree/main/0015-3sum/) | Medium |
 | [0049-group-anagrams](https://github.com/nemo201/Leetcode/tree/main/0049-group-anagrams/) | Medium |
 | [0075-sort-colors](https://github.com/nemo201/Leetcode/tree/main/0075-sort-colors/) | Medium |
+| [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 ## Greedy
 | Problem Name | Difficulty |
@@ -103,6 +105,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/nemo201/Leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
+| [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 ## Monotonic Queue
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -116,6 +119,7 @@ Collection of LeetCode questions.
 | [0049-group-anagrams](https://github.com/nemo201/Leetcode/tree/main/0049-group-anagrams/) | Medium |
 | [0076-minimum-window-substring](https://github.com/nemo201/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0424-longest-repeating-character-replacement](https://github.com/nemo201/Leetcode/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0525-contiguous-array](https://github.com/nemo201/Leetcode/tree/main/0525-contiguous-array/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/nemo201/Leetcode/tree/main/0560-subarray-sum-equals-k/) | Medium |
@@ -150,9 +154,22 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0053-maximum-subarray](https://github.com/nemo201/Leetcode/tree/main/0053-maximum-subarray/) | Medium |
+| [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 ## Union-Find
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
+## Bucket Sort
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
+## Counting
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
+## Quickselect
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 <!---LeetCode Topics End-->
