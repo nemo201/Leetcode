@@ -29,6 +29,7 @@ Collection of LeetCode questions.
 | [0525-contiguous-array](https://github.com/nemo201/Leetcode/tree/main/0525-contiguous-array/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/nemo201/Leetcode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0643-maximum-average-subarray-i](https://github.com/nemo201/Leetcode/tree/main/0643-maximum-average-subarray-i/) | Easy |
+| [0704-binary-search](https://github.com/nemo201/Leetcode/tree/main/0704-binary-search/) | Easy |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/nemo201/Leetcode/tree/main/1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium |
@@ -53,6 +54,7 @@ Collection of LeetCode questions.
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/nemo201/Leetcode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0209-minimum-size-subarray-sum](https://github.com/nemo201/Leetcode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
+| [0704-binary-search](https://github.com/nemo201/Leetcode/tree/main/0704-binary-search/) | Easy |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
