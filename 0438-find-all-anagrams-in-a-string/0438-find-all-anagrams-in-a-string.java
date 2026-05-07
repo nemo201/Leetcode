@@ -6,36 +6,23 @@ class Solution {
             return ans;
         }
 
-        int[] freq = new int[26];
+        int[] need = new int[26];
+        int[] window = new int[26];
         for (char c : p.toCharArray()) {
-            freq[c - 'a']++;
+            need[c - 'a']++;
         }
+        
+        for (int i = 0; i < m; i++) {
+            window[s.charAt(i) - 'a']++;
 
-        String key = helper(freq);
-
-        for (int i = 0; i <= m - n; i++) {
-            int[] curFreq = new int[26];
-            for (int j = i; j < i + n; j++) {
-                char c = s.charAt(j);
-                curFreq[c - 'a']++;
+            if (i >= n) {
+                window[s.charAt(i - n) - 'a']--;
             }
 
-            String curKey = helper(curFreq);
-
-            if (curKey.equals(key)) {
-                ans.add(i);
+            if (Arrays.equals(need, window)) {
+                ans.add(i - n + 1);
             }
         }
         return ans;
-    }
-
-    private String helper(int[] freq) {
-        StringBuilder sb = new StringBuilder();
-        for (int count : freq) {
-            sb.append(count).append("#");
-        }
-
-        String key = sb.toString();
-        return key;
     }
 }
