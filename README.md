@@ -123,6 +123,7 @@ Collection of LeetCode questions.
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0242-valid-anagram](https://github.com/nemo201/Leetcode/tree/main/0242-valid-anagram/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0383-ransom-note](https://github.com/nemo201/Leetcode/tree/main/0383-ransom-note/) | Easy |
 | [0424-longest-repeating-character-replacement](https://github.com/nemo201/Leetcode/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0438-find-all-anagrams-in-a-string](https://github.com/nemo201/Leetcode/tree/main/0438-find-all-anagrams-in-a-string/) | Medium |
 | [0525-contiguous-array](https://github.com/nemo201/Leetcode/tree/main/0525-contiguous-array/) | Medium |
@@ -135,6 +136,7 @@ Collection of LeetCode questions.
 | [0049-group-anagrams](https://github.com/nemo201/Leetcode/tree/main/0049-group-anagrams/) | Medium |
 | [0076-minimum-window-substring](https://github.com/nemo201/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 | [0242-valid-anagram](https://github.com/nemo201/Leetcode/tree/main/0242-valid-anagram/) | Easy |
+| [0383-ransom-note](https://github.com/nemo201/Leetcode/tree/main/0383-ransom-note/) | Easy |
 | [0424-longest-repeating-character-replacement](https://github.com/nemo201/Leetcode/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0438-find-all-anagrams-in-a-string](https://github.com/nemo201/Leetcode/tree/main/0438-find-all-anagrams-in-a-string/) | Medium |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
@@ -174,6 +176,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0383-ransom-note](https://github.com/nemo201/Leetcode/tree/main/0383-ransom-note/) | Easy |
 ## Quickselect
 | Problem Name | Difficulty |
 | ------- | ------- |
