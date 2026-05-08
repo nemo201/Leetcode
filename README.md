@@ -20,6 +20,7 @@ Collection of LeetCode questions.
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/nemo201/Leetcode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0152-maximum-product-subarray](https://github.com/nemo201/Leetcode/tree/main/0152-maximum-product-subarray/) | Medium |
+| [0153-find-minimum-in-rotated-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/nemo201/Leetcode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0209-minimum-size-subarray-sum](https://github.com/nemo201/Leetcode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0239-sliding-window-maximum](https://github.com/nemo201/Leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
@@ -55,6 +56,7 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0033-search-in-rotated-sorted-array/) | Medium |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0034-find-first-and-last-position-of-element-in-sorted-array/) | Medium |
+| [0153-find-minimum-in-rotated-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/nemo201/Leetcode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
 | [0209-minimum-size-subarray-sum](https://github.com/nemo201/Leetcode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
