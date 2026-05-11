@@ -16,36 +16,18 @@ class Solution {
 
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode prevGroup = dummy;
+        ListNode prev = dummy;
 
-        while(true) {
-            ListNode knode = getkthNode(prevGroup);
-            if (knode == null) {
-                break;
-            }
-            ListNode nextFront = knode.next;
-            ListNode cur = prevGroup.next;
-            ListNode prev = nextFront;
+        while(prev.next != null && prev.next.next != null) {
+            ListNode first = prev.next;
+            ListNode second = prev.next.next;
 
-            for (int i = 0; i < 2; i++) {
-                ListNode temp = cur.next;
-                cur.next = prev;
-                prev = cur;
-                cur = temp;
-            }
-
-            ListNode temp = prevGroup.next;
-            prevGroup.next = knode;
-            prevGroup = temp;
+            first.next = second.next;
+            second.next = first;
+            prev.next = second;
+            prev = first;
         }
+
         return dummy.next;
-    }
-    private ListNode getkthNode(ListNode cur) {
-        int k = 2;
-        while (cur != null && k > 0) {
-            cur = cur.next;
-            k--;
-        }
-        return cur;
     }
 }
