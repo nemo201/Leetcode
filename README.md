@@ -52,6 +52,7 @@ Collection of LeetCode questions.
 | [0141-linked-list-cycle](https://github.com/nemo201/Leetcode/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/nemo201/Leetcode/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/nemo201/Leetcode/tree/main/0167-two-sum-ii-input-array-is-sorted/) | Medium |
+| [0234-palindrome-linked-list](https://github.com/nemo201/Leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0283-move-zeroes](https://github.com/nemo201/Leetcode/tree/main/0283-move-zeroes/) | Easy |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
@@ -94,6 +95,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0042-trapping-rain-water](https://github.com/nemo201/Leetcode/tree/main/0042-trapping-rain-water/) | Hard |
+| [0234-palindrome-linked-list](https://github.com/nemo201/Leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 ## Monotonic Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -210,6 +212,7 @@ Collection of LeetCode questions.
 | [0141-linked-list-cycle](https://github.com/nemo201/Leetcode/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/nemo201/Leetcode/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0206-reverse-linked-list](https://github.com/nemo201/Leetcode/tree/main/0206-reverse-linked-list/) | Easy |
+| [0234-palindrome-linked-list](https://github.com/nemo201/Leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0876-middle-of-the-linked-list](https://github.com/nemo201/Leetcode/tree/main/0876-middle-of-the-linked-list/) | Easy |
 ## Recursion
 | Problem Name | Difficulty |
@@ -217,4 +220,5 @@ Collection of LeetCode questions.
 | [0024-swap-nodes-in-pairs](https://github.com/nemo201/Leetcode/tree/main/0024-swap-nodes-in-pairs/) | Medium |
 | [0025-reverse-nodes-in-k-group](https://github.com/nemo201/Leetcode/tree/main/0025-reverse-nodes-in-k-group/) | Hard |
 | [0206-reverse-linked-list](https://github.com/nemo201/Leetcode/tree/main/0206-reverse-linked-list/) | Easy |
+| [0234-palindrome-linked-list](https://github.com/nemo201/Leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 <!---LeetCode Topics End-->
