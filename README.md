@@ -54,6 +54,7 @@ Collection of LeetCode questions.
 | [0283-move-zeroes](https://github.com/nemo201/Leetcode/tree/main/0283-move-zeroes/) | Easy |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
+| [0876-middle-of-the-linked-list](https://github.com/nemo201/Leetcode/tree/main/0876-middle-of-the-linked-list/) | Easy |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 ## Binary Search
 | Problem Name | Difficulty |
@@ -207,6 +208,7 @@ Collection of LeetCode questions.
 | [0141-linked-list-cycle](https://github.com/nemo201/Leetcode/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/nemo201/Leetcode/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0206-reverse-linked-list](https://github.com/nemo201/Leetcode/tree/main/0206-reverse-linked-list/) | Easy |
+| [0876-middle-of-the-linked-list](https://github.com/nemo201/Leetcode/tree/main/0876-middle-of-the-linked-list/) | Easy |
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
