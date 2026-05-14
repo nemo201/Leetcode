@@ -18,7 +18,7 @@ class Solution {
     }
 
     private int largestArea(int[] height) {
-        Stack<Integer> stack = new Stack<>();
+        ArrayDeque<Integer> stack = new ArrayDeque<>();
         int maxArea = 0;
         for (int i = 0; i <= height.length; i++) {
             int currentHeight = (i == height.length) ? 0 : height[i];
