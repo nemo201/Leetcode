@@ -22,6 +22,7 @@ Collection of LeetCode questions.
 | [0085-maximal-rectangle](https://github.com/nemo201/Leetcode/tree/main/0085-maximal-rectangle/) | Hard |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/nemo201/Leetcode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0150-evaluate-reverse-polish-notation](https://github.com/nemo201/Leetcode/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0152-maximum-product-subarray](https://github.com/nemo201/Leetcode/tree/main/0152-maximum-product-subarray/) | Medium |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
 | [0162-find-peak-element](https://github.com/nemo201/Leetcode/tree/main/0162-find-peak-element/) | Medium |
@@ -108,6 +109,7 @@ Collection of LeetCode questions.
 | [0042-trapping-rain-water](https://github.com/nemo201/Leetcode/tree/main/0042-trapping-rain-water/) | Hard |
 | [0084-largest-rectangle-in-histogram](https://github.com/nemo201/Leetcode/tree/main/0084-largest-rectangle-in-histogram/) | Hard |
 | [0085-maximal-rectangle](https://github.com/nemo201/Leetcode/tree/main/0085-maximal-rectangle/) | Hard |
+| [0150-evaluate-reverse-polish-notation](https://github.com/nemo201/Leetcode/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0224-basic-calculator](https://github.com/nemo201/Leetcode/tree/main/0224-basic-calculator/) | Hard |
 | [0234-palindrome-linked-list](https://github.com/nemo201/Leetcode/tree/main/0234-palindrome-linked-list/) | Easy |
 | [0445-add-two-numbers-ii](https://github.com/nemo201/Leetcode/tree/main/0445-add-two-numbers-ii/) | Medium |
@@ -268,6 +270,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0002-add-two-numbers](https://github.com/nemo201/Leetcode/tree/main/0002-add-two-numbers/) | Medium |
+| [0150-evaluate-reverse-polish-notation](https://github.com/nemo201/Leetcode/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0224-basic-calculator](https://github.com/nemo201/Leetcode/tree/main/0224-basic-calculator/) | Hard |
 | [0445-add-two-numbers-ii](https://github.com/nemo201/Leetcode/tree/main/0445-add-two-numbers-ii/) | Medium |
 ## Backtracking
