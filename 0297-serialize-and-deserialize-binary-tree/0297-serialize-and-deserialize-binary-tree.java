@@ -30,18 +30,18 @@ public class Codec {
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
         Queue<String> q = new LinkedList<>(Arrays.asList(data.split(",")));
-        return dfsDesrialize(q);
+        return dfsDeserialize(q);
     }
 
-    private TreeNode dfsDesrialize(Queue<String> q) {
+    private TreeNode dfsDeserialize(Queue<String> q) {
         String val = q.poll();
         if (val.equals("#")) {
             return null;
         }
 
         TreeNode node = new TreeNode(Integer.parseInt(val));
-        node.left = dfsDesrialize(q);
-        node.right = dfsDesrialize(q);
+        node.left = dfsDeserialize(q);
+        node.right = dfsDeserialize(q);
         return node;
     }
 }
