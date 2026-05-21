@@ -42,6 +42,7 @@ Collection of LeetCode questions.
 | [0739-daily-temperatures](https://github.com/nemo201/Leetcode/tree/main/0739-daily-temperatures/) | Medium |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
+| [0994-rotting-oranges](https://github.com/nemo201/Leetcode/tree/main/0994-rotting-oranges/) | Medium |
 | [1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/nemo201/Leetcode/tree/main/1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium |
 | [1480-running-sum-of-1d-array](https://github.com/nemo201/Leetcode/tree/main/1480-running-sum-of-1d-array/) | Easy |
 ## Two Pointers
@@ -212,6 +213,7 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0085-maximal-rectangle](https://github.com/nemo201/Leetcode/tree/main/0085-maximal-rectangle/) | Hard |
 | [0304-range-sum-query-2d-immutable](https://github.com/nemo201/Leetcode/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
+| [0994-rotting-oranges](https://github.com/nemo201/Leetcode/tree/main/0994-rotting-oranges/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -313,4 +315,5 @@ Collection of LeetCode questions.
 | [0103-binary-tree-zigzag-level-order-traversal](https://github.com/nemo201/Leetcode/tree/main/0103-binary-tree-zigzag-level-order-traversal/) | Medium |
 | [0199-binary-tree-right-side-view](https://github.com/nemo201/Leetcode/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
+| [0994-rotting-oranges](https://github.com/nemo201/Leetcode/tree/main/0994-rotting-oranges/) | Medium |
 <!---LeetCode Topics End-->
