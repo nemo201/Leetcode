@@ -15,23 +15,60 @@
  */
 class Solution {
     public String getDirections(TreeNode root, int startValue, int destValue) {
-        StringBuilder s = new StringBuilder(), d = new StringBuilder();
-        helper(root, startValue, s);
-        helper(root, destValue, d);
-        
-        int i = 0, imax = Math.min(s.length(), d.length());
-        while (i < imax && s.charAt(s.length() - i - 1) == d.charAt(d.length() - i - 1))
-            i++;
-        return "U".repeat(s.length() - i) + d.reverse().toString().substring(i);
+        TreeNode lca = findLCA(root, startValue, destValue);
+        StringBuilder startPath = new StringBuilder();
+        StringBuilder destPath = new StringBuilder();
+
+        findPath(lca, startValue, startPath);
+        findPath(lca, destValue, destPath);
+
+        StringBuilder ans = new StringBuilder();
+
+        for (int i = 0; i < startPath.length(); i++) {
+            ans.append('U');
+        }
+        ans.append(destPath);
+        return ans.toString();
     }
-    
-    private boolean helper(TreeNode node, int val, StringBuilder sb) {
-        if (node.val == val)
+
+    private TreeNode findLCA(TreeNode root, int p, int q) {
+        if (root == null || root.val == p || root.val == q) {
+            return root;
+        }
+
+        TreeNode left = findLCA(root.left, p, q);
+        TreeNode right = findLCA(root.right, p, q);
+
+        if (left != null && right != null) {
+            return root;
+        }
+
+        return left != null ? left : right;
+    }
+
+    private boolean findPath(TreeNode node, int target, StringBuilder path) {
+        if (node == null) {
+            return false;
+        }
+
+        if (node.val == target) {
             return true;
-        else if (node.left != null && helper(node.left, val, sb))
-            sb.append("L");
-        else if (node.right != null && helper(node.right, val, sb))
-            sb.append("R");
-        return sb.length() > 0;
+        }
+
+        path.append('L');
+        if (findPath(node.left, target, path)) {
+            return true;
+        }
+
+        path.deleteCharAt(path.length() - 1);
+
+        path.append('R');
+        if (findPath(node.right, target, path)) {
+            return true;
+        }
+
+        path.deleteCharAt(path.length() - 1);
+
+        return false;
     }
 }
