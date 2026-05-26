@@ -42,6 +42,7 @@ Collection of LeetCode questions.
 | [0643-maximum-average-subarray-i](https://github.com/nemo201/Leetcode/tree/main/0643-maximum-average-subarray-i/) | Easy |
 | [0704-binary-search](https://github.com/nemo201/Leetcode/tree/main/0704-binary-search/) | Easy |
 | [0739-daily-temperatures](https://github.com/nemo201/Leetcode/tree/main/0739-daily-temperatures/) | Medium |
+| [0875-koko-eating-bananas](https://github.com/nemo201/Leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0994-rotting-oranges](https://github.com/nemo201/Leetcode/tree/main/0994-rotting-oranges/) | Medium |
@@ -81,6 +82,7 @@ Collection of LeetCode questions.
 | [0209-minimum-size-subarray-sum](https://github.com/nemo201/Leetcode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0704-binary-search](https://github.com/nemo201/Leetcode/tree/main/0704-binary-search/) | Easy |
+| [0875-koko-eating-bananas](https://github.com/nemo201/Leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
