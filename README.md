@@ -23,6 +23,7 @@ Collection of LeetCode questions.
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/nemo201/Leetcode/tree/main/0108-convert-sorted-array-to-binary-search-tree/) | Easy |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/nemo201/Leetcode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0130-surrounded-regions](https://github.com/nemo201/Leetcode/tree/main/0130-surrounded-regions/) | Medium |
 | [0150-evaluate-reverse-polish-notation](https://github.com/nemo201/Leetcode/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0152-maximum-product-subarray](https://github.com/nemo201/Leetcode/tree/main/0152-maximum-product-subarray/) | Medium |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
@@ -231,6 +232,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0085-maximal-rectangle](https://github.com/nemo201/Leetcode/tree/main/0085-maximal-rectangle/) | Hard |
+| [0130-surrounded-regions](https://github.com/nemo201/Leetcode/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/nemo201/Leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0304-range-sum-query-2d-immutable](https://github.com/nemo201/Leetcode/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
 | [0695-max-area-of-island](https://github.com/nemo201/Leetcode/tree/main/0695-max-area-of-island/) | Medium |
@@ -250,6 +252,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0130-surrounded-regions](https://github.com/nemo201/Leetcode/tree/main/0130-surrounded-regions/) | Medium |
 | [0200-number-of-islands](https://github.com/nemo201/Leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 | [0695-max-area-of-island](https://github.com/nemo201/Leetcode/tree/main/0695-max-area-of-island/) | Medium |
@@ -341,6 +344,7 @@ Collection of LeetCode questions.
 | [0112-path-sum](https://github.com/nemo201/Leetcode/tree/main/0112-path-sum/) | Easy |
 | [0113-path-sum-ii](https://github.com/nemo201/Leetcode/tree/main/0113-path-sum-ii/) | Medium |
 | [0124-binary-tree-maximum-path-sum](https://github.com/nemo201/Leetcode/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
+| [0130-surrounded-regions](https://github.com/nemo201/Leetcode/tree/main/0130-surrounded-regions/) | Medium |
 | [0199-binary-tree-right-side-view](https://github.com/nemo201/Leetcode/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0200-number-of-islands](https://github.com/nemo201/Leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0207-course-schedule](https://github.com/nemo201/Leetcode/tree/main/0207-course-schedule/) | Medium |
@@ -378,6 +382,7 @@ Collection of LeetCode questions.
 | [0104-maximum-depth-of-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0104-maximum-depth-of-binary-tree/) | Easy |
 | [0112-path-sum](https://github.com/nemo201/Leetcode/tree/main/0112-path-sum/) | Easy |
 | [0127-word-ladder](https://github.com/nemo201/Leetcode/tree/main/0127-word-ladder/) | Hard |
+| [0130-surrounded-regions](https://github.com/nemo201/Leetcode/tree/main/0130-surrounded-regions/) | Medium |
 | [0199-binary-tree-right-side-view](https://github.com/nemo201/Leetcode/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0200-number-of-islands](https://github.com/nemo201/Leetcode/tree/main/0200-number-of-islands/) | Medium |
 | [0207-course-schedule](https://github.com/nemo201/Leetcode/tree/main/0207-course-schedule/) | Medium |
