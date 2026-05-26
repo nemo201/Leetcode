@@ -246,6 +246,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 ## Bucket Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -339,6 +340,7 @@ Collection of LeetCode questions.
 | [0230-kth-smallest-element-in-a-bst](https://github.com/nemo201/Leetcode/tree/main/0230-kth-smallest-element-in-a-bst/) | Medium |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0236-lowest-common-ancestor-of-a-binary-tree/) | Medium |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
+| [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/nemo201/Leetcode/tree/main/2096-step-by-step-directions-from-a-binary-tree-node-to-another/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
@@ -371,6 +373,7 @@ Collection of LeetCode questions.
 | [0199-binary-tree-right-side-view](https://github.com/nemo201/Leetcode/tree/main/0199-binary-tree-right-side-view/) | Medium |
 | [0207-course-schedule](https://github.com/nemo201/Leetcode/tree/main/0207-course-schedule/) | Medium |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
+| [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 | [0994-rotting-oranges](https://github.com/nemo201/Leetcode/tree/main/0994-rotting-oranges/) | Medium |
 ## Binary Search Tree
 | Problem Name | Difficulty |
@@ -388,6 +391,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0207-course-schedule](https://github.com/nemo201/Leetcode/tree/main/0207-course-schedule/) | Medium |
+| [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 ## Topological Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
