@@ -191,6 +191,7 @@ Collection of LeetCode questions.
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0383-ransom-note](https://github.com/nemo201/Leetcode/tree/main/0383-ransom-note/) | Easy |
 | [0424-longest-repeating-character-replacement](https://github.com/nemo201/Leetcode/tree/main/0424-longest-repeating-character-replacement/) | Medium |
+| [0433-minimum-genetic-mutation](https://github.com/nemo201/Leetcode/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0438-find-all-anagrams-in-a-string](https://github.com/nemo201/Leetcode/tree/main/0438-find-all-anagrams-in-a-string/) | Medium |
 | [0496-next-greater-element-i](https://github.com/nemo201/Leetcode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0525-contiguous-array](https://github.com/nemo201/Leetcode/tree/main/0525-contiguous-array/) | Medium |
@@ -211,6 +212,7 @@ Collection of LeetCode questions.
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0383-ransom-note](https://github.com/nemo201/Leetcode/tree/main/0383-ransom-note/) | Easy |
 | [0424-longest-repeating-character-replacement](https://github.com/nemo201/Leetcode/tree/main/0424-longest-repeating-character-replacement/) | Medium |
+| [0433-minimum-genetic-mutation](https://github.com/nemo201/Leetcode/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0438-find-all-anagrams-in-a-string](https://github.com/nemo201/Leetcode/tree/main/0438-find-all-anagrams-in-a-string/) | Medium |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/nemo201/Leetcode/tree/main/2096-step-by-step-directions-from-a-binary-tree-node-to-another/) | Medium |
@@ -395,6 +397,7 @@ Collection of LeetCode questions.
 | [0207-course-schedule](https://github.com/nemo201/Leetcode/tree/main/0207-course-schedule/) | Medium |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0417-pacific-atlantic-water-flow](https://github.com/nemo201/Leetcode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
+| [0433-minimum-genetic-mutation](https://github.com/nemo201/Leetcode/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 | [0695-max-area-of-island](https://github.com/nemo201/Leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0994-rotting-oranges](https://github.com/nemo201/Leetcode/tree/main/0994-rotting-oranges/) | Medium |
