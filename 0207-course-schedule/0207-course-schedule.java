@@ -1,11 +1,11 @@
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         Map<Integer, List<Integer>> adj = new HashMap<>();
-        int[] indegree = new int[numCourses];
-
         for (int i = 0; i < numCourses; i++) {
             adj.put(i, new ArrayList<>());
         }
+
+        int[] indegree = new int[numCourses];
 
         for (int[] pre : prerequisites) {
             adj.get(pre[0]).add(pre[1]);
@@ -14,7 +14,7 @@ class Solution {
 
         boolean[] visited = new boolean[numCourses];
         Queue<Integer> q = new LinkedList<>();
-
+        
         for (int i = 0; i < numCourses; i++) {
             if (indegree[i] == 0) {
                 q.offer(i);
@@ -23,10 +23,9 @@ class Solution {
         }
 
         while (!q.isEmpty()) {
-            int course = q.poll();
-            for (int nei : adj.get(course)) {
+            int cur = q.poll();
+            for (int nei : adj.get(cur)) {
                 indegree[nei]--;
-
                 if (indegree[nei] == 0) {
                     q.offer(nei);
                     visited[nei] = true;
@@ -34,7 +33,7 @@ class Solution {
             }
         }
 
-        for (boolean v: visited) {
+        for (boolean v : visited) {
             if (!v) {
                 return false;
             }
