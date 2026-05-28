@@ -1,16 +1,17 @@
 class Solution {
     public int orangesRotting(int[][] grid) {
-        int rows = grid.length;
-        int cols = grid[0].length;
+        int m = grid.length;
+        int n = grid[0].length;
 
-        Queue<int[]> q = new LinkedList<>();
         int fresh = 0;
+        Queue<int[]> q = new LinkedList<>();
 
-        for (int r = 0; r < rows; r++) {
-            for (int c = 0; c < cols; c++) {
-                if (grid[r][c] == 2) {
-                    q.offer(new int[]{r, c});
-                } else if (grid[r][c] == 1) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 2) {
+                    q.offer(new int[]{i, j});
+                }
+                if (grid[i][j] == 1) {
                     fresh++;
                 }
             }
@@ -20,34 +21,30 @@ class Solution {
             return 0;
         }
 
-        int mins = 0;
-
+        int min = 0;
         int[][] dirs = {{1, 0}, {-1, 0}, {0, -1}, {0, 1}};
-
         while (!q.isEmpty()) {
             int size = q.size();
             boolean rotted = false;
             for (int i = 0; i < size; i++) {
                 int[] cur = q.poll();
-                int r = cur[0];
-                int c = cur[1];
-                
-                for (int[] d : dirs) {
-                    int nr = r + d[0];
-                    int nc = c + d[1];
 
-                    if (nr >= 0 && nr < rows && nc >= 0 && nc < cols && grid[nr][nc] == 1) {
+                for (int[] dir : dirs) {
+                    int nr = cur[0] + dir[0];
+                    int nc = cur[1] + dir[1];
+
+                    if (nr >= 0 && nr < m && nc >= 0 && nc < n && grid[nr][nc] == 1) {
                         grid[nr][nc] = 2;
+                        q.offer(new int[]{nr, nc});
                         fresh--;
-                        q.offer(new int[] {nr, nc});
                         rotted = true;
                     }
                 }
             }
             if (rotted) {
-                mins++;
+                min++;
             }
         }
-        return fresh == 0 ? mins : -1;
+        return (fresh == 0) ? min : -1;
     }
 }
