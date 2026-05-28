@@ -46,6 +46,7 @@ Collection of LeetCode questions.
 | [0695-max-area-of-island](https://github.com/nemo201/Leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0704-binary-search](https://github.com/nemo201/Leetcode/tree/main/0704-binary-search/) | Easy |
 | [0739-daily-temperatures](https://github.com/nemo201/Leetcode/tree/main/0739-daily-temperatures/) | Medium |
+| [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 | [0875-koko-eating-bananas](https://github.com/nemo201/Leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
@@ -197,6 +198,7 @@ Collection of LeetCode questions.
 | [0525-contiguous-array](https://github.com/nemo201/Leetcode/tree/main/0525-contiguous-array/) | Medium |
 | [0560-subarray-sum-equals-k](https://github.com/nemo201/Leetcode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
+| [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -215,6 +217,7 @@ Collection of LeetCode questions.
 | [0433-minimum-genetic-mutation](https://github.com/nemo201/Leetcode/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0438-find-all-anagrams-in-a-string](https://github.com/nemo201/Leetcode/tree/main/0438-find-all-anagrams-in-a-string/) | Medium |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
+| [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/nemo201/Leetcode/tree/main/2096-step-by-step-directions-from-a-binary-tree-node-to-another/) | Medium |
 ## Prefix Sum
 | Problem Name | Difficulty |
@@ -400,6 +403,7 @@ Collection of LeetCode questions.
 | [0433-minimum-genetic-mutation](https://github.com/nemo201/Leetcode/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 | [0695-max-area-of-island](https://github.com/nemo201/Leetcode/tree/main/0695-max-area-of-island/) | Medium |
+| [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 | [0994-rotting-oranges](https://github.com/nemo201/Leetcode/tree/main/0994-rotting-oranges/) | Medium |
 | [1020-number-of-enclaves](https://github.com/nemo201/Leetcode/tree/main/1020-number-of-enclaves/) | Medium |
 ## Binary Search Tree
