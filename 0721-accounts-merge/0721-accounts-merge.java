@@ -10,7 +10,6 @@ class Solution {
 
             for (int j = 1; j < m; j++) {
                 String e = accounts.get(i).get(j);
-                String name = accounts.get(i).get(0);
 
                 if (!map.containsKey(e)) {
                     map.put(e, i);
