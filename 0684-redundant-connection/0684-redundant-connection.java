@@ -1,36 +1,52 @@
 class Solution {
-    int[] parent;
     public int[] findRedundantConnection(int[][] edges) {
         int n = edges.length;
-        parent = new int[n + 1];
 
-        for (int i = 0; i <= n; i++) {
-            parent[i] = i;
-        }
+        UnionFind uf = new UnionFind(n + 1);
 
         for (int[] edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-
-            if (find(u) == find(v)) {
+            if (uf.find(edge[0]) == uf.find(edge[1])) {
                 return edge;
             }
-            union(u, v);
+            uf.union(edge[0], edge[1]);
         }
+
         return new int[]{};
     }
 
-    private int find(int x) {
-        if (parent[x] != x) {
-            parent[x] = find(parent[x]);
+    class UnionFind {
+        int[] parent;
+        int[] rank;
+
+        public UnionFind(int n) {
+            parent = new int[n];
+            rank = new int[n];
+
+            for (int i = 0; i < n; i++) {
+                parent[i] = i;
+                rank[i] = 1;
+            }
         }
-        return parent[x];
-    }
 
-    private void union(int a, int b) {
-        int pa = find(a);
-        int pb = find(b);
+        public int find(int x) {
+            if (parent[x] != x) {
+                parent[x] = find(parent[x]);
+            }
+            return parent[x];
+        }
 
-        parent[pa] = pb;
+        public void union(int x, int y) {
+            int px = find(x);
+            int py = find(y);
+
+            if (rank[px] < rank[py]) {
+                parent[px] = py;
+            } else if (rank[px] > rank[py]) {
+                parent[py] = px;
+            } else {
+                parent[px] = py;
+                rank[py]++;
+            }
+        }
     }
 }
