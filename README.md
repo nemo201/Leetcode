@@ -177,6 +177,7 @@ Collection of LeetCode questions.
 | [0239-sliding-window-maximum](https://github.com/nemo201/Leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0295-find-median-from-data-stream](https://github.com/nemo201/Leetcode/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0743-network-delay-time](https://github.com/nemo201/Leetcode/tree/main/0743-network-delay-time/) | Medium |
 | [1046-last-stone-weight](https://github.com/nemo201/Leetcode/tree/main/1046-last-stone-weight/) | Easy |
 ## Monotonic Queue
 | Problem Name | Difficulty |
@@ -381,6 +382,7 @@ Collection of LeetCode questions.
 | [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 | [0695-max-area-of-island](https://github.com/nemo201/Leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
+| [0743-network-delay-time](https://github.com/nemo201/Leetcode/tree/main/0743-network-delay-time/) | Medium |
 | [0802-find-eventual-safe-states](https://github.com/nemo201/Leetcode/tree/main/0802-find-eventual-safe-states/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/nemo201/Leetcode/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [1020-number-of-enclaves](https://github.com/nemo201/Leetcode/tree/main/1020-number-of-enclaves/) | Medium |
@@ -425,6 +427,7 @@ Collection of LeetCode questions.
 | [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 | [0695-max-area-of-island](https://github.com/nemo201/Leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
+| [0743-network-delay-time](https://github.com/nemo201/Leetcode/tree/main/0743-network-delay-time/) | Medium |
 | [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 | [0802-find-eventual-safe-states](https://github.com/nemo201/Leetcode/tree/main/0802-find-eventual-safe-states/) | Medium |
 | [0994-rotting-oranges](https://github.com/nemo201/Leetcode/tree/main/0994-rotting-oranges/) | Medium |
@@ -449,6 +452,7 @@ Collection of LeetCode questions.
 | [0310-minimum-height-trees](https://github.com/nemo201/Leetcode/tree/main/0310-minimum-height-trees/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
+| [0743-network-delay-time](https://github.com/nemo201/Leetcode/tree/main/0743-network-delay-time/) | Medium |
 | [0802-find-eventual-safe-states](https://github.com/nemo201/Leetcode/tree/main/0802-find-eventual-safe-states/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/nemo201/Leetcode/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [1584-min-cost-to-connect-all-points](https://github.com/nemo201/Leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
@@ -467,4 +471,8 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1584-min-cost-to-connect-all-points](https://github.com/nemo201/Leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
+## Shortest Path
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0743-network-delay-time](https://github.com/nemo201/Leetcode/tree/main/0743-network-delay-time/) | Medium |
 <!---LeetCode Topics End-->
