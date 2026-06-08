@@ -1,45 +1,33 @@
 class Solution {
     public int networkDelayTime(int[][] times, int n, int k) {
-        Map<Integer, List<int[]>> adj = new HashMap<>();
-
-        for (int i = 1; i <= n; i++) {
-            adj.put(i, new ArrayList<>());
-        }
-
-        for (int[] time : times) {
-            adj.get(time[0]).add(new int[]{time[1], time[2]});
-        }
-
-        Queue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
-        pq.offer(new int[]{k, 0});
         int[] dist = new int[n + 1];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[k] = 0;
 
-        while (!pq.isEmpty()) {
-            int[] cur = pq.poll();
-            int node = cur[0];
-            int time = cur[1];
+        for (int i = 1; i <= n - 1; i++) {
+            boolean updated = false;
 
-            for (int[] nei : adj.get(node)) {
-                int nextNode = nei[0];
-                int nextTime = nei[1];
+            for (int[] edge : times) {
+                int u = edge[0];
+                int v = edge[1];
+                int w = edge[2];
 
-                if (time + nextTime < dist[nextNode]) {
-                    dist[nextNode] = time + nextTime;
-                    pq.offer(new int[]{nextNode, dist[nextNode]});
+                if (dist[u] != Integer.MAX_VALUE && dist[u] + w < dist[v]) {
+                    dist[v] = dist[u] + w;
+                    updated = true;
                 }
             }
+            if (!updated) {
+                break;
+            }
         }
-
-        int minTime = 0;
-
+        int maxTime = 0;
         for (int i = 1; i <= n; i++) {
             if (dist[i] == Integer.MAX_VALUE) {
                 return -1;
-            } 
-            minTime = Math.max(minTime, dist[i]);
+            }
+            maxTime = Math.max(maxTime, dist[i]);
         }
-        return minTime;
+        return maxTime;
     }
 }
