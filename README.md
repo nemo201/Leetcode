@@ -48,6 +48,7 @@ Collection of LeetCode questions.
 | [0704-binary-search](https://github.com/nemo201/Leetcode/tree/main/0704-binary-search/) | Easy |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
 | [0739-daily-temperatures](https://github.com/nemo201/Leetcode/tree/main/0739-daily-temperatures/) | Medium |
+| [0746-min-cost-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 | [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 | [0778-swim-in-rising-water](https://github.com/nemo201/Leetcode/tree/main/0778-swim-in-rising-water/) | Hard |
 | [0875-koko-eating-bananas](https://github.com/nemo201/Leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
@@ -131,6 +132,7 @@ Collection of LeetCode questions.
 | [0152-maximum-product-subarray](https://github.com/nemo201/Leetcode/tree/main/0152-maximum-product-subarray/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0509-fibonacci-number](https://github.com/nemo201/Leetcode/tree/main/0509-fibonacci-number/) | Easy |
+| [0746-min-cost-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/nemo201/Leetcode/tree/main/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | Medium |
 ## Stack
