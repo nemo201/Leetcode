@@ -41,6 +41,7 @@ Collection of LeetCode questions.
 | [0304-range-sum-query-2d-immutable](https://github.com/nemo201/Leetcode/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0417-pacific-atlantic-water-flow](https://github.com/nemo201/Leetcode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
 | [0496-next-greater-element-i](https://github.com/nemo201/Leetcode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0525-contiguous-array](https://github.com/nemo201/Leetcode/tree/main/0525-contiguous-array/) | Medium |
@@ -100,6 +101,7 @@ Collection of LeetCode questions.
 | [0209-minimum-size-subarray-sum](https://github.com/nemo201/Leetcode/tree/main/0209-minimum-size-subarray-sum/) | Medium |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0300-longest-increasing-subsequence](https://github.com/nemo201/Leetcode/tree/main/0300-longest-increasing-subsequence/) | Medium |
+| [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0704-binary-search](https://github.com/nemo201/Leetcode/tree/main/0704-binary-search/) | Easy |
 | [0778-swim-in-rising-water](https://github.com/nemo201/Leetcode/tree/main/0778-swim-in-rising-water/) | Hard |
 | [0875-koko-eating-bananas](https://github.com/nemo201/Leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
@@ -115,6 +117,7 @@ Collection of LeetCode questions.
 | [0242-valid-anagram](https://github.com/nemo201/Leetcode/tree/main/0242-valid-anagram/) | Easy |
 | [0295-find-median-from-data-stream](https://github.com/nemo201/Leetcode/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
+| [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 ## Greedy
@@ -137,6 +140,7 @@ Collection of LeetCode questions.
 | [0198-house-robber](https://github.com/nemo201/Leetcode/tree/main/0198-house-robber/) | Medium |
 | [0300-longest-increasing-subsequence](https://github.com/nemo201/Leetcode/tree/main/0300-longest-increasing-subsequence/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
+| [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0509-fibonacci-number](https://github.com/nemo201/Leetcode/tree/main/0509-fibonacci-number/) | Easy |
 | [0746-min-cost-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
