@@ -68,6 +68,7 @@ Collection of LeetCode questions.
 | [1480-running-sum-of-1d-array](https://github.com/nemo201/Leetcode/tree/main/1480-running-sum-of-1d-array/) | Easy |
 | [1514-path-with-maximum-probability](https://github.com/nemo201/Leetcode/tree/main/1514-path-with-maximum-probability/) | Medium |
 | [1584-min-cost-to-connect-all-points](https://github.com/nemo201/Leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
+| [1671-minimum-number-of-removals-to-make-mountain-array](https://github.com/nemo201/Leetcode/tree/main/1671-minimum-number-of-removals-to-make-mountain-array/) | Hard |
 ## Two Pointers
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -106,6 +107,7 @@ Collection of LeetCode questions.
 | [0778-swim-in-rising-water](https://github.com/nemo201/Leetcode/tree/main/0778-swim-in-rising-water/) | Hard |
 | [0875-koko-eating-bananas](https://github.com/nemo201/Leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/nemo201/Leetcode/tree/main/1011-capacity-to-ship-packages-within-d-days/) | Medium |
+| [1671-minimum-number-of-removals-to-make-mountain-array](https://github.com/nemo201/Leetcode/tree/main/1671-minimum-number-of-removals-to-make-mountain-array/) | Hard |
 ## Sorting
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -124,6 +126,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/nemo201/Leetcode/tree/main/0011-container-with-most-water/) | Medium |
+| [1671-minimum-number-of-removals-to-make-mountain-array](https://github.com/nemo201/Leetcode/tree/main/1671-minimum-number-of-removals-to-make-mountain-array/) | Hard |
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -145,6 +148,7 @@ Collection of LeetCode questions.
 | [0746-min-cost-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/nemo201/Leetcode/tree/main/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | Medium |
+| [1671-minimum-number-of-removals-to-make-mountain-array](https://github.com/nemo201/Leetcode/tree/main/1671-minimum-number-of-removals-to-make-mountain-array/) | Hard |
 ## Stack
 | Problem Name | Difficulty |
 | ------- | ------- |
