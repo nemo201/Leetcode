@@ -137,6 +137,7 @@ Collection of LeetCode questions.
 | [0042-trapping-rain-water](https://github.com/nemo201/Leetcode/tree/main/0042-trapping-rain-water/) | Hard |
 | [0053-maximum-subarray](https://github.com/nemo201/Leetcode/tree/main/0053-maximum-subarray/) | Medium |
 | [0070-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0070-climbing-stairs/) | Easy |
+| [0072-edit-distance](https://github.com/nemo201/Leetcode/tree/main/0072-edit-distance/) | Medium |
 | [0085-maximal-rectangle](https://github.com/nemo201/Leetcode/tree/main/0085-maximal-rectangle/) | Hard |
 | [0091-decode-ways](https://github.com/nemo201/Leetcode/tree/main/0091-decode-ways/) | Medium |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/nemo201/Leetcode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
@@ -247,6 +248,7 @@ Collection of LeetCode questions.
 | [0022-generate-parentheses](https://github.com/nemo201/Leetcode/tree/main/0022-generate-parentheses/) | Medium |
 | [0032-longest-valid-parentheses](https://github.com/nemo201/Leetcode/tree/main/0032-longest-valid-parentheses/) | Hard |
 | [0049-group-anagrams](https://github.com/nemo201/Leetcode/tree/main/0049-group-anagrams/) | Medium |
+| [0072-edit-distance](https://github.com/nemo201/Leetcode/tree/main/0072-edit-distance/) | Medium |
 | [0076-minimum-window-substring](https://github.com/nemo201/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 | [0091-decode-ways](https://github.com/nemo201/Leetcode/tree/main/0091-decode-ways/) | Medium |
 | [0127-word-ladder](https://github.com/nemo201/Leetcode/tree/main/0127-word-ladder/) | Hard |
