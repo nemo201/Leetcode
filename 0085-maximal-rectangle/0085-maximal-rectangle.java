@@ -1,35 +1,42 @@
 class Solution {
     public int maximalRectangle(char[][] matrix) {
-        int rows = matrix.length, cols = matrix[0].length;
-        int []height = new int[cols];
-        int maxArea = 0;
+        int m = matrix.length;
+        int n = matrix[0].length;
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
+        int[] heights = new int[n];
+        int ans = 0;
+
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
                 if (matrix[i][j] == '1') {
-                    height[j] += 1;
+                    heights[j]++;
                 } else {
-                    height[j] = 0;
+                    heights[j] = 0;
                 }
             }
-            maxArea = Math.max(maxArea, largestArea(height));
+            ans = Math.max(ans, helper(heights));
         }
-        return maxArea;
+        return ans;
     }
 
-    private int largestArea(int[] height) {
-        ArrayDeque<Integer> stack = new ArrayDeque<>();
+    private int helper (int[] heights) {
+        Stack<Integer> stack = new Stack<>();
         int maxArea = 0;
-        for (int i = 0; i <= height.length; i++) {
-            int currentHeight = (i == height.length) ? 0 : height[i];
-            while (!stack.isEmpty() && currentHeight < height[stack.peek()]) {
-                int h = height[stack.pop()];
-                int right = i;
-                int left = stack.isEmpty() ? -1 : stack.peek();
-                int width = right - left - 1;
-                int area = h * width;
 
-                maxArea = Math.max(maxArea, area);
+        for (int i = 0; i <= heights.length; i++) {
+            int currentHeight = (i == heights.length) ? 0 : heights[i];
+
+            while (!stack.isEmpty() && currentHeight < heights[stack.peek()]) {
+                int height = heights[stack.pop()];
+                int width;
+
+                if (stack.isEmpty()) {
+                    width = i;
+                } else {
+                    width = i - stack.peek() - 1;
+                }
+
+                maxArea = Math.max(maxArea, height * width);
             }
             stack.push(i);
         }
