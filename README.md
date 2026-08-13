@@ -45,6 +45,7 @@ Collection of LeetCode questions.
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0368-largest-divisible-subset](https://github.com/nemo201/Leetcode/tree/main/0368-largest-divisible-subset/) | Medium |
+| [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0417-pacific-atlantic-water-flow](https://github.com/nemo201/Leetcode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
 | [0496-next-greater-element-i](https://github.com/nemo201/Leetcode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0525-contiguous-array](https://github.com/nemo201/Leetcode/tree/main/0525-contiguous-array/) | Medium |
@@ -154,6 +155,7 @@ Collection of LeetCode questions.
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0368-largest-divisible-subset](https://github.com/nemo201/Leetcode/tree/main/0368-largest-divisible-subset/) | Medium |
+| [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0509-fibonacci-number](https://github.com/nemo201/Leetcode/tree/main/0509-fibonacci-number/) | Easy |
 | [0583-delete-operation-for-two-strings](https://github.com/nemo201/Leetcode/tree/main/0583-delete-operation-for-two-strings/) | Medium |
 | [0741-cherry-pickup](https://github.com/nemo201/Leetcode/tree/main/0741-cherry-pickup/) | Hard |
@@ -556,4 +558,12 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0084-largest-rectangle-in-histogram](https://github.com/nemo201/Leetcode/tree/main/0084-largest-rectangle-in-histogram/) | Hard |
+## Knapsack Problem
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
+## 0-1 Knapsack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
 <!---LeetCode Topics End-->
