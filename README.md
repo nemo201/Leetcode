@@ -47,6 +47,7 @@ Collection of LeetCode questions.
 | [0368-largest-divisible-subset](https://github.com/nemo201/Leetcode/tree/main/0368-largest-divisible-subset/) | Medium |
 | [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0417-pacific-atlantic-water-flow](https://github.com/nemo201/Leetcode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
+| [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
 | [0496-next-greater-element-i](https://github.com/nemo201/Leetcode/tree/main/0496-next-greater-element-i/) | Easy |
 | [0525-contiguous-array](https://github.com/nemo201/Leetcode/tree/main/0525-contiguous-array/) | Medium |
@@ -157,6 +158,7 @@ Collection of LeetCode questions.
 | [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0368-largest-divisible-subset](https://github.com/nemo201/Leetcode/tree/main/0368-largest-divisible-subset/) | Medium |
 | [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
+| [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
 | [0509-fibonacci-number](https://github.com/nemo201/Leetcode/tree/main/0509-fibonacci-number/) | Easy |
 | [0583-delete-operation-for-two-strings](https://github.com/nemo201/Leetcode/tree/main/0583-delete-operation-for-two-strings/) | Medium |
@@ -271,6 +273,7 @@ Collection of LeetCode questions.
 | [0424-longest-repeating-character-replacement](https://github.com/nemo201/Leetcode/tree/main/0424-longest-repeating-character-replacement/) | Medium |
 | [0433-minimum-genetic-mutation](https://github.com/nemo201/Leetcode/tree/main/0433-minimum-genetic-mutation/) | Medium |
 | [0438-find-all-anagrams-in-a-string](https://github.com/nemo201/Leetcode/tree/main/0438-find-all-anagrams-in-a-string/) | Medium |
+| [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
 | [0583-delete-operation-for-two-strings](https://github.com/nemo201/Leetcode/tree/main/0583-delete-operation-for-two-strings/) | Medium |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
@@ -565,10 +568,12 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
+| [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
 ## 0-1 Knapsack
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
+| [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
 <!---LeetCode Topics End-->
