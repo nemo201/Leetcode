@@ -41,6 +41,7 @@ Collection of LeetCode questions.
 | [0300-longest-increasing-subsequence](https://github.com/nemo201/Leetcode/tree/main/0300-longest-increasing-subsequence/) | Medium |
 | [0303-range-sum-query-immutable](https://github.com/nemo201/Leetcode/tree/main/0303-range-sum-query-immutable/) | Easy |
 | [0304-range-sum-query-2d-immutable](https://github.com/nemo201/Leetcode/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
+| [0322-coin-change](https://github.com/nemo201/Leetcode/tree/main/0322-coin-change/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
@@ -155,6 +156,7 @@ Collection of LeetCode questions.
 | [0198-house-robber](https://github.com/nemo201/Leetcode/tree/main/0198-house-robber/) | Medium |
 | [0221-maximal-square](https://github.com/nemo201/Leetcode/tree/main/0221-maximal-square/) | Medium |
 | [0300-longest-increasing-subsequence](https://github.com/nemo201/Leetcode/tree/main/0300-longest-increasing-subsequence/) | Medium |
+| [0322-coin-change](https://github.com/nemo201/Leetcode/tree/main/0322-coin-change/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0368-largest-divisible-subset](https://github.com/nemo201/Leetcode/tree/main/0368-largest-divisible-subset/) | Medium |
@@ -488,6 +490,7 @@ Collection of LeetCode questions.
 | [0207-course-schedule](https://github.com/nemo201/Leetcode/tree/main/0207-course-schedule/) | Medium |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0310-minimum-height-trees](https://github.com/nemo201/Leetcode/tree/main/0310-minimum-height-trees/) | Medium |
+| [0322-coin-change](https://github.com/nemo201/Leetcode/tree/main/0322-coin-change/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0417-pacific-atlantic-water-flow](https://github.com/nemo201/Leetcode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
 | [0433-minimum-genetic-mutation](https://github.com/nemo201/Leetcode/tree/main/0433-minimum-genetic-mutation/) | Medium |
@@ -569,6 +572,7 @@ Collection of LeetCode questions.
 ## Knapsack Problem
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0322-coin-change](https://github.com/nemo201/Leetcode/tree/main/0322-coin-change/) | Medium |
 | [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
@@ -580,4 +584,8 @@ Collection of LeetCode questions.
 | [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
 | [1049-last-stone-weight-ii](https://github.com/nemo201/Leetcode/tree/main/1049-last-stone-weight-ii/) | Medium |
+## Complete Knapsack
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0322-coin-change](https://github.com/nemo201/Leetcode/tree/main/0322-coin-change/) | Medium |
 <!---LeetCode Topics End-->
