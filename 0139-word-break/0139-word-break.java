@@ -1,29 +1,19 @@
 class Solution {
     public boolean wordBreak(String s, List<String> wordDict) {
-        Boolean [] memo = new Boolean[s.length()];
-        return helper (s, wordDict, 0, memo);
-    }
+        Set<String> dict = new HashSet<>(wordDict);
 
-    private boolean helper (String s, List<String> dict, int index, Boolean [] memo) {
-        if (index == s.length()) {
-            return true;
-        }
+        int n = s.length();
+        boolean[] dp = new boolean[n + 1];
+        dp[0] = true;
 
-        if (memo[index] != null) {
-            return memo[index];
-        }
-
-        for (String word : dict) {
-            if (index + word.length() > s.length()) {
-                continue;
-            }
-
-            if (s.startsWith(word, index)) {
-                if (helper (s, dict, index + word.length(), memo)) {
-                    return memo[index] = true;
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && dict.contains(s.substring(j, i))) {
+                    dp[i] = true;
+                    break;
                 }
             }
         }
-        return memo[index] = false;
+        return dp[n];
     }
 }
