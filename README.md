@@ -25,6 +25,7 @@ Collection of LeetCode questions.
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/nemo201/Leetcode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
 | [0130-surrounded-regions](https://github.com/nemo201/Leetcode/tree/main/0130-surrounded-regions/) | Medium |
+| [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
 | [0150-evaluate-reverse-polish-notation](https://github.com/nemo201/Leetcode/tree/main/0150-evaluate-reverse-polish-notation/) | Medium |
 | [0152-maximum-product-subarray](https://github.com/nemo201/Leetcode/tree/main/0152-maximum-product-subarray/) | Medium |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0153-find-minimum-in-rotated-sorted-array/) | Medium |
@@ -153,6 +154,7 @@ Collection of LeetCode questions.
 | [0091-decode-ways](https://github.com/nemo201/Leetcode/tree/main/0091-decode-ways/) | Medium |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/nemo201/Leetcode/tree/main/0121-best-time-to-buy-and-sell-stock/) | Easy |
 | [0124-binary-tree-maximum-path-sum](https://github.com/nemo201/Leetcode/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
+| [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
 | [0152-maximum-product-subarray](https://github.com/nemo201/Leetcode/tree/main/0152-maximum-product-subarray/) | Medium |
 | [0198-house-robber](https://github.com/nemo201/Leetcode/tree/main/0198-house-robber/) | Medium |
 | [0221-maximal-square](https://github.com/nemo201/Leetcode/tree/main/0221-maximal-square/) | Medium |
@@ -245,6 +247,7 @@ Collection of LeetCode questions.
 | [0076-minimum-window-substring](https://github.com/nemo201/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 | [0127-word-ladder](https://github.com/nemo201/Leetcode/tree/main/0127-word-ladder/) | Hard |
 | [0128-longest-consecutive-sequence](https://github.com/nemo201/Leetcode/tree/main/0128-longest-consecutive-sequence/) | Medium |
+| [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
 | [0141-linked-list-cycle](https://github.com/nemo201/Leetcode/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/nemo201/Leetcode/tree/main/0142-linked-list-cycle-ii/) | Medium |
 | [0242-valid-anagram](https://github.com/nemo201/Leetcode/tree/main/0242-valid-anagram/) | Easy |
@@ -272,6 +275,7 @@ Collection of LeetCode questions.
 | [0076-minimum-window-substring](https://github.com/nemo201/Leetcode/tree/main/0076-minimum-window-substring/) | Hard |
 | [0091-decode-ways](https://github.com/nemo201/Leetcode/tree/main/0091-decode-ways/) | Medium |
 | [0127-word-ladder](https://github.com/nemo201/Leetcode/tree/main/0127-word-ladder/) | Hard |
+| [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
 | [0224-basic-calculator](https://github.com/nemo201/Leetcode/tree/main/0224-basic-calculator/) | Hard |
 | [0242-valid-anagram](https://github.com/nemo201/Leetcode/tree/main/0242-valid-anagram/) | Easy |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
@@ -545,6 +549,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0070-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0070-climbing-stairs/) | Easy |
+| [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0509-fibonacci-number](https://github.com/nemo201/Leetcode/tree/main/0509-fibonacci-number/) | Easy |
 ## Minimum Spanning Tree
@@ -592,4 +597,12 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0322-coin-change](https://github.com/nemo201/Leetcode/tree/main/0322-coin-change/) | Medium |
 | [0518-coin-change-ii](https://github.com/nemo201/Leetcode/tree/main/0518-coin-change-ii/) | Medium |
+## Trie
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
+## Brute-Force Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
 <!---LeetCode Topics End-->
