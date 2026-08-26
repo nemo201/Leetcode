@@ -14,25 +14,36 @@
  * }
  */
 class Solution {
-    List<Integer> allSums = new ArrayList();
-    
+    private long totalSum;
+    private long maxProduct;
+
     public int maxProduct(TreeNode root) {
-        long totalSum = treeSum(root);
-        long best = 0;
-        for (long sum : allSums)
-            best = Math.max(best, sum * (totalSum - sum));
-        
-        return (int)(best % 1000000007);
+        totalSum = getSum(root);
+        dfs(root);
+        return (int)(maxProduct % 1_000_000_007);
     }
-    
-    private int treeSum(TreeNode subroot) {
-        if (subroot == null)
+
+    private long getSum(TreeNode node) {
+        if (node == null) {
             return 0;
-        int leftSum = treeSum(subroot.left);
-        int rightSum = treeSum(subroot.right);
-        int totalSum = leftSum + rightSum + subroot.val;
-        
-        allSums.add(totalSum);
-        return totalSum;
+        }
+
+        return node.val + getSum(node.left) + getSum(node.right);
+    }
+
+    private long dfs(TreeNode node) {
+        if (node == null) {
+            return 0;
+        }
+
+        long subtreeSum = node.val + dfs(node.left) + dfs(node.right);
+
+        long otherSum = totalSum - subtreeSum;
+
+        long product = subtreeSum * otherSum;
+
+        maxProduct = Math.max(maxProduct, product);
+
+        return subtreeSum;
     }
 }
