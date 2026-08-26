@@ -619,6 +619,7 @@ Collection of LeetCode questions.
 ## DP on Trees
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0124-binary-tree-maximum-path-sum](https://github.com/nemo201/Leetcode/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0337-house-robber-iii](https://github.com/nemo201/Leetcode/tree/main/0337-house-robber-iii/) | Medium |
 | [0543-diameter-of-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0543-diameter-of-binary-tree/) | Easy |
 <!---LeetCode Topics End-->
