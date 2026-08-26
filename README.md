@@ -437,6 +437,7 @@ Collection of LeetCode questions.
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0337-house-robber-iii](https://github.com/nemo201/Leetcode/tree/main/0337-house-robber-iii/) | Medium |
 | [0450-delete-node-in-a-bst](https://github.com/nemo201/Leetcode/tree/main/0450-delete-node-in-a-bst/) | Medium |
+| [0543-diameter-of-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0543-diameter-of-binary-tree/) | Easy |
 | [0701-insert-into-a-binary-search-tree](https://github.com/nemo201/Leetcode/tree/main/0701-insert-into-a-binary-search-tree/) | Medium |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/nemo201/Leetcode/tree/main/2096-step-by-step-directions-from-a-binary-tree-node-to-another/) | Medium |
 ## Depth-First Search
@@ -460,6 +461,7 @@ Collection of LeetCode questions.
 | [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 | [0337-house-robber-iii](https://github.com/nemo201/Leetcode/tree/main/0337-house-robber-iii/) | Medium |
 | [0417-pacific-atlantic-water-flow](https://github.com/nemo201/Leetcode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
+| [0543-diameter-of-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0543-diameter-of-binary-tree/) | Easy |
 | [0684-redundant-connection](https://github.com/nemo201/Leetcode/tree/main/0684-redundant-connection/) | Medium |
 | [0695-max-area-of-island](https://github.com/nemo201/Leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
@@ -488,6 +490,7 @@ Collection of LeetCode questions.
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0337-house-robber-iii](https://github.com/nemo201/Leetcode/tree/main/0337-house-robber-iii/) | Medium |
 | [0450-delete-node-in-a-bst](https://github.com/nemo201/Leetcode/tree/main/0450-delete-node-in-a-bst/) | Medium |
+| [0543-diameter-of-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0543-diameter-of-binary-tree/) | Easy |
 | [0701-insert-into-a-binary-search-tree](https://github.com/nemo201/Leetcode/tree/main/0701-insert-into-a-binary-search-tree/) | Medium |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/nemo201/Leetcode/tree/main/2096-step-by-step-directions-from-a-binary-tree-node-to-another/) | Medium |
 ## Breadth-First Search
@@ -617,4 +620,5 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0337-house-robber-iii](https://github.com/nemo201/Leetcode/tree/main/0337-house-robber-iii/) | Medium |
+| [0543-diameter-of-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0543-diameter-of-binary-tree/) | Easy |
 <!---LeetCode Topics End-->
