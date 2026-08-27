@@ -8,7 +8,7 @@ class Solution {
 
         for (int i = 1; i < n; i++) {
             dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]); //skip or sell
-            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]); //skip or sell
+            dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]); //skip or buy
         }
 
         return dp[n - 1][0];
