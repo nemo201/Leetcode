@@ -63,6 +63,7 @@ Collection of LeetCode questions.
 | [0643-maximum-average-subarray-i](https://github.com/nemo201/Leetcode/tree/main/0643-maximum-average-subarray-i/) | Easy |
 | [0695-max-area-of-island](https://github.com/nemo201/Leetcode/tree/main/0695-max-area-of-island/) | Medium |
 | [0704-binary-search](https://github.com/nemo201/Leetcode/tree/main/0704-binary-search/) | Easy |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/nemo201/Leetcode/tree/main/0714-best-time-to-buy-and-sell-stock-with-transaction-fee/) | Medium |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
 | [0739-daily-temperatures](https://github.com/nemo201/Leetcode/tree/main/0739-daily-temperatures/) | Medium |
 | [0741-cherry-pickup](https://github.com/nemo201/Leetcode/tree/main/0741-cherry-pickup/) | Hard |
@@ -144,6 +145,7 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/nemo201/Leetcode/tree/main/0011-container-with-most-water/) | Medium |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/nemo201/Leetcode/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/nemo201/Leetcode/tree/main/0714-best-time-to-buy-and-sell-stock-with-transaction-fee/) | Medium |
 | [1671-minimum-number-of-removals-to-make-mountain-array](https://github.com/nemo201/Leetcode/tree/main/1671-minimum-number-of-removals-to-make-mountain-array/) | Hard |
 ## Dynamic Programming
 | Problem Name | Difficulty |
@@ -182,6 +184,7 @@ Collection of LeetCode questions.
 | [0516-longest-palindromic-subsequence](https://github.com/nemo201/Leetcode/tree/main/0516-longest-palindromic-subsequence/) | Medium |
 | [0518-coin-change-ii](https://github.com/nemo201/Leetcode/tree/main/0518-coin-change-ii/) | Medium |
 | [0583-delete-operation-for-two-strings](https://github.com/nemo201/Leetcode/tree/main/0583-delete-operation-for-two-strings/) | Medium |
+| [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/nemo201/Leetcode/tree/main/0714-best-time-to-buy-and-sell-stock-with-transaction-fee/) | Medium |
 | [0741-cherry-pickup](https://github.com/nemo201/Leetcode/tree/main/0741-cherry-pickup/) | Hard |
 | [0746-min-cost-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
