@@ -18,6 +18,7 @@ Collection of LeetCode questions.
 | [0053-maximum-subarray](https://github.com/nemo201/Leetcode/tree/main/0053-maximum-subarray/) | Medium |
 | [0063-unique-paths-ii](https://github.com/nemo201/Leetcode/tree/main/0063-unique-paths-ii/) | Medium |
 | [0075-sort-colors](https://github.com/nemo201/Leetcode/tree/main/0075-sort-colors/) | Medium |
+| [0078-subsets](https://github.com/nemo201/Leetcode/tree/main/0078-subsets/) | Medium |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/nemo201/Leetcode/tree/main/0080-remove-duplicates-from-sorted-array-ii/) | Medium |
 | [0084-largest-rectangle-in-histogram](https://github.com/nemo201/Leetcode/tree/main/0084-largest-rectangle-in-histogram/) | Hard |
 | [0085-maximal-rectangle](https://github.com/nemo201/Leetcode/tree/main/0085-maximal-rectangle/) | Hard |
@@ -218,6 +219,7 @@ Collection of LeetCode questions.
 ## Bit Manipulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0078-subsets](https://github.com/nemo201/Leetcode/tree/main/0078-subsets/) | Medium |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
@@ -428,6 +430,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/nemo201/Leetcode/tree/main/0022-generate-parentheses/) | Medium |
+| [0078-subsets](https://github.com/nemo201/Leetcode/tree/main/0078-subsets/) | Medium |
 | [0113-path-sum-ii](https://github.com/nemo201/Leetcode/tree/main/0113-path-sum-ii/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
 ## Tree
