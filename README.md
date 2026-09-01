@@ -18,6 +18,7 @@ Collection of LeetCode questions.
 | [0042-trapping-rain-water](https://github.com/nemo201/Leetcode/tree/main/0042-trapping-rain-water/) | Hard |
 | [0046-permutations](https://github.com/nemo201/Leetcode/tree/main/0046-permutations/) | Medium |
 | [0049-group-anagrams](https://github.com/nemo201/Leetcode/tree/main/0049-group-anagrams/) | Medium |
+| [0051-n-queens](https://github.com/nemo201/Leetcode/tree/main/0051-n-queens/) | Hard |
 | [0053-maximum-subarray](https://github.com/nemo201/Leetcode/tree/main/0053-maximum-subarray/) | Medium |
 | [0063-unique-paths-ii](https://github.com/nemo201/Leetcode/tree/main/0063-unique-paths-ii/) | Medium |
 | [0075-sort-colors](https://github.com/nemo201/Leetcode/tree/main/0075-sort-colors/) | Medium |
@@ -438,6 +439,7 @@ Collection of LeetCode questions.
 | [0039-combination-sum](https://github.com/nemo201/Leetcode/tree/main/0039-combination-sum/) | Medium |
 | [0040-combination-sum-ii](https://github.com/nemo201/Leetcode/tree/main/0040-combination-sum-ii/) | Medium |
 | [0046-permutations](https://github.com/nemo201/Leetcode/tree/main/0046-permutations/) | Medium |
+| [0051-n-queens](https://github.com/nemo201/Leetcode/tree/main/0051-n-queens/) | Hard |
 | [0078-subsets](https://github.com/nemo201/Leetcode/tree/main/0078-subsets/) | Medium |
 | [0090-subsets-ii](https://github.com/nemo201/Leetcode/tree/main/0090-subsets-ii/) | Medium |
 | [0113-path-sum-ii](https://github.com/nemo201/Leetcode/tree/main/0113-path-sum-ii/) | Medium |
@@ -649,4 +651,8 @@ Collection of LeetCode questions.
 | [0124-binary-tree-maximum-path-sum](https://github.com/nemo201/Leetcode/tree/main/0124-binary-tree-maximum-path-sum/) | Hard |
 | [0337-house-robber-iii](https://github.com/nemo201/Leetcode/tree/main/0337-house-robber-iii/) | Medium |
 | [0543-diameter-of-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0543-diameter-of-binary-tree/) | Easy |
+## Algorithm X
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0051-n-queens](https://github.com/nemo201/Leetcode/tree/main/0051-n-queens/) | Hard |
 <!---LeetCode Topics End-->
