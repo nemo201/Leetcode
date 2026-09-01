@@ -14,7 +14,7 @@ class Solution {
 
         for (int i = index; i < can.length; i++) {
             if (can[i] > target) {
-                continue;
+                break;
             }
             list.add(can[i]);
             helper (can, target - can[i], i, ans, list);
