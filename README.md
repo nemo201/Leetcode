@@ -276,6 +276,7 @@ Collection of LeetCode questions.
 | [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
 | [0141-linked-list-cycle](https://github.com/nemo201/Leetcode/tree/main/0141-linked-list-cycle/) | Easy |
 | [0142-linked-list-cycle-ii](https://github.com/nemo201/Leetcode/tree/main/0142-linked-list-cycle-ii/) | Medium |
+| [0208-implement-trie-prefix-tree](https://github.com/nemo201/Leetcode/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0242-valid-anagram](https://github.com/nemo201/Leetcode/tree/main/0242-valid-anagram/) | Easy |
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0383-ransom-note](https://github.com/nemo201/Leetcode/tree/main/0383-ransom-note/) | Easy |
@@ -302,6 +303,7 @@ Collection of LeetCode questions.
 | [0091-decode-ways](https://github.com/nemo201/Leetcode/tree/main/0091-decode-ways/) | Medium |
 | [0127-word-ladder](https://github.com/nemo201/Leetcode/tree/main/0127-word-ladder/) | Hard |
 | [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
+| [0208-implement-trie-prefix-tree](https://github.com/nemo201/Leetcode/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0224-basic-calculator](https://github.com/nemo201/Leetcode/tree/main/0224-basic-calculator/) | Hard |
 | [0242-valid-anagram](https://github.com/nemo201/Leetcode/tree/main/0242-valid-anagram/) | Easy |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
@@ -329,6 +331,7 @@ Collection of LeetCode questions.
 ## Design
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0208-implement-trie-prefix-tree](https://github.com/nemo201/Leetcode/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0295-find-median-from-data-stream](https://github.com/nemo201/Leetcode/tree/main/0295-find-median-from-data-stream/) | Hard |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0303-range-sum-query-immutable](https://github.com/nemo201/Leetcode/tree/main/0303-range-sum-query-immutable/) | Easy |
@@ -645,6 +648,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
+| [0208-implement-trie-prefix-tree](https://github.com/nemo201/Leetcode/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 ## Brute-Force Search
 | Problem Name | Difficulty |
 | ------- | ------- |
