@@ -74,6 +74,7 @@ Collection of LeetCode questions.
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
 | [0739-daily-temperatures](https://github.com/nemo201/Leetcode/tree/main/0739-daily-temperatures/) | Medium |
 | [0741-cherry-pickup](https://github.com/nemo201/Leetcode/tree/main/0741-cherry-pickup/) | Hard |
+| [0745-prefix-and-suffix-search](https://github.com/nemo201/Leetcode/tree/main/0745-prefix-and-suffix-search/) | Hard |
 | [0746-min-cost-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 | [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 | [0778-swim-in-rising-water](https://github.com/nemo201/Leetcode/tree/main/0778-swim-in-rising-water/) | Hard |
@@ -288,6 +289,7 @@ Collection of LeetCode questions.
 | [0560-subarray-sum-equals-k](https://github.com/nemo201/Leetcode/tree/main/0560-subarray-sum-equals-k/) | Medium |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
+| [0745-prefix-and-suffix-search](https://github.com/nemo201/Leetcode/tree/main/0745-prefix-and-suffix-search/) | Hard |
 | [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/nemo201/Leetcode/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 ## String
@@ -317,6 +319,7 @@ Collection of LeetCode questions.
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
 | [0583-delete-operation-for-two-strings](https://github.com/nemo201/Leetcode/tree/main/0583-delete-operation-for-two-strings/) | Medium |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
+| [0745-prefix-and-suffix-search](https://github.com/nemo201/Leetcode/tree/main/0745-prefix-and-suffix-search/) | Hard |
 | [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/nemo201/Leetcode/tree/main/1143-longest-common-subsequence/) | Medium |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/nemo201/Leetcode/tree/main/2096-step-by-step-directions-from-a-binary-tree-node-to-another/) | Medium |
@@ -338,6 +341,7 @@ Collection of LeetCode questions.
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/nemo201/Leetcode/tree/main/0297-serialize-and-deserialize-binary-tree/) | Hard |
 | [0303-range-sum-query-immutable](https://github.com/nemo201/Leetcode/tree/main/0303-range-sum-query-immutable/) | Easy |
 | [0304-range-sum-query-2d-immutable](https://github.com/nemo201/Leetcode/tree/main/0304-range-sum-query-2d-immutable/) | Medium |
+| [0745-prefix-and-suffix-search](https://github.com/nemo201/Leetcode/tree/main/0745-prefix-and-suffix-search/) | Hard |
 ## Matrix
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -653,6 +657,7 @@ Collection of LeetCode questions.
 | [0139-word-break](https://github.com/nemo201/Leetcode/tree/main/0139-word-break/) | Medium |
 | [0208-implement-trie-prefix-tree](https://github.com/nemo201/Leetcode/tree/main/0208-implement-trie-prefix-tree/) | Medium |
 | [0211-design-add-and-search-words-data-structure](https://github.com/nemo201/Leetcode/tree/main/0211-design-add-and-search-words-data-structure/) | Medium |
+| [0745-prefix-and-suffix-search](https://github.com/nemo201/Leetcode/tree/main/0745-prefix-and-suffix-search/) | Hard |
 ## Brute-Force Search
 | Problem Name | Difficulty |
 | ------- | ------- |
