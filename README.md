@@ -17,6 +17,7 @@ Collection of LeetCode questions.
 | [0039-combination-sum](https://github.com/nemo201/Leetcode/tree/main/0039-combination-sum/) | Medium |
 | [0040-combination-sum-ii](https://github.com/nemo201/Leetcode/tree/main/0040-combination-sum-ii/) | Medium |
 | [0042-trapping-rain-water](https://github.com/nemo201/Leetcode/tree/main/0042-trapping-rain-water/) | Hard |
+| [0045-jump-game-ii](https://github.com/nemo201/Leetcode/tree/main/0045-jump-game-ii/) | Medium |
 | [0046-permutations](https://github.com/nemo201/Leetcode/tree/main/0046-permutations/) | Medium |
 | [0049-group-anagrams](https://github.com/nemo201/Leetcode/tree/main/0049-group-anagrams/) | Medium |
 | [0051-n-queens](https://github.com/nemo201/Leetcode/tree/main/0051-n-queens/) | Hard |
@@ -155,6 +156,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/nemo201/Leetcode/tree/main/0011-container-with-most-water/) | Medium |
+| [0045-jump-game-ii](https://github.com/nemo201/Leetcode/tree/main/0045-jump-game-ii/) | Medium |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/nemo201/Leetcode/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
 | [0455-assign-cookies](https://github.com/nemo201/Leetcode/tree/main/0455-assign-cookies/) | Easy |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/nemo201/Leetcode/tree/main/0714-best-time-to-buy-and-sell-stock-with-transaction-fee/) | Medium |
@@ -165,6 +167,7 @@ Collection of LeetCode questions.
 | [0022-generate-parentheses](https://github.com/nemo201/Leetcode/tree/main/0022-generate-parentheses/) | Medium |
 | [0032-longest-valid-parentheses](https://github.com/nemo201/Leetcode/tree/main/0032-longest-valid-parentheses/) | Hard |
 | [0042-trapping-rain-water](https://github.com/nemo201/Leetcode/tree/main/0042-trapping-rain-water/) | Hard |
+| [0045-jump-game-ii](https://github.com/nemo201/Leetcode/tree/main/0045-jump-game-ii/) | Medium |
 | [0053-maximum-subarray](https://github.com/nemo201/Leetcode/tree/main/0053-maximum-subarray/) | Medium |
 | [0062-unique-paths](https://github.com/nemo201/Leetcode/tree/main/0062-unique-paths/) | Medium |
 | [0063-unique-paths-ii](https://github.com/nemo201/Leetcode/tree/main/0063-unique-paths-ii/) | Medium |
