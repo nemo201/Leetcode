@@ -61,6 +61,7 @@ Collection of LeetCode questions.
 | [0377-combination-sum-iv](https://github.com/nemo201/Leetcode/tree/main/0377-combination-sum-iv/) | Medium |
 | [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0417-pacific-atlantic-water-flow](https://github.com/nemo201/Leetcode/tree/main/0417-pacific-atlantic-water-flow/) | Medium |
+| [0455-assign-cookies](https://github.com/nemo201/Leetcode/tree/main/0455-assign-cookies/) | Easy |
 | [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
 | [0496-next-greater-element-i](https://github.com/nemo201/Leetcode/tree/main/0496-next-greater-element-i/) | Easy |
@@ -112,6 +113,7 @@ Collection of LeetCode questions.
 | [0283-move-zeroes](https://github.com/nemo201/Leetcode/tree/main/0283-move-zeroes/) | Easy |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
 | [0295-find-median-from-data-stream](https://github.com/nemo201/Leetcode/tree/main/0295-find-median-from-data-stream/) | Hard |
+| [0455-assign-cookies](https://github.com/nemo201/Leetcode/tree/main/0455-assign-cookies/) | Easy |
 | [0567-permutation-in-string](https://github.com/nemo201/Leetcode/tree/main/0567-permutation-in-string/) | Medium |
 | [0876-middle-of-the-linked-list](https://github.com/nemo201/Leetcode/tree/main/0876-middle-of-the-linked-list/) | Easy |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
@@ -146,6 +148,7 @@ Collection of LeetCode questions.
 | [0347-top-k-frequent-elements](https://github.com/nemo201/Leetcode/tree/main/0347-top-k-frequent-elements/) | Medium |
 | [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0368-largest-divisible-subset](https://github.com/nemo201/Leetcode/tree/main/0368-largest-divisible-subset/) | Medium |
+| [0455-assign-cookies](https://github.com/nemo201/Leetcode/tree/main/0455-assign-cookies/) | Easy |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 ## Greedy
@@ -153,6 +156,7 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/nemo201/Leetcode/tree/main/0011-container-with-most-water/) | Medium |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/nemo201/Leetcode/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
+| [0455-assign-cookies](https://github.com/nemo201/Leetcode/tree/main/0455-assign-cookies/) | Easy |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/nemo201/Leetcode/tree/main/0714-best-time-to-buy-and-sell-stock-with-transaction-fee/) | Medium |
 | [1671-minimum-number-of-removals-to-make-mountain-array](https://github.com/nemo201/Leetcode/tree/main/1671-minimum-number-of-removals-to-make-mountain-array/) | Hard |
 ## Dynamic Programming
@@ -677,4 +681,8 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0037-sudoku-solver](https://github.com/nemo201/Leetcode/tree/main/0037-sudoku-solver/) | Hard |
+## Quicksort
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0455-assign-cookies](https://github.com/nemo201/Leetcode/tree/main/0455-assign-cookies/) | Easy |
 <!---LeetCode Topics End-->
