@@ -22,6 +22,7 @@ Collection of LeetCode questions.
 | [0049-group-anagrams](https://github.com/nemo201/Leetcode/tree/main/0049-group-anagrams/) | Medium |
 | [0051-n-queens](https://github.com/nemo201/Leetcode/tree/main/0051-n-queens/) | Hard |
 | [0053-maximum-subarray](https://github.com/nemo201/Leetcode/tree/main/0053-maximum-subarray/) | Medium |
+| [0055-jump-game](https://github.com/nemo201/Leetcode/tree/main/0055-jump-game/) | Medium |
 | [0063-unique-paths-ii](https://github.com/nemo201/Leetcode/tree/main/0063-unique-paths-ii/) | Medium |
 | [0075-sort-colors](https://github.com/nemo201/Leetcode/tree/main/0075-sort-colors/) | Medium |
 | [0078-subsets](https://github.com/nemo201/Leetcode/tree/main/0078-subsets/) | Medium |
@@ -157,6 +158,7 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0011-container-with-most-water](https://github.com/nemo201/Leetcode/tree/main/0011-container-with-most-water/) | Medium |
 | [0045-jump-game-ii](https://github.com/nemo201/Leetcode/tree/main/0045-jump-game-ii/) | Medium |
+| [0055-jump-game](https://github.com/nemo201/Leetcode/tree/main/0055-jump-game/) | Medium |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/nemo201/Leetcode/tree/main/0122-best-time-to-buy-and-sell-stock-ii/) | Medium |
 | [0455-assign-cookies](https://github.com/nemo201/Leetcode/tree/main/0455-assign-cookies/) | Easy |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/nemo201/Leetcode/tree/main/0714-best-time-to-buy-and-sell-stock-with-transaction-fee/) | Medium |
@@ -169,6 +171,7 @@ Collection of LeetCode questions.
 | [0042-trapping-rain-water](https://github.com/nemo201/Leetcode/tree/main/0042-trapping-rain-water/) | Hard |
 | [0045-jump-game-ii](https://github.com/nemo201/Leetcode/tree/main/0045-jump-game-ii/) | Medium |
 | [0053-maximum-subarray](https://github.com/nemo201/Leetcode/tree/main/0053-maximum-subarray/) | Medium |
+| [0055-jump-game](https://github.com/nemo201/Leetcode/tree/main/0055-jump-game/) | Medium |
 | [0062-unique-paths](https://github.com/nemo201/Leetcode/tree/main/0062-unique-paths/) | Medium |
 | [0063-unique-paths-ii](https://github.com/nemo201/Leetcode/tree/main/0063-unique-paths-ii/) | Medium |
 | [0070-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0070-climbing-stairs/) | Easy |
