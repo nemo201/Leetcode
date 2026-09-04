@@ -23,6 +23,7 @@ Collection of LeetCode questions.
 | [0051-n-queens](https://github.com/nemo201/Leetcode/tree/main/0051-n-queens/) | Hard |
 | [0053-maximum-subarray](https://github.com/nemo201/Leetcode/tree/main/0053-maximum-subarray/) | Medium |
 | [0055-jump-game](https://github.com/nemo201/Leetcode/tree/main/0055-jump-game/) | Medium |
+| [0056-merge-intervals](https://github.com/nemo201/Leetcode/tree/main/0056-merge-intervals/) | Medium |
 | [0063-unique-paths-ii](https://github.com/nemo201/Leetcode/tree/main/0063-unique-paths-ii/) | Medium |
 | [0075-sort-colors](https://github.com/nemo201/Leetcode/tree/main/0075-sort-colors/) | Medium |
 | [0078-subsets](https://github.com/nemo201/Leetcode/tree/main/0078-subsets/) | Medium |
@@ -144,6 +145,7 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0015-3sum](https://github.com/nemo201/Leetcode/tree/main/0015-3sum/) | Medium |
 | [0049-group-anagrams](https://github.com/nemo201/Leetcode/tree/main/0049-group-anagrams/) | Medium |
+| [0056-merge-intervals](https://github.com/nemo201/Leetcode/tree/main/0056-merge-intervals/) | Medium |
 | [0075-sort-colors](https://github.com/nemo201/Leetcode/tree/main/0075-sort-colors/) | Medium |
 | [0148-sort-list](https://github.com/nemo201/Leetcode/tree/main/0148-sort-list/) | Medium |
 | [0215-kth-largest-element-in-an-array](https://github.com/nemo201/Leetcode/tree/main/0215-kth-largest-element-in-an-array/) | Medium |
@@ -696,5 +698,6 @@ Collection of LeetCode questions.
 ## Quicksort
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0056-merge-intervals](https://github.com/nemo201/Leetcode/tree/main/0056-merge-intervals/) | Medium |
 | [0455-assign-cookies](https://github.com/nemo201/Leetcode/tree/main/0455-assign-cookies/) | Easy |
 <!---LeetCode Topics End-->
