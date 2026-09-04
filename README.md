@@ -94,6 +94,7 @@ Collection of LeetCode questions.
 | [1046-last-stone-weight](https://github.com/nemo201/Leetcode/tree/main/1046-last-stone-weight/) | Easy |
 | [1049-last-stone-weight-ii](https://github.com/nemo201/Leetcode/tree/main/1049-last-stone-weight-ii/) | Medium |
 | [1091-shortest-path-in-binary-matrix](https://github.com/nemo201/Leetcode/tree/main/1091-shortest-path-in-binary-matrix/) | Medium |
+| [1288-remove-covered-intervals](https://github.com/nemo201/Leetcode/tree/main/1288-remove-covered-intervals/) | Medium |
 | [1293-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/nemo201/Leetcode/tree/main/1293-shortest-path-in-a-grid-with-obstacles-elimination/) | Hard |
 | [1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/nemo201/Leetcode/tree/main/1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium |
 | [1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/nemo201/Leetcode/tree/main/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Hard |
@@ -159,6 +160,7 @@ Collection of LeetCode questions.
 | [0455-assign-cookies](https://github.com/nemo201/Leetcode/tree/main/0455-assign-cookies/) | Easy |
 | [0721-accounts-merge](https://github.com/nemo201/Leetcode/tree/main/0721-accounts-merge/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
+| [1288-remove-covered-intervals](https://github.com/nemo201/Leetcode/tree/main/1288-remove-covered-intervals/) | Medium |
 ## Greedy
 | Problem Name | Difficulty |
 | ------- | ------- |
