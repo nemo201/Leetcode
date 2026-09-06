@@ -262,6 +262,7 @@ Collection of LeetCode questions.
 | [0260-single-number-iii](https://github.com/nemo201/Leetcode/tree/main/0260-single-number-iii/) | Medium |
 | [0268-missing-number](https://github.com/nemo201/Leetcode/tree/main/0268-missing-number/) | Easy |
 | [0287-find-the-duplicate-number](https://github.com/nemo201/Leetcode/tree/main/0287-find-the-duplicate-number/) | Medium |
+| [0371-sum-of-two-integers](https://github.com/nemo201/Leetcode/tree/main/0371-sum-of-two-integers/) | Medium |
 ## Sliding Window
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -479,6 +480,7 @@ Collection of LeetCode questions.
 | [0224-basic-calculator](https://github.com/nemo201/Leetcode/tree/main/0224-basic-calculator/) | Hard |
 | [0268-missing-number](https://github.com/nemo201/Leetcode/tree/main/0268-missing-number/) | Easy |
 | [0368-largest-divisible-subset](https://github.com/nemo201/Leetcode/tree/main/0368-largest-divisible-subset/) | Medium |
+| [0371-sum-of-two-integers](https://github.com/nemo201/Leetcode/tree/main/0371-sum-of-two-integers/) | Medium |
 | [0445-add-two-numbers-ii](https://github.com/nemo201/Leetcode/tree/main/0445-add-two-numbers-ii/) | Medium |
 | [0509-fibonacci-number](https://github.com/nemo201/Leetcode/tree/main/0509-fibonacci-number/) | Easy |
 ## Backtracking
