@@ -40,6 +40,7 @@ class Solution {
                 tail.next = l2;
                 l2 = l2.next;
             }
+
             tail = tail.next;
         }
 
@@ -50,6 +51,7 @@ class Solution {
         if (l2 != null) {
             tail.next = l2;
         }
+
         return dummy.next;
     }
 }
