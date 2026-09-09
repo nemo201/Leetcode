@@ -1,35 +1,84 @@
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        if (nums1.length  > nums2.length) {
+
+        // Lengths of the two arrays
+        int m = nums1.length;
+        int n = nums2.length;
+
+        // Always binary-search the smaller array
+        if (m > n) {
             return findMedianSortedArrays(nums2, nums1);
         }
 
-        int m = nums1.length, n = nums2.length;
-        int left = 0, right = m;
+        // Search for partition position in nums1
+        int left = 0;
+        int right = m;
 
         while (left <= right) {
-            int partitionA = left + (right - left) / 2;
-            int partitionB = (m + n + 1) / 2 - partitionA;
 
-            int maxLeftA = (partitionA == 0) ? Integer.MIN_VALUE : nums1[partitionA - 1];
+            // Try a partition in nums1
+            int partitionA =
+                left + (right - left) / 2;
 
-            int minRightA = (partitionA == m) ? Integer.MAX_VALUE : nums1[partitionA];
+            // Total number of elements required
+            // on the left side
+            //
+            // partitionA + partitionB = (m+n+1)/2
+            int partitionB =
+                (m + n + 1) / 2 - partitionA;
 
-            int maxLeftB = (partitionB == 0) ? Integer.MIN_VALUE : nums2[partitionB - 1];
+            // Largest element on left of nums1
+            int maxLeftA =
+                (partitionA == 0)
+                    ? Integer.MIN_VALUE
+                    : nums1[partitionA - 1];
 
-            int minRightB = (partitionB == n) ? Integer.MAX_VALUE : nums2[partitionB];
+            // Smallest element on right of nums1
+            int minRightA =
+                (partitionA == m)
+                    ? Integer.MAX_VALUE
+                    : nums1[partitionA];
 
-            if (maxLeftA <= minRightB && maxLeftB <= minRightA) {
+            // Largest element on left of nums2
+            int maxLeftB =
+                (partitionB == 0)
+                    ? Integer.MIN_VALUE
+                    : nums2[partitionB - 1];
+
+            // Smallest element on right of nums2
+            int minRightB =
+                (partitionB == n)
+                    ? Integer.MAX_VALUE
+                    : nums2[partitionB];
+
+            // Check if we found the correct partition
+            if (maxLeftA <= minRightB &&
+                maxLeftB <= minRightA) {
+
+                // Odd number of total elements
                 if ((m + n) % 2 == 1) {
                     return Math.max(maxLeftA, maxLeftB);
                 }
-                return (Math.max(maxLeftA, maxLeftB) + Math.min(minRightA, minRightB)) / 2.0;
+
+                // Even number of total elements
+                return (
+                    Math.max(maxLeftA, maxLeftB)
+                    +
+                    Math.min(minRightA, minRightB)
+                ) / 2.0;
+
+            // A's partition is too far RIGHT
             } else if (maxLeftA > minRightB) {
+
                 right = partitionA - 1;
+
+            // A's partition is too far LEFT
             } else {
+
                 left = partitionA + 1;
             }
         }
+
         return 0;
     }
 }
