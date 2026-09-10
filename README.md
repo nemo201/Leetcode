@@ -759,4 +759,8 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/nemo201/Leetcode/tree/main/0023-merge-k-sorted-lists/) | Hard |
+## Directed Acyclic Graph
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0329-longest-increasing-path-in-a-matrix](https://github.com/nemo201/Leetcode/tree/main/0329-longest-increasing-path-in-a-matrix/) | Hard |
 <!---LeetCode Topics End-->
