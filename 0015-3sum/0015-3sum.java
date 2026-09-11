@@ -12,7 +12,6 @@ class Solution {
 
             while (j < k) {
                 int sum = nums[i] + nums[j] + nums[k];
-
                 if (sum == 0) {
                     ans.add(Arrays.asList(nums[i], nums[j], nums[k]));
                     j++;
@@ -25,10 +24,10 @@ class Solution {
                     while (j < k && nums[k] == nums[k + 1]) {
                         k--;
                     }
-                } else if (sum < 0){
-                    j++;
-                } else {
+                } else if (sum > 0) {
                     k--;
+                } else {
+                    j++;
                 }
             }
         }
