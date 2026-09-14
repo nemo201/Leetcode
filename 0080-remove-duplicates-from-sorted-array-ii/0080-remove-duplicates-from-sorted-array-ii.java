@@ -9,6 +9,7 @@ class Solution {
                 k++;
             }
         }
+
         return k;
     }
 }
