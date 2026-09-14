@@ -4,7 +4,8 @@ class Solution {
 
         for (int p2 = 0; p2 < nums.length; p2++) {
             if (nums[p2] != 0) {
-                nums[p1++] = nums[p2];
+                nums[p1] = nums[p2];
+                p1++;
             }
         }
 
