@@ -1,16 +1,15 @@
 class Solution {
     public int findMaxLength(int[] nums) {
+        int balance = 0;
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0, -1);
-
         int max = 0;
-        int balance = 0;
 
         for (int i = 0; i < nums.length; i++) {
             if (nums[i] == 1) {
-                balance += 1;
+                balance++;
             } else {
-                balance -= 1;
+                balance--;
             }
 
             if (map.containsKey(balance)) {
