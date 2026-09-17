@@ -26,12 +26,6 @@ class Solution {
             }
         }
 
-        List<List<String>> ans = new ArrayList<>();
-
-        for (List<String> value : map.values()) {
-            ans.add(value);
-        }
-
-        return ans;
+        return new ArrayList<>(map.values());
     }
 }
