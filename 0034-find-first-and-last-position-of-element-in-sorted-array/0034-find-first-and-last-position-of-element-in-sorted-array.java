@@ -3,20 +3,19 @@ class Solution {
         int first = findFirst(nums, target);
 
         if (first == -1) {
-            return new int[]{-1, -1};
+            return new int[] { -1, -1 };
         }
 
         int last = findLast(nums, target);
 
-        return new int[]{first, last};
+        return new int[] { first, last };
     }
 
     private int findFirst(int[] nums, int target) {
         int left = 0, right = nums.length - 1;
         int ans = -1;
-
         while (left <= right) {
-            int mid = left + (right - left)/ 2;
+            int mid = left + (right - left) / 2;
 
             if (nums[mid] == target) {
                 ans = mid;
@@ -35,7 +34,7 @@ class Solution {
         int ans = -1;
 
         while (left <= right) {
-            int mid = left + (right - left)/ 2;
+            int mid = left + (right - left) / 2;
 
             if (nums[mid] == target) {
                 ans = mid;
