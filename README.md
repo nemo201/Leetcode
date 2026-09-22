@@ -105,6 +105,7 @@ Collection of LeetCode questions.
 | [1293-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/nemo201/Leetcode/tree/main/1293-shortest-path-in-a-grid-with-obstacles-elimination/) | Hard |
 | [1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/nemo201/Leetcode/tree/main/1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium |
 | [1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/nemo201/Leetcode/tree/main/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Hard |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/nemo201/Leetcode/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 | [1480-running-sum-of-1d-array](https://github.com/nemo201/Leetcode/tree/main/1480-running-sum-of-1d-array/) | Easy |
 | [1514-path-with-maximum-probability](https://github.com/nemo201/Leetcode/tree/main/1514-path-with-maximum-probability/) | Medium |
 | [1584-min-cost-to-connect-all-points](https://github.com/nemo201/Leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
@@ -282,12 +283,14 @@ Collection of LeetCode questions.
 | [0643-maximum-average-subarray-i](https://github.com/nemo201/Leetcode/tree/main/0643-maximum-average-subarray-i/) | Easy |
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/nemo201/Leetcode/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/nemo201/Leetcode/tree/main/1343-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold/) | Medium |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/nemo201/Leetcode/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 ## Queue
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0239-sliding-window-maximum](https://github.com/nemo201/Leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/nemo201/Leetcode/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/nemo201/Leetcode/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 ## Heap (Priority Queue)
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -301,6 +304,7 @@ Collection of LeetCode questions.
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/nemo201/Leetcode/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [1046-last-stone-weight](https://github.com/nemo201/Leetcode/tree/main/1046-last-stone-weight/) | Easy |
 | [1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/nemo201/Leetcode/tree/main/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Hard |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/nemo201/Leetcode/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 | [1514-path-with-maximum-probability](https://github.com/nemo201/Leetcode/tree/main/1514-path-with-maximum-probability/) | Medium |
 ## Monotonic Queue
 | Problem Name | Difficulty |
@@ -308,6 +312,7 @@ Collection of LeetCode questions.
 | [0239-sliding-window-maximum](https://github.com/nemo201/Leetcode/tree/main/0239-sliding-window-maximum/) | Hard |
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/nemo201/Leetcode/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/nemo201/Leetcode/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 ## Hash Table
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -759,6 +764,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0315-count-of-smaller-numbers-after-self](https://github.com/nemo201/Leetcode/tree/main/0315-count-of-smaller-numbers-after-self/) | Hard |
+| [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/nemo201/Leetcode/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 ## Treap
 | Problem Name | Difficulty |
 | ------- | ------- |
