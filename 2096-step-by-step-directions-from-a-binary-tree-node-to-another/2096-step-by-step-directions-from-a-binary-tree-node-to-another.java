@@ -15,7 +15,7 @@
  */
 class Solution {
     public String getDirections(TreeNode root, int startValue, int destValue) {
-        TreeNode lca = findLCA(root, startValue, destValue);
+        TreeNode lca = findLca(root, startValue, destValue);
         StringBuilder startPath = new StringBuilder();
         StringBuilder destPath = new StringBuilder();
 
@@ -23,7 +23,6 @@ class Solution {
         findPath(lca, destValue, destPath);
 
         StringBuilder ans = new StringBuilder();
-
         for (int i = 0; i < startPath.length(); i++) {
             ans.append('U');
         }
@@ -31,16 +30,16 @@ class Solution {
         return ans.toString();
     }
 
-    private TreeNode findLCA(TreeNode root, int p, int q) {
-        if (root == null || root.val == p || root.val == q) {
-            return root;
+    private TreeNode findLca(TreeNode node, int p, int q) {
+        if (node == null || node.val == p || node.val == q) {
+            return node;
         }
 
-        TreeNode left = findLCA(root.left, p, q);
-        TreeNode right = findLCA(root.right, p, q);
+        TreeNode left = findLca(node.left, p, q);
+        TreeNode right = findLca(node.right, p, q);
 
         if (left != null && right != null) {
-            return root;
+            return node;
         }
 
         return left != null ? left : right;
@@ -59,14 +58,12 @@ class Solution {
         if (findPath(node.left, target, path)) {
             return true;
         }
-
         path.deleteCharAt(path.length() - 1);
 
         path.append('R');
         if (findPath(node.right, target, path)) {
             return true;
         }
-
         path.deleteCharAt(path.length() - 1);
 
         return false;
