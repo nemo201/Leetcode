@@ -16,7 +16,7 @@ public class Codec {
         return sb.toString();
     }
 
-    private void dfsSerialize(TreeNode node, StringBuilder sb) {
+    public void dfsSerialize(TreeNode node, StringBuilder sb) {
         if (node == null) {
             sb.append("#,");
             return;
@@ -33,7 +33,7 @@ public class Codec {
         return dfsDeserialize(q);
     }
 
-    private TreeNode dfsDeserialize(Queue<String> q) {
+    public TreeNode dfsDeserialize(Queue<String> q) {
         String val = q.poll();
         if (val.equals("#")) {
             return null;
@@ -42,6 +42,7 @@ public class Codec {
         TreeNode node = new TreeNode(Integer.parseInt(val));
         node.left = dfsDeserialize(q);
         node.right = dfsDeserialize(q);
+
         return node;
     }
 }
