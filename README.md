@@ -782,4 +782,8 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0022-generate-parentheses](https://github.com/nemo201/Leetcode/tree/main/0022-generate-parentheses/) | Medium |
 | [0032-longest-valid-parentheses](https://github.com/nemo201/Leetcode/tree/main/0032-longest-valid-parentheses/) | Hard |
+## Bidirectional Search
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0127-word-ladder](https://github.com/nemo201/Leetcode/tree/main/0127-word-ladder/) | Hard |
 <!---LeetCode Topics End-->
