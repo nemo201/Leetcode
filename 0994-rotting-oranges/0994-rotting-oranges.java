@@ -23,9 +23,9 @@ class Solution {
         int[][] dirs = { { 1, 0 }, { -1, 0 }, { 0, -1 }, { 0, 1 } };
         int min = 0;
 
-        while (!q.isEmpty()) {
+        while (!q.isEmpty() && fresh > 0) {
             int size = q.size();
-            boolean rotted = false;
+            // boolean rotted = false;
 
             for (int i = 0; i < size; i++) {
                 int[] node = q.poll();
@@ -37,13 +37,14 @@ class Solution {
                         q.offer(new int[]{nr, nc});
                         grid[nr][nc] = 2;
                         fresh--;
-                        rotted = true;
+                        // rotted = true;
                     }
                 }
             }
-            if (rotted) {
-                min++;
-            }
+            // if (rotted) {
+            //     min++;
+            // }
+            min++;
         }
         return (fresh == 0) ? min : -1;
     }
