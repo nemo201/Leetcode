@@ -3,14 +3,16 @@ class Solution {
         int left = 1;
         int right = 0;
 
-        for (int pile : piles) {
-            right = Math.max(right, pile);
+        for (int num : piles) {
+            right = Math.max(right, num);
         }
 
         int ans = right;
+
         while (left <= right) {
-            int mid = left + (right - left)/2;
-            if (canFinish(piles, h, mid)) {
+            int mid = left + (right - left) / 2;
+
+            if (isValid(piles, mid, h)) {
                 ans = mid;
                 right = mid - 1;
             } else {
@@ -19,11 +21,13 @@ class Solution {
         }
         return ans;
     }
-    private boolean canFinish(int[] piles, int h, int k) {
+
+    private boolean isValid(int[] piles, int k, int h) {
         long hours = 0;
         for (int pile : piles) {
             hours += (pile + k - 1) / k;
         }
+
         return hours <= h;
     }
 }
