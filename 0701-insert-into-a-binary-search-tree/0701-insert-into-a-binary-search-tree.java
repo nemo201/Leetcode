@@ -18,11 +18,10 @@ class Solution {
         if (root == null) {
             return new TreeNode(val);
         }
-
         TreeNode cur = root;
 
         while (true) {
-            if (val < cur.val) {
+            if (cur.val > val) {
                 if (cur.left == null) {
                     cur.left = new TreeNode(val);
                     break;
