@@ -29,8 +29,7 @@ class Solution {
             }
             if (root.right == null) {
                 return root.left;
-            } 
-
+            }
             TreeNode successor = findMin(root.right);
             root.val = successor.val;
             root.right = deleteNode(root.right, successor.val);
