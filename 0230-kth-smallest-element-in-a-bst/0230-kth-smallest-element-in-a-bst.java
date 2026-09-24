@@ -15,10 +15,10 @@
  */
 class Solution {
     public int kthSmallest(TreeNode root, int k) {
-        Stack<TreeNode> stack = new Stack<>();
+        Deque<TreeNode> stack = new ArrayDeque<>();
         TreeNode cur = root;
-        
-        while (cur != null || !stack.isEmpty()) {
+
+        while (cur!= null || !stack.isEmpty()) {
             while (cur != null) {
                 stack.push(cur);
                 cur = cur.left;
@@ -26,6 +26,7 @@ class Solution {
 
             cur = stack.pop();
             k--;
+
             if (k == 0) {
                 return cur.val;
             }
