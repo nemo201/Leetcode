@@ -14,12 +14,13 @@ class Solution {
             int time = node[2];
 
             if (x == n - 1 && y == n - 1) {
-                return Math.max(time, grid[n - 1][n - 1]);
+                return Math.max(time, grid[x][y]);
             }
 
             if (visited[x][y]) {
                 continue;
             }
+
             visited[x][y] = true;
 
             for (int[] dir : dirs) {
