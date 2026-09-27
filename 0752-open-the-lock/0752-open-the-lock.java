@@ -8,7 +8,6 @@ class Solution {
 
         Queue<String> q = new LinkedList<>();
         Set<String> visited = new HashSet<>();
-
         String start = "0000";
         q.offer(start);
         visited.add(start);
@@ -16,17 +15,18 @@ class Solution {
 
         while (!q.isEmpty()) {
             int size = q.size();
-            for (int i = 0; i < size; i++) {
+
+            for(int i = 0; i < size; i++) {
                 String cur = q.poll();
 
                 if (cur.equals(target)) {
                     return turns;
                 }
 
-                for (String next : neighbors(cur)) {
-                    if (!dict.contains(next) && !visited.contains(next)) {
-                        q.offer(next);
-                        visited.add(next);
+                for (String nei : neighbors(cur)) {
+                    if (!dict.contains(nei) && !visited.contains(nei)) {
+                        q.offer(nei);
+                        visited.add(nei);
                     }
                 }
             }
@@ -42,13 +42,13 @@ class Solution {
         for (int i = 0; i < 4; i++) {
             char og = arr[i];
             arr[i] = og == '9' ? '0' : (char)(og + 1);
-            list.add(new String (arr));
+            list.add(new String(arr));
 
             arr[i] = og == '0' ? '9' : (char)(og - 1);
-            list.add(new String (arr));
-
+            list.add(new String(arr));
             arr[i] = og;
         }
+
         return list;
     }
 }
