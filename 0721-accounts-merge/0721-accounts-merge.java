@@ -1,80 +1,74 @@
 class Solution {
-    public List<List<String>> accountsMerge(List<List<String>> accounts) {
-        int n = accounts.size();
-        UnionFind uf = new UnionFind(n);
 
-        Map<String, Integer> map = new HashMap<>();
+    public List<List<String>> accountsMerge(
+            List<List<String>> accounts) {
 
-        for (int i = 0; i < n; i++) {
-            int m = accounts.get(i).size();
+        Map<String, List<String>> graph = new HashMap<>();
+        Map<String, String> emailToName = new HashMap<>();
 
-            for (int j = 1; j < m; j++) {
-                String e = accounts.get(i).get(j);
+        // Build graph
+        for (List<String> account : accounts) {
 
-                if (!map.containsKey(e)) {
-                    map.put(e, i);
-                } else {
-                    uf.union(i, map.get(e));
-                }
+            String name = account.get(0);
+            String firstEmail = account.get(1);
+
+            graph.putIfAbsent(firstEmail, new ArrayList<>());
+            emailToName.put(firstEmail, name);
+
+            for (int i = 2; i < account.size(); i++) {
+
+                String email = account.get(i);
+
+                graph.putIfAbsent(email, new ArrayList<>());
+                emailToName.put(email, name);
+
+                // Connect first email with current email
+                graph.get(firstEmail).add(email);
+                graph.get(email).add(firstEmail);
             }
         }
-        Map<Integer, List<String>> components = new HashMap<>();
-        for (String email : map.keySet()) {
-            int group = map.get(email);
-            int groupRep = uf.find(group);
 
-            if (!components.containsKey(groupRep)) {
-                components.put(groupRep, new ArrayList<>());
+        Set<String> visited = new HashSet<>();
+
+        List<List<String>> result = new ArrayList<>();
+
+        // Find connected components
+        for (String email : graph.keySet()) {
+
+            if (visited.contains(email)) {
+                continue;
             }
-            components.get(groupRep).add(email);
+
+            List<String> emails = new ArrayList<>();
+
+            dfs(email, graph, visited, emails);
+
+            Collections.sort(emails);
+
+            List<String> account = new ArrayList<>();
+
+            account.add(emailToName.get(email));
+            account.addAll(emails);
+
+            result.add(account);
         }
 
-        List<List<String>> ans = new ArrayList<>();
-        for (int group : components.keySet()) {
-            List<String> component = components.get(group);
-            Collections.sort(component);
-            component.add(0, accounts.get(group).get(0));
-            ans.add(component);
-        }
-        return ans;
+        return result;
     }
 
-    class UnionFind{
-        int[] parent;
-        int[] rank;
+    private void dfs(
+            String email,
+            Map<String, List<String>> graph,
+            Set<String> visited,
+            List<String> emails) {
 
-        public UnionFind(int n) {
-            parent = new int[n];
-            rank = new int[n];
+        visited.add(email);
+        emails.add(email);
 
-            for (int i = 0; i < n; i++) {
-                parent[i] = i;
-                rank[i] = 1;
-            }
-        }
+        for (String neighbor : graph.get(email)) {
 
-        public int find(int x) {
-            if (parent[x] != x) {
-                parent[x] = find(parent[x]);
-            }
-            return parent[x];
-        }
-
-        public void union(int x, int y) {
-            int px = find(x);
-            int py = find(y);
-
-            if (px == py) {
-                return;
-            }
-
-            if (rank[px] < rank[py]) {
-                parent[px] = py;
-            } else if (rank[px] > rank[py]) {
-                parent[py] = px;
-            } else {
-                parent[px] = py;
-                rank[py]++;
+            if (!visited.contains(neighbor)) {
+                dfs(neighbor, graph, visited, emails);
             }
         }
     }
