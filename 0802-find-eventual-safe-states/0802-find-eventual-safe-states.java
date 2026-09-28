@@ -1,45 +1,48 @@
 class Solution {
     public List<Integer> eventualSafeNodes(int[][] graph) {
-        Map<Integer, List<Integer>> adj = new HashMap<>();
-        int[] outdegree = new int[graph.length];
+        List<List<Integer>> adj = new ArrayList<>();
+        int n = graph.length;
 
-        for (int i = 0; i < graph.length; i++) {
-            adj.put(i, new ArrayList<>());
+        for (int i = 0; i < n; i++) {
+            adj.add(new ArrayList<>());
         }
 
-        for (int i = 0; i < graph.length; i++) {
+        int[] outdegree = new int[n];
+
+        for (int i = 0; i < n; i++) {
             outdegree[i] = graph[i].length;
-            for (int v : graph[i]) {
-                adj.get(v).add(i);
+            for (int j = 0; j < graph[i].length; j++) {
+                int next = graph[i][j];
+                adj.get(next).add(i);
             }
         }
-
+        
+        boolean[] terminal = new boolean[n];
         Queue<Integer> q = new LinkedList<>();
-        for (int i = 0; i < graph.length; i++) {
+        for (int i = 0; i < n; i++) {
             if (outdegree[i] == 0) {
                 q.offer(i);
+                terminal[i] = true;
             }
         }
-
-        boolean[] terminalNode = new boolean[graph.length];
 
         while (!q.isEmpty()) {
             int node = q.poll();
-            terminalNode[node] = true;
 
             for (int nei : adj.get(node)) {
                 outdegree[nei]--;
 
                 if (outdegree[nei] == 0) {
                     q.offer(nei);
+                    terminal[nei] = true;
                 }
             }
         }
 
         List<Integer> safeNodes = new ArrayList<>();
 
-        for (int i = 0; i < terminalNode.length; i++) {
-            if (terminalNode[i]) {
+        for (int i = 0; i < terminal.length; i++) {
+            if (terminal[i]) {
                 safeNodes.add(i);
             }
         }
