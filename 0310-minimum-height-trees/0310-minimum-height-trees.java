@@ -1,18 +1,21 @@
 class Solution {
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
-        Map<Integer, List<Integer>> adj = new HashMap<>();
-        if (n == 1)
+        List<List<Integer>> adj = new ArrayList<>();
+
+        if (n == 1) {
             return Collections.singletonList(0);
-        
-        if (n == 2)
+        }
+
+        if (n == 2) {
             return Arrays.asList(0, 1);
+        }
 
         for (int i = 0; i < n; i++) {
-            adj.put(i, new ArrayList<>());
+            adj.add(new ArrayList<>());
         }
 
         int[] indegree = new int[n];
-
+        
         for (int[] edge : edges) {
             adj.get(edge[0]).add(edge[1]);
             adj.get(edge[1]).add(edge[0]);
@@ -35,7 +38,6 @@ class Solution {
                 int node = q.poll();
                 for (int nei : adj.get(node)) {
                     indegree[nei]--;
-
                     if (indegree[nei] == 1) {
                         q.offer(nei);
                     }
