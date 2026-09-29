@@ -1,7 +1,6 @@
 class Solution {
     public double maxProbability(int n, int[][] edges, double[] succProb, int start_node, int end_node) {
         Map<Integer, List<double[]>> adj = new HashMap<>();
-
         for (int i = 0; i < n; i++) {
             adj.put(i, new ArrayList<>());
         }
