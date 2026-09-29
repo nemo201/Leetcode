@@ -28,8 +28,8 @@ class Solution {
     }
 
     class UnionFind {
-        int parent[];
-        int rank[];
+        int[] parent;
+        int[] rank;
 
         public UnionFind(int n) {
             parent = new int[n];
@@ -55,13 +55,11 @@ class Solution {
             if (px == py) {
                 return false;
             }
-            
+
             if (rank[px] < rank[py]) {
                 parent[px] = py;
-            } else if (rank[px] > rank[py]) {
+            } else if (rank[px] >= rank[py]) {
                 parent[py] = px;
-            } else {
-                parent[px] = py;
                 rank[px]++;
             }
             return true;
