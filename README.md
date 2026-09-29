@@ -817,6 +817,7 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0778-swim-in-rising-water](https://github.com/nemo201/Leetcode/tree/main/0778-swim-in-rising-water/) | Hard |
+| [1514-path-with-maximum-probability](https://github.com/nemo201/Leetcode/tree/main/1514-path-with-maximum-probability/) | Medium |
 ## Kosaraju's Algorithm
 | Problem Name | Difficulty |
 | ------- | ------- |
