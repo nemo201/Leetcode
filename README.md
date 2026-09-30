@@ -110,6 +110,7 @@ Collection of LeetCode questions.
 | [1480-running-sum-of-1d-array](https://github.com/nemo201/Leetcode/tree/main/1480-running-sum-of-1d-array/) | Easy |
 | [1514-path-with-maximum-probability](https://github.com/nemo201/Leetcode/tree/main/1514-path-with-maximum-probability/) | Medium |
 | [1584-min-cost-to-connect-all-points](https://github.com/nemo201/Leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/nemo201/Leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 | [1671-minimum-number-of-removals-to-make-mountain-array](https://github.com/nemo201/Leetcode/tree/main/1671-minimum-number-of-removals-to-make-mountain-array/) | Hard |
 ## Two Pointers
 | Problem Name | Difficulty |
@@ -155,6 +156,7 @@ Collection of LeetCode questions.
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/nemo201/Leetcode/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [0875-koko-eating-bananas](https://github.com/nemo201/Leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/nemo201/Leetcode/tree/main/1011-capacity-to-ship-packages-within-d-days/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/nemo201/Leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 | [1671-minimum-number-of-removals-to-make-mountain-array](https://github.com/nemo201/Leetcode/tree/main/1671-minimum-number-of-removals-to-make-mountain-array/) | Hard |
 ## Sorting
 | Problem Name | Difficulty |
@@ -310,6 +312,7 @@ Collection of LeetCode questions.
 | [1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/nemo201/Leetcode/tree/main/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Hard |
 | [1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit](https://github.com/nemo201/Leetcode/tree/main/1438-longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit/) | Medium |
 | [1514-path-with-maximum-probability](https://github.com/nemo201/Leetcode/tree/main/1514-path-with-maximum-probability/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/nemo201/Leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Monotonic Queue
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -419,6 +422,7 @@ Collection of LeetCode questions.
 | [1091-shortest-path-in-binary-matrix](https://github.com/nemo201/Leetcode/tree/main/1091-shortest-path-in-binary-matrix/) | Medium |
 | [1293-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/nemo201/Leetcode/tree/main/1293-shortest-path-in-a-grid-with-obstacles-elimination/) | Hard |
 | [1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/nemo201/Leetcode/tree/main/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Hard |
+| [1631-path-with-minimum-effort](https://github.com/nemo201/Leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Divide and Conquer
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -447,6 +451,7 @@ Collection of LeetCode questions.
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/nemo201/Leetcode/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [1020-number-of-enclaves](https://github.com/nemo201/Leetcode/tree/main/1020-number-of-enclaves/) | Medium |
 | [1584-min-cost-to-connect-all-points](https://github.com/nemo201/Leetcode/tree/main/1584-min-cost-to-connect-all-points/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/nemo201/Leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Bucket Sort
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -578,6 +583,7 @@ Collection of LeetCode questions.
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/nemo201/Leetcode/tree/main/0947-most-stones-removed-with-same-row-or-column/) | Medium |
 | [1020-number-of-enclaves](https://github.com/nemo201/Leetcode/tree/main/1020-number-of-enclaves/) | Medium |
 | [1339-maximum-product-of-splitted-binary-tree](https://github.com/nemo201/Leetcode/tree/main/1339-maximum-product-of-splitted-binary-tree/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/nemo201/Leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 | [2096-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/nemo201/Leetcode/tree/main/2096-step-by-step-directions-from-a-binary-tree-node-to-another/) | Medium |
 ## Binary Tree
 | Problem Name | Difficulty |
@@ -633,6 +639,7 @@ Collection of LeetCode questions.
 | [1091-shortest-path-in-binary-matrix](https://github.com/nemo201/Leetcode/tree/main/1091-shortest-path-in-binary-matrix/) | Medium |
 | [1293-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/nemo201/Leetcode/tree/main/1293-shortest-path-in-a-grid-with-obstacles-elimination/) | Hard |
 | [1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid](https://github.com/nemo201/Leetcode/tree/main/1368-minimum-cost-to-make-at-least-one-valid-path-in-a-grid/) | Hard |
+| [1631-path-with-minimum-effort](https://github.com/nemo201/Leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Binary Search Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -818,6 +825,7 @@ Collection of LeetCode questions.
 | ------- | ------- |
 | [0778-swim-in-rising-water](https://github.com/nemo201/Leetcode/tree/main/0778-swim-in-rising-water/) | Hard |
 | [1514-path-with-maximum-probability](https://github.com/nemo201/Leetcode/tree/main/1514-path-with-maximum-probability/) | Medium |
+| [1631-path-with-minimum-effort](https://github.com/nemo201/Leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
 ## Kosaraju's Algorithm
 | Problem Name | Difficulty |
 | ------- | ------- |
