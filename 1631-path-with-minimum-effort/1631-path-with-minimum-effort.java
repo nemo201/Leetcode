@@ -1,30 +1,42 @@
 class Solution {
-    public static final int[][] dirs = {{-1,0}, {1, 0}, {0, -1}, {0, 1}};
-    
     public int minimumEffortPath(int[][] heights) {
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> Integer.compare(a[2], b[2]));
-        int n = heights.length;
-        int m = heights[0].length;
-        Integer[][] minDist = new Integer[n][m];
-        minDist[0][0] = 0;
+        int m = heights.length;
+        int n = heights[0].length;
+
+        int[][] efforts = new int[m][n];
+
+        for (int[] row : efforts) {
+            Arrays.fill(row, Integer.MAX_VALUE);
+        }
+
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> Integer.compare(a[0],  b[0]));
         pq.offer(new int[]{0, 0, 0});
+        efforts[0][0] = 0;
+
+        int[][] dirs = new int[][]{{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+
         while (!pq.isEmpty()) {
             int[] cur = pq.poll();
-            if (cur[0] == n - 1 && cur[1] == m - 1)
-                return cur[2];
-            for (int[] dir : dirs) {
-                int nx = cur[0] + dir[0];
-                int ny = cur[1] + dir[1];
-                if (nx < 0 || nx >= n || ny < 0 || ny >= m) {
-                    continue;
-                }
-                int effort = Math.max(cur[2], Math.abs(heights[cur[0]][cur[1]] - heights[nx][ny]));
-                if (minDist[nx][ny] == null || minDist[nx][ny] > effort) {
-                    minDist[nx][ny] = effort;
-                    pq.offer(new int[]{nx, ny, minDist[nx][ny]});
+            int effort = cur[0];
+            int x = cur[1];
+            int y = cur[2];
+
+            if (x == m - 1 && y == n - 1) {
+                return effort;
+            }
+
+            for (int[] dir :dirs) {
+                int nx = x + dir[0];
+                int ny = y + dir[1];
+                if (nx >= 0 && nx < m && ny >= 0 && ny < n) {
+                    int newEffort = Math.max (Math.abs(heights[nx][ny] - heights[x][y]), effort);
+                    if (newEffort < efforts[nx][ny]) {
+                        efforts[nx][ny] = newEffort;
+                        pq.offer(new int[]{newEffort, nx, ny});
+                    }
                 }
             }
         }
-        return -1;
+        return 0;
     }
 }
