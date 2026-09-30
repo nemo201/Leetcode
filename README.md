@@ -829,6 +829,7 @@ Collection of LeetCode questions.
 ## Dijkstra's Algorithm
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0743-network-delay-time](https://github.com/nemo201/Leetcode/tree/main/0743-network-delay-time/) | Medium |
 | [0778-swim-in-rising-water](https://github.com/nemo201/Leetcode/tree/main/0778-swim-in-rising-water/) | Hard |
 | [1514-path-with-maximum-probability](https://github.com/nemo201/Leetcode/tree/main/1514-path-with-maximum-probability/) | Medium |
 | [1631-path-with-minimum-effort](https://github.com/nemo201/Leetcode/tree/main/1631-path-with-minimum-effort/) | Medium |
