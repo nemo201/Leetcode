@@ -12,7 +12,11 @@ class Solution {
                 int v = edge[1];
                 int w = edge[2];
 
-                if (dist[u] != Integer.MAX_VALUE && dist[u] + w < dist[v]) {
+                if (dist[u] == Integer.MAX_VALUE) {
+                    continue;
+                }
+
+                if (dist[u] + w < dist[v]) {
                     dist[v] = dist[u] + w;
                     updated = true;
                 }
