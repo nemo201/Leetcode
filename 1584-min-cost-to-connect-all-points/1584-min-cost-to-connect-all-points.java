@@ -1,68 +1,32 @@
 class Solution {
     public int minCostConnectPoints(int[][] points) {
         int n = points.length;
-        List<int[]> allEdges = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                int w = Math.abs(points[i][0] - points[j][0]) + Math.abs(points[i][1] - points[j][1]);
-                int[] curEdge = {w, i, j};
-                allEdges.add(curEdge);
+        boolean[] visited = new boolean[n];
+        int totalCost = 0;
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+        pq.offer(new int[]{0, 0});
+        int edges = 0;
+
+        while (!pq.isEmpty() && edges < n) {
+            int[] cur = pq.poll();
+            int cost = cur[0];
+            int node = cur[1];
+            
+            if (visited[node]) {
+                continue;
+            }
+
+            totalCost += cost;
+            visited[node] = true;
+            edges++;
+
+            for (int nextNode = 0; nextNode < n; nextNode++) {
+                if (!visited[nextNode]) {
+                    int nextCost = Math.abs(points[node][0] - points[nextNode][0]) + Math.abs(points[node][1] - points[nextNode][1]);
+                    pq.offer(new int[] {nextCost, nextNode});
+                }
             }
         }
-        Collections.sort(allEdges, (a, b) -> Integer.compare(a[0], b[0]));
-        UnionFind uf = new UnionFind(n);
-        int cost = 0;
-        int edgesUsed = 0;
-
-        for (int i = 0; i < allEdges.size() && edgesUsed < n - 1; i++) {
-            int n1 = allEdges.get(i)[1];
-            int n2 = allEdges.get(i)[2];
-            int w = allEdges.get(i)[0];
-
-            if (uf.union(n1, n2)) {
-                cost += w;
-                edgesUsed++;
-            }
-        }
-        return cost;
-    }
-
-    class UnionFind {
-        int[] parent;
-        int[] rank;
-
-        public UnionFind(int n) {
-            parent = new int[n];
-            rank = new int[n];
-
-            for (int i = 0; i < n; i++) {
-                parent[i] = i;
-                rank[i] = 1;
-            }
-        }
-
-        public int find(int x) {
-            if (parent[x] != x) {
-                parent[x] = find(parent[x]);
-            }
-            return parent[x];
-        }
-
-        public boolean union(int x, int y) {
-            int px = find(x);
-            int py = find(y);
-
-            if (px == py) {
-                return false;
-            }
-
-            if (rank[px] < rank[py]) {
-                parent[px] = py;
-            } else if (rank[px] >= rank[py]) {
-                parent[py] = px;
-                rank[px]++;
-            }
-            return true;
-        }
+        return totalCost;
     }
 }
