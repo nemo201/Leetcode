@@ -91,6 +91,7 @@ Collection of LeetCode questions.
 | [0746-min-cost-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 | [0752-open-the-lock](https://github.com/nemo201/Leetcode/tree/main/0752-open-the-lock/) | Medium |
 | [0778-swim-in-rising-water](https://github.com/nemo201/Leetcode/tree/main/0778-swim-in-rising-water/) | Hard |
+| [0801-minimum-swaps-to-make-sequences-increasing](https://github.com/nemo201/Leetcode/tree/main/0801-minimum-swaps-to-make-sequences-increasing/) | Hard |
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/nemo201/Leetcode/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [0875-koko-eating-bananas](https://github.com/nemo201/Leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
@@ -236,6 +237,7 @@ Collection of LeetCode questions.
 | [0741-cherry-pickup](https://github.com/nemo201/Leetcode/tree/main/0741-cherry-pickup/) | Hard |
 | [0746-min-cost-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 | [0787-cheapest-flights-within-k-stops](https://github.com/nemo201/Leetcode/tree/main/0787-cheapest-flights-within-k-stops/) | Medium |
+| [0801-minimum-swaps-to-make-sequences-increasing](https://github.com/nemo201/Leetcode/tree/main/0801-minimum-swaps-to-make-sequences-increasing/) | Hard |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [1049-last-stone-weight-ii](https://github.com/nemo201/Leetcode/tree/main/1049-last-stone-weight-ii/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/nemo201/Leetcode/tree/main/1143-longest-common-subsequence/) | Medium |
