@@ -863,5 +863,6 @@ Collection of LeetCode questions.
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0300-longest-increasing-subsequence](https://github.com/nemo201/Leetcode/tree/main/0300-longest-increasing-subsequence/) | Medium |
+| [0354-russian-doll-envelopes](https://github.com/nemo201/Leetcode/tree/main/0354-russian-doll-envelopes/) | Hard |
 | [0673-number-of-longest-increasing-subsequence](https://github.com/nemo201/Leetcode/tree/main/0673-number-of-longest-increasing-subsequence/) | Medium |
 <!---LeetCode Topics End-->
