@@ -16,12 +16,11 @@ class Solution {
     }
 
     private int helper(
-        int[][] grid,
-        int r1,
-        int c1,
-        int r2,
-        int[][][] memo
-    ) {
+            int[][] grid,
+            int r1,
+            int c1,
+            int r2,
+            int[][][] memo) {
         int n = grid.length;
 
         // Calculate c2
@@ -29,14 +28,14 @@ class Solution {
 
         // Invalid state
         if (r1 >= n || c1 >= n ||
-            r2 >= n || c2 >= n ||
-            c1 < 0 || c2 < 0) {
+                r2 >= n || c2 >= n ||
+                c1 < 0 || c2 < 0) {
             return -1;
         }
 
         // Hit a thorn
         if (grid[r1][c1] == -1 ||
-            grid[r2][c2] == -1) {
+                grid[r2][c2] == -1) {
             return -1;
         }
 
@@ -59,48 +58,21 @@ class Solution {
 
         // Person 1: right
         // Person 2: right
-        int rr = helper(
-            grid,
-            r1,
-            c1 + 1,
-            r2,
-            memo
-        );
+        int rr = helper(grid, r1, c1 + 1, r2, memo);
 
         // Person 1: right
         // Person 2: down
-        int rd = helper(
-            grid,
-            r1,
-            c1 + 1,
-            r2 + 1,
-            memo
-        );
+        int rd = helper(grid, r1, c1 + 1, r2 + 1, memo);
 
         // Person 1: down
         // Person 2: right
-        int dr = helper(
-            grid,
-            r1 + 1,
-            c1,
-            r2,
-            memo
-        );
+        int dr = helper(grid, r1 + 1, c1, r2, memo);
 
         // Person 1: down
         // Person 2: down
-        int dd = helper(
-            grid,
-            r1 + 1,
-            c1,
-            r2 + 1,
-            memo
-        );
+        int dd = helper(grid, r1 + 1, c1, r2 + 1, memo);
 
-        int best = Math.max(
-            Math.max(rr, rd),
-            Math.max(dr, dd)
-        );
+        int best = Math.max(Math.max(rr, rd), Math.max(dr, dd));
 
         if (best == -1) {
             return memo[r1][c1][r2] = -1;
