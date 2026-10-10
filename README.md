@@ -95,6 +95,7 @@ Collection of LeetCode questions.
 | [0801-minimum-swaps-to-make-sequences-increasing](https://github.com/nemo201/Leetcode/tree/main/0801-minimum-swaps-to-make-sequences-increasing/) | Hard |
 | [0862-shortest-subarray-with-sum-at-least-k](https://github.com/nemo201/Leetcode/tree/main/0862-shortest-subarray-with-sum-at-least-k/) | Hard |
 | [0875-koko-eating-bananas](https://github.com/nemo201/Leetcode/tree/main/0875-koko-eating-bananas/) | Medium |
+| [0879-profitable-schemes](https://github.com/nemo201/Leetcode/tree/main/0879-profitable-schemes/) | Hard |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [0977-squares-of-a-sorted-array](https://github.com/nemo201/Leetcode/tree/main/0977-squares-of-a-sorted-array/) | Easy |
 | [0986-interval-list-intersections](https://github.com/nemo201/Leetcode/tree/main/0986-interval-list-intersections/) | Medium |
@@ -241,6 +242,7 @@ Collection of LeetCode questions.
 | [0746-min-cost-climbing-stairs](https://github.com/nemo201/Leetcode/tree/main/0746-min-cost-climbing-stairs/) | Easy |
 | [0787-cheapest-flights-within-k-stops](https://github.com/nemo201/Leetcode/tree/main/0787-cheapest-flights-within-k-stops/) | Medium |
 | [0801-minimum-swaps-to-make-sequences-increasing](https://github.com/nemo201/Leetcode/tree/main/0801-minimum-swaps-to-make-sequences-increasing/) | Hard |
+| [0879-profitable-schemes](https://github.com/nemo201/Leetcode/tree/main/0879-profitable-schemes/) | Hard |
 | [0918-maximum-sum-circular-subarray](https://github.com/nemo201/Leetcode/tree/main/0918-maximum-sum-circular-subarray/) | Medium |
 | [1049-last-stone-weight-ii](https://github.com/nemo201/Leetcode/tree/main/1049-last-stone-weight-ii/) | Medium |
 | [1143-longest-common-subsequence](https://github.com/nemo201/Leetcode/tree/main/1143-longest-common-subsequence/) | Medium |
@@ -726,6 +728,7 @@ Collection of LeetCode questions.
 | [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
 | [0518-coin-change-ii](https://github.com/nemo201/Leetcode/tree/main/0518-coin-change-ii/) | Medium |
+| [0879-profitable-schemes](https://github.com/nemo201/Leetcode/tree/main/0879-profitable-schemes/) | Hard |
 | [1049-last-stone-weight-ii](https://github.com/nemo201/Leetcode/tree/main/1049-last-stone-weight-ii/) | Medium |
 ## 0-1 Knapsack
 | Problem Name | Difficulty |
@@ -733,6 +736,7 @@ Collection of LeetCode questions.
 | [0416-partition-equal-subset-sum](https://github.com/nemo201/Leetcode/tree/main/0416-partition-equal-subset-sum/) | Medium |
 | [0474-ones-and-zeroes](https://github.com/nemo201/Leetcode/tree/main/0474-ones-and-zeroes/) | Medium |
 | [0494-target-sum](https://github.com/nemo201/Leetcode/tree/main/0494-target-sum/) | Medium |
+| [0879-profitable-schemes](https://github.com/nemo201/Leetcode/tree/main/0879-profitable-schemes/) | Hard |
 | [1049-last-stone-weight-ii](https://github.com/nemo201/Leetcode/tree/main/1049-last-stone-weight-ii/) | Medium |
 ## Complete Knapsack
 | Problem Name | Difficulty |
