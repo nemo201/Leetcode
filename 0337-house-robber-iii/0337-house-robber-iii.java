@@ -15,7 +15,7 @@
  */
 class Solution {
     public int rob(TreeNode root) {
-        int[] result = helper (root);
+        int[] result = helper(root);
         return Math.max(result[0], result[1]);
     }
 
@@ -28,7 +28,6 @@ class Solution {
         int[] right = helper (node.right);
 
         int rob = node.val + left[1] + right[1];
-
         int skip = Math.max(left[0], left[1]) + Math.max(right[0], right[1]);
 
         return new int[]{rob, skip};
