@@ -18,7 +18,7 @@ class Solution {
         }
 
         for (int col = 0; col < board.length; col++) {
-            if (isValid(board, row, col)) {
+            if (isValid(row, col, board)) {
                 board[row][col] = 'Q';
                 helper (row + 1, board, ans);
                 board[row][col] = '.';
@@ -26,14 +26,14 @@ class Solution {
         }
     }
 
-    private boolean isValid(char[][] board, int row, int col) {
+    private boolean isValid (int row, int col, char[][] board) {
         for (int i = 0; i < row; i++) {
             if (board[i][col] == 'Q') {
                 return false;
             }
         }
 
-        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
+        for (int i = row  - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
             if (board[i][j] == 'Q') {
                 return false;
             }
@@ -48,11 +48,11 @@ class Solution {
         return true;
     }
 
-    private List<String> construct(char[][] board) {
+    private List<String> construct (char[][] board) {
         List<String> list = new ArrayList<>();
         for (char[] row : board) {
             list.add(new String(row));
         }
-        return list;  
+        return list;
     }
 }
