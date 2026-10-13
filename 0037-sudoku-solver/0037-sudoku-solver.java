@@ -3,7 +3,7 @@ class Solution {
         solve(board);
     }
 
-    private boolean solve(char[][] board) {
+    private boolean solve (char[][] board) {
         for (int row = 0; row < 9; row++) {
             for (int col = 0; col < 9; col++) {
                 if (board[row][col] == '.') {
@@ -25,7 +25,7 @@ class Solution {
         return true;
     }
 
-    private boolean isValid (char[][] board, int row, int col, char c) {
+    private boolean isValid(char[][] board, int row, int col, char c) {
         for (int i = 0; i < 9; i++) {
             if (board[row][i] == c) {
                 return false;
