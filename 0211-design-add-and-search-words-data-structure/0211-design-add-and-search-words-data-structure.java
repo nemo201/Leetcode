@@ -50,12 +50,11 @@ class WordDictionary {
         }
 
         int childIndex = c - 'a';
-
         if (node.children[childIndex] == null) {
             return false;
         }
 
-        return dfs (word, index + 1, node.children[childIndex]);
+        return dfs(word, index + 1, node.children[childIndex]);
     }
 }
 
